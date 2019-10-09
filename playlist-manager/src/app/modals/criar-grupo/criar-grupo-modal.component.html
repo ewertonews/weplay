@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Novo grupo</h2>
+<mat-dialog-content [formGroup]="formNovoGrupo">
+  
+    <mat-form-field style="width: 100%">
+        <input matInput
+              placeholder="Nome do grupo/banda"
+              formControlName="nome" autocomplete="off">
+    </mat-form-field>
+    <!-- <label for="file">Foto do grupo:</label>
+    <input type="file" formControlName="foto" (change)="getFotoRef($event)" accept=".png,.jpg" /> -->
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
+

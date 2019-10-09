@@ -1,0 +1,26 @@
+.btn-cadastrar{
+    margin: 5px 0 7px 7px;
+}
+
+table {
+    width: 100%;
+}
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+  
+td, th {
+    width: 25%;
+}
+
+
+.filtro{
+    width: 40%;
+}
+
+.mat-row, .mat-header-row {  
+    min-width: 845px;  
+    width: 100%;  
+}  

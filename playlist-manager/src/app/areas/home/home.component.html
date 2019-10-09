@@ -1,0 +1,30 @@
+<app-header [usuario]="usuario"></app-header>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12" *ngIf="showSpinner">
+                <mat-spinner></mat-spinner>
+            </div>            
+            <div *ngIf="usuario" class="col-md-12">
+                <mat-card *ngIf="!showSpinner && gruposDoUsuario.length == 0">                    
+                    <mat-card-content>                        
+                        <div *ngIf="gruposDoUsuario.length == 0">
+                            <h4>Olá, {{usuario.nome}}!</h4>
+                            <p>
+                                Você ainda não participa de nenhuma banda ou grupo. Solicite ao administrador do seu grupo para 
+                                lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>) ou clique no botão abaixo para criar um novo grupo.
+                            </p>
+                            <button mat-raised-button color="primary" (click)="openDialog()"> CRIAR GRUPO </button>
+                        </div>                        
+                   </mat-card-content>                   
+                </mat-card>
+                <div class="row" *ngIf="!showSpinner && gruposDoUsuario.length > 0">
+                    <div class="col-md-12">
+                        <h3>Meus grupos</h3>    
+                    </div>                   
+                    <div *ngFor="let grupo of gruposDoUsuario" class="col-md-3">
+                        <app-card-grupo [grupo]="grupo"></app-card-grupo>
+                    </div>        
+                </div>
+            </div>            
+        </div>
+</div>

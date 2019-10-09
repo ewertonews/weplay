@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title>{{grupo.nome}}</mat-card-title>
+      <!-- <mat-card-subtitle>subtítulo</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image src="{{grupo.foto}}" alt="foto de {{grupo.nome}}">
+    <mat-card-content>
+      <p>
+        <strong>Administrador(es):</strong>
+      </p>
+      <ul>
+        <li *ngFor="let admin of admins">
+            {{admin.nome}}
+        </li>
+      </ul>      
+      <p>
+        <strong>Membros:</strong> {{grupo.emailMembros.length}}
+      </p>
+      <p>
+        <strong>Músicas no repertório:</strong> 0
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="detalhesGrupo()">ENTRAR</button>      
+    </mat-card-actions>
+  </mat-card>
+  <br>

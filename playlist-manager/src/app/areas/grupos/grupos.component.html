@@ -1,0 +1,35 @@
+<app-header [usuario]="currentUser"></app-header>
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-md-4">
+        <img height="10%" mat-card-image src="{{grupo.foto}}" alt="foto de {{grupo.nome}}">
+    </div> -->
+    <div class="col-md-12">
+      <h1>{{grupo.nome}}</h1>
+    </div>
+  </div>
+  <div class="row">          
+      <div class="col-lg-9">
+          <mat-card>
+            <mat-card-content>
+                <mat-tab-group mat-stretch-tabs>
+                  <mat-tab label="Músicas"> 
+                   <app-musicas *ngIf="playlistDoGrupo" [musicas]=" playlistDoGrupo.musicas"></app-musicas>
+                  </mat-tab>
+                  <mat-tab label="Repertórios"> 
+                    Content 2 
+                  </mat-tab>               
+                </mat-tab-group>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-lg-3">
+            <mat-card>
+              <mat-card-title>Integrantes</mat-card-title>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Líderes</mat-card-title>
+              </mat-card>
+        </div>
+  </div>
+</div>
