@@ -2,8 +2,13 @@
     margin: 5px 0 7px 7px;
 }
 
+/* mat-card{
+    overflow: auto;
+} */
+
 table {
     width: 100%;
+    table-layout: fixed;
 }
   
 .mat-form-field {
@@ -11,16 +16,31 @@ table {
     width: 100%;
 }
   
-td, th {
-    width: 25%;
-}
+/* td, th {
+    width: 45%;
+} */
 
+th, td {
+    overflow: hidden;
+    width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 35px;
+  }
 
 .filtro{
     width: 40%;
 }
 
 .mat-row, .mat-header-row {  
-    min-width: 845px;  
+    min-width: 850px;  
     width: 100%;  
 }  
+
+
+/* th.th-nome div.mat-sort-header-container{
+    width: 500px;
+} */
+/* #mat-tab-content-0-0 > div > app-musicas > div.mat-elevation-z8 > table > thead > tr > th.th-nome.mat-header-cell.ng-tns-c11-3.cdk-column-nome.mat-column-nome.ng-star-inserted > div {
+    width: 150px;
+} */

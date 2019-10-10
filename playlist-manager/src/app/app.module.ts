@@ -27,6 +27,9 @@ import { MatListModule } from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatPaginatorIntl, MatNativeDateModule} from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
+
 
 import { LandingComponent } from './areas/landing/landing.component';
 
@@ -43,6 +46,7 @@ import { GruposComponent } from './areas/grupos/grupos.component';
 import { UsuariosService } from './services/usuarios.service';
 import { MusicasComponent } from './areas/musicas/musicas.component';
 import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.component';
+import { getPortuguesePaginatorIntl } from './areas/musicas/portuguese-paginator-intl';
 
 @NgModule({
   declarations: [
@@ -68,6 +72,7 @@ import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.compone
     MatCheckboxModule,
     MatChipsModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatTableModule,
     MatSortModule,
     MatSnackBarModule,
@@ -78,12 +83,18 @@ import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.compone
     MatProgressSpinnerModule,
     MatTabsModule,
     MatBadgeModule,
+    MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [AuthService, UsuariosService],
+  providers: [
+    AuthService, 
+    UsuariosService,  
+    { provide: MatPaginatorIntl, useValue: getPortuguesePaginatorIntl() },
+    MatDatepickerModule
+  ],
   bootstrap: [AppComponent],
   entryComponents: [CriarGrupoModalComponent, CriarMusicaComponent]
 })

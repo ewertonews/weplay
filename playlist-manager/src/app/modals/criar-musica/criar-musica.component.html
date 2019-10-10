@@ -15,24 +15,29 @@
     </div>
     <div class="col-md-4">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Link YouTube" formControlName="linkVideo" autocomplete="off">
+        <input type="url" matInput placeholder="Link p/ ouvir a música" formControlName="linkOuvir" autocomplete="off">
+        <mat-hint  align="start">Link da música no Youtube, Spotify, etc</mat-hint>
       </mat-form-field>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4">
         <mat-form-field class="full-width">
-          <input matInput placeholder="Link Cifra" formControlName="linkCifra" autocomplete="off">
+          <input type="url"  matInput placeholder="Link Cifra" formControlName="linkCifra" autocomplete="off">
         </mat-form-field>
       </div>
     <div class="col-md-4">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Link Spotify" formControlName="linkSpotify" autocomplete="off">
+        <input matInput type="number" placeholder="Qtd. de vezes tocada" formControlName="quantidadeVezesTocada" autocomplete="off">
+        <mat-hint  align="start">Qtd. real ou aproximada que a música já foi tocada</mat-hint>
       </mat-form-field>
     </div>
     <div class="col-md-4">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Link Deezer" formControlName="linkDeezer" autocomplete="off">
+      <mat-form-field class="full-width"> 
+        <input matInput [matDatepicker]="picker" placeholder="Ultima vez tocada" formControlName="ultimaVezTocada" autocomplete="off">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-hint  align="start">Se lembrar, especifique a data</mat-hint>
       </mat-form-field>
     </div>    
   </div>
@@ -42,9 +47,22 @@
             <input matInput placeholder="Rítmo da Música" formControlName="ritmo" autocomplete="off">
           </mat-form-field>
         </div>
-      <div class="col-md-4">
+      <div class="col-md-8">
         <mat-form-field class="full-width">
-          <input matInput placeholder="Tags (separadas por vírgula)" formControlName="tags" autocomplete="off">
+            <mat-chip-list #chipList aria-label="Seleção de tags">
+              <mat-chip *ngFor="let tag of tags" [selectable]="selectable"
+                        [removable]="removable" (removed)="remove(tag)">
+                {{tag}}
+                <mat-icon matChipRemove *ngIf="removable">cancelar</mat-icon>
+              </mat-chip>
+              <input placeholder="Tags (separadas por vírgula)"
+                      [matChipInputFor]="chipList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event)"
+                      formControlName="tags" autocomplete="off">
+            </mat-chip-list>
+          <!-- <input matInput placeholder="Tags (separadas por vírgula)" formControlName="tags" autocomplete="off"> -->
         </mat-form-field>
       </div>
         

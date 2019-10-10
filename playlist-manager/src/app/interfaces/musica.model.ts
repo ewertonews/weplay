@@ -6,8 +6,6 @@ export interface Musica {
     ultimaVezTocada: string;
     ritmo: string;
     linkCifra: string;
-    linkVideo: string;
-    linkSpotify: string;
-    linkDeezer: string;
+    linkOuvir: string;
     tags: string[];
 }

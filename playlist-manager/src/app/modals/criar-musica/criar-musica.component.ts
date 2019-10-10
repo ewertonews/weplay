@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { FormBuilder } from '@angular/forms';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {COMMA} from '@angular/cdk/keycodes';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Musica } from 'src/app/interfaces/musica.model';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
@@ -13,6 +15,12 @@ import { Playlist } from 'src/app/interfaces/playlist.model';
 export class CriarMusicaComponent implements OnInit {
 
   playListDoGrupo: Playlist;
+  visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
+  readonly separatorKeysCodes: number[] = [COMMA];
+  tags = [];
 
   constructor(
     public dialogRef: MatDialogRef<CriarMusicaComponent>,
@@ -22,14 +30,14 @@ export class CriarMusicaComponent implements OnInit {
     
   formNovaMusica = this.fb.group({
     id: '',
-    nome: '',
-    artista: '',
+    nome: ['', Validators.required],
+    artista: ['', Validators.required],
     ritmo: '',
-    linkVideo: '',
-    linkSpotify: '',
-    linkDeezer: '',
+    linkOuvir: [''],
+    quantidadeVezesTocada: '',
+    ultimaVezTocada: '',
     linkCifra: '',
-    tags:''
+    tags: ''
   });
 
   
@@ -56,25 +64,47 @@ export class CriarMusicaComponent implements OnInit {
     this.playListDoGrupo.musicas.push(musica);
     localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
     this.playlistService.addSongToPlaylist(this.playListDoGrupo).then(resAddSong => {
-      console.log("musica adiciona a playlist ", resAddSong);      
+      console.log("musica adiciona a playlist ", musica);      
     });
   }
 
   criarMusica(){
+    console.log("tags", this.tags)
     let novaMusica: Musica = {
       id: "musica",
       artista: this.formNovaMusica.value.artista,
       nome: this.formNovaMusica.value.nome,
       linkCifra: this.formNovaMusica.value.linkCifra,
-      linkVideo: this.formNovaMusica.value.linkVideo,
-      linkSpotify: this.formNovaMusica.value.linkSpotify,
-      linkDeezer: this.formNovaMusica.value.linkDeezer,
+      linkOuvir: this.formNovaMusica.value.linkOuvir,      
       ritmo: this.formNovaMusica.value.ritmo,
-      tags: this.formNovaMusica.value.tags,
+      tags: this.tags,
       quantidadeVezesTocada: 0,
       ultimaVezTocada: ''
     };
     return novaMusica;
+  }
+
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our fruit
+    if ((value || '').trim()) {
+      this.tags.push(value.trim());
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+  }
+
+  remove(tag: string): void {
+    const index = this.tags.indexOf(tag);
+
+    if (index >= 0) {
+      this.tags.splice(index, 1);
+    }
   }
 
 }

@@ -19,14 +19,21 @@ export class MusicasComponent implements OnInit {
 
   constructor(private musicaDialog: MatDialog) { }
 
-  displayedColumns: string[] = ['nome', 'artista', 'linkVideo', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada'];
+  displayedColumns: string[] = ['nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada'];
 
   ngOnInit() {
-    console.log("musicas do grupo: ", this.musicas);
-    this.dataSource = new MatTableDataSource(this.musicas);
+    console.log("Datasource 1: ", this.dataSource);
+
+    if (this.dataSource){
+      this.dataSource.data = this.musicas;
+    }else{
+      this.dataSource = new MatTableDataSource(this.musicas);
+    }    
 
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    console.log("Datasource 2: ", JSON.stringify(this.dataSource));
   }
 
   openCriarMusicaDialog() {
