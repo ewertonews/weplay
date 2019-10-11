@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import {MatChipInputEvent} from '@angular/material/chips';
-import {COMMA} from '@angular/cdk/keycodes';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Musica } from 'src/app/interfaces/musica.model';
 import { PlaylistService } from 'src/app/services/playlist.service';
@@ -19,7 +19,7 @@ export class CriarMusicaComponent implements OnInit {
   selectable = true;
   removable = true;
   addOnBlur = true;
-  readonly separatorKeysCodes: number[] = [COMMA];
+  readonly separatorKeysCodes: number[] = [COMMA, ENTER];
   tags = [];
 
   constructor(
@@ -34,7 +34,7 @@ export class CriarMusicaComponent implements OnInit {
     artista: ['', Validators.required],
     ritmo: '',
     linkOuvir: [''],
-    quantidadeVezesTocada: '',
+    quantidadeVezesTocada: 0,
     ultimaVezTocada: '',
     linkCifra: '',
     tags: ''
@@ -77,9 +77,9 @@ export class CriarMusicaComponent implements OnInit {
       linkCifra: this.formNovaMusica.value.linkCifra,
       linkOuvir: this.formNovaMusica.value.linkOuvir,      
       ritmo: this.formNovaMusica.value.ritmo,
-      tags: this.tags,
-      quantidadeVezesTocada: 0,
-      ultimaVezTocada: ''
+      tags: this.tags.join(", "),
+      quantidadeVezesTocada: this.formNovaMusica.value.quantidadeVezesTocada,
+      ultimaVezTocada: this.formNovaMusica.value.ultimaVezTocada
     };
     return novaMusica;
   }

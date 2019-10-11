@@ -19,10 +19,9 @@ export class MusicasComponent implements OnInit {
 
   constructor(private musicaDialog: MatDialog) { }
 
-  displayedColumns: string[] = ['nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada'];
+  displayedColumns: string[] = ['nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
 
   ngOnInit() {
-    console.log("Datasource 1: ", this.dataSource);
 
     if (this.dataSource){
       this.dataSource.data = this.musicas;
@@ -48,7 +47,7 @@ export class MusicasComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(
       () => {
-        setTimeout(() =>{
+        setTimeout(() => {
           this.musicas = JSON.parse(localStorage.getItem("playlist")).musicas;
           this.dataSource.data = this.musicas;
           

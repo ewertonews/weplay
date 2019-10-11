@@ -7,5 +7,5 @@ export interface Musica {
     ritmo: string;
     linkCifra: string;
     linkOuvir: string;
-    tags: string[];
+    tags: string;
 }
