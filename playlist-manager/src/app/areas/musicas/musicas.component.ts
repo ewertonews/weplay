@@ -3,6 +3,7 @@ import { MatDialogConfig, MatDialog, MatPaginator, MatSort } from '@angular/mate
 import { CriarMusicaComponent } from 'src/app/modals/criar-musica/criar-musica.component';
 import { Musica } from 'src/app/interfaces/musica.model';
 import {MatTableDataSource} from '@angular/material/table';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-musicas',
@@ -13,13 +14,14 @@ export class MusicasComponent implements OnInit {
 
   @Input()musicas: Musica[];
   dataSource: MatTableDataSource<Musica>;
+  selection = new SelectionModel<Musica>(true, []);
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private musicaDialog: MatDialog) { }
 
-  displayedColumns: string[] = ['nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
+  displayedColumns: string[] = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
 
   ngOnInit() {
 
@@ -62,6 +64,26 @@ export class MusicasComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+
+    console.log("selection", this.selection);
+  }
+
+  /** The label for the checkbox on the passed row */
+  checkboxLabel(row?: Musica): string {   
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'}`;
+  }
+
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  masterToggle() {
+    this.isAllSelected() ?
+        this.selection.clear() :
+        this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
 }
