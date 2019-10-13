@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Grupo } from 'src/app/interfaces/grupo.model';
 import { Usuario } from 'src/app/interfaces/usuario.model';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
+import { MusicasComponent } from '../musicas/musicas.component';
+import { Musica } from 'src/app/interfaces/musica.model';
 
 @Component({
   selector: 'app-grupos',
@@ -14,13 +16,17 @@ export class GruposComponent implements OnInit {
   grupo: Grupo;
   currentUser: Usuario;
   playlistDoGrupo: Playlist;
+  tabSelecionada = 0;
+  qtdMusicas;
+
+  musicasParaRepertorio: Musica[];
 
   constructor(private playlistService: PlaylistService) { 
     this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
     console.log("currentUser", this.currentUser);
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     let grupoSelecionado = localStorage.getItem("grupo");
     console.log('grupo selec', grupoSelecionado);
     if (grupoSelecionado){
@@ -32,7 +38,16 @@ export class GruposComponent implements OnInit {
       this.playlistDoGrupo = res.data() as Playlist;
       localStorage.setItem("playlist", JSON.stringify(this.playlistDoGrupo));
       console.log("PlaylistDoGrupo ", this.playlistDoGrupo);
+      this.qtdMusicas = this.playlistDoGrupo.musicas.length;
     });
+  }
+
+  receiveMusicasSelecionadas($event) {
+    console.log("recebeu o evento");
+    this.musicasParaRepertorio = $event;
+    console.log("musicasParaRepertorio", this.musicasParaRepertorio);
+    let tabRep = document.getElementById('mat-tab-label-0-1') as HTMLElement;
+    tabRep.click();
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
 import { MatDialogConfig, MatDialog, MatPaginator, MatSort } from '@angular/material';
 import { CriarMusicaComponent } from 'src/app/modals/criar-musica/criar-musica.component';
 import { Musica } from 'src/app/interfaces/musica.model';
@@ -15,7 +15,13 @@ export class MusicasComponent implements OnInit {
   @Input()musicas: Musica[];
   dataSource: MatTableDataSource<Musica>;
   selection = new SelectionModel<Musica>(true, []);
+  musicasSelecionadas: Musica[];
   
+  @Output() musicasSelecionadasEvent = new EventEmitter<Musica[]>();
+  
+  tabSelecionada = 0;
+  textoBotaoRepertorio: string;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -24,7 +30,6 @@ export class MusicasComponent implements OnInit {
   displayedColumns: string[] = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
 
   ngOnInit() {
-
     if (this.dataSource){
       this.dataSource.data = this.musicas;
     }else{
@@ -34,7 +39,7 @@ export class MusicasComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
 
-    console.log("Datasource 2: ", JSON.stringify(this.dataSource));
+   
   }
 
   openCriarMusicaDialog() {
@@ -86,4 +91,23 @@ export class MusicasComponent implements OnInit {
         this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
+  selectMusica($event, row){
+    if($event){      
+      this.selection.toggle(row);
+      console.log(this.selection.selected);
+      this.musicasSelecionadas = this.selection.selected;
+    } 
+    //return null;
+  }
+
+  enviarMusicasCriarRepertorio(){
+    console.log("chamou enviarMusicasCriarRepertorio");
+    this.tabSelecionada = 1;
+    this.sendTabSelecionada(this.musicasSelecionadas);
+  }
+
+  sendTabSelecionada(musicas) {
+    console.log("vai emitir o evento");
+    this.musicasSelecionadasEvent.emit(musicas);
+  }
 }

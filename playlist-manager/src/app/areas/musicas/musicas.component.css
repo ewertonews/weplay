@@ -38,10 +38,6 @@ th, td {
     width: 100%;  
 }  
 
-
-/* th.th-nome div.mat-sort-header-container{
-    width: 500px;
-} */
-/* #mat-tab-content-0-0 > div > app-musicas > div.mat-elevation-z8 > table > thead > tr > th.th-nome.mat-header-cell.ng-tns-c11-3.cdk-column-nome.mat-column-nome.ng-star-inserted > div {
-    width: 150px;
-} */
+.btn-add-musica{
+    margin-top: 2vh;
+}

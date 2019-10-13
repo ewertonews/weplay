@@ -12,12 +12,21 @@
       <div class="col-lg-9">
           <mat-card>
             <mat-card-content>
-                <mat-tab-group mat-stretch-tabs>
-                  <mat-tab label="Músicas"> 
-                   <app-musicas *ngIf="playlistDoGrupo" [musicas]=" playlistDoGrupo.musicas"></app-musicas>
+                <mat-tab-group mat-stretch-tabs selectedIndex="tabSelecionada">                  
+                  <mat-tab> 
+                    <ng-template mat-tab-label>
+                      <i class="fa fa-music fa-lg" aria-hidden="true"></i>
+                      &nbsp;<span *ngIf="qtdMusicas" matBadge="{{qtdMusicas}}" matBadgeOverlap="false">Músicas</span>
+                      <span *ngIf="!qtdMusicas">Músicas</span>
+                    </ng-template>
+                   <app-musicas (musicasSelecionadasEvent)="receiveMusicasSelecionadas($event)" *ngIf="playlistDoGrupo" [musicas]="playlistDoGrupo.musicas"></app-musicas>
                   </mat-tab>
-                  <mat-tab label="Repertórios"> 
-                    Content 2 
+                  <mat-tab label="Repertórios">
+                    <ng-template mat-tab-label>
+                      <i class="fa fa-list-ul fa-lg" aria-hidden="true"></i>
+                      &nbsp;Repertórios
+                    </ng-template> 
+                   {{musicasParaRepertorio | json}}
                   </mat-tab>               
                 </mat-tab-group>
             </mat-card-content>
