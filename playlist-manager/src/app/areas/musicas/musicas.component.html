@@ -1,5 +1,5 @@
 <div class="btn-cadastrar">    
-    <mat-form-field class="filtro">
+    <mat-form-field class="filtro" *ngIf="temMusicas">
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Procurar música" autocomplete="off">
     </mat-form-field>
     <div class="pull-right btn-add-musica">
@@ -8,12 +8,12 @@
         <button mat-raised-button color="primary" (click)="openCriarMusicaDialog()"><i class="fa fa-plus"></i> &nbsp;Adicionar Música</button>        
     </div>             
 </div>
-<div *ngIf="!musicas">
+<div *ngIf="!temMusicas">
     <p>Este grupo ainda não tem músicas cadastradas</p>
 </div>
-<div class="mat-elevation-z8">
+<div *ngIf="temMusicas" class="mat-elevation-z8">   
+    <table mat-table [dataSource]="dataSource" matSort>
 
-    <table mat-table [dataSource]="dataSource" matSort>    
          <!-- Checkbox Column -->
         <ng-container matColumnDef="select">
             <th mat-header-cell *matHeaderCellDef  style="width: 45px">

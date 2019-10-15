@@ -37,6 +37,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+//import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 import { environment } from '../environments/environment';
 import { AuthService } from './autenticacao/auth.service';
@@ -47,6 +49,7 @@ import { UsuariosService } from './services/usuarios.service';
 import { MusicasComponent } from './areas/musicas/musicas.component';
 import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.component';
 import { getPortuguesePaginatorIntl } from './areas/musicas/portuguese-paginator-intl';
+import { RepertoriosComponent } from './areas/repertorios/repertorios.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,8 @@ import { getPortuguesePaginatorIntl } from './areas/musicas/portuguese-paginator
     CardGrupoComponent,
     GruposComponent,
     MusicasComponent,
-    CriarMusicaComponent
+    CriarMusicaComponent,
+    RepertoriosComponent
   ],
   imports: [
     BrowserModule,

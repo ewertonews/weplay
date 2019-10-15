@@ -11,8 +11,9 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrls: ['./musicas.component.css']
 })
 export class MusicasComponent implements OnInit {
+  temMusicas = false;
+  @Input() musicas: Musica[];
 
-  @Input()musicas: Musica[];
   dataSource: MatTableDataSource<Musica>;
   selection = new SelectionModel<Musica>(true, []);
   musicasSelecionadas: Musica[];
@@ -38,8 +39,12 @@ export class MusicasComponent implements OnInit {
 
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    if (this.musicas.length > 0){ 
+      console.log("musicas", this.musicas);
+      console.log(this.dataSource.data);     
 
-   
+      this.temMusicas = true;
+    }    
   }
 
   openCriarMusicaDialog() {
@@ -54,11 +59,16 @@ export class MusicasComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(
       () => {
-        setTimeout(() => {
-          this.musicas = JSON.parse(localStorage.getItem("playlist")).musicas;
-          this.dataSource.data = this.musicas;
+        this.musicas = JSON.parse(localStorage.getItem("playlist")).musicas;
+        this.dataSource.data = this.musicas;
+        if(this.musicas.length > 0){
+          this.temMusicas = true;
+        }
+        // setTimeout(() => {
+
+         
           
-        }, 500);         
+        // }, 10);         
       }      
     );
   }
@@ -87,8 +97,13 @@ export class MusicasComponent implements OnInit {
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
     this.isAllSelected() ?
-        this.selection.clear() :
+        this.clearSelection() :
         this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+
+  clearSelection(){
+    this.musicasSelecionadas = [];
+    this.selection.clear();
   }
 
   selectMusica($event, row){

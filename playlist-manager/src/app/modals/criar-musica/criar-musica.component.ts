@@ -6,6 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Musica } from 'src/app/interfaces/musica.model';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
+import { MusicasService } from 'src/app/services/musicas.service';
 
 @Component({
   selector: 'app-criar-musica',
@@ -26,7 +27,8 @@ export class CriarMusicaComponent implements OnInit {
     public dialogRef: MatDialogRef<CriarMusicaComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Musica,
     private fb: FormBuilder,
-    private playlistService: PlaylistService) {}
+    private playlistService: PlaylistService,
+    private musicaService: MusicasService) {}
     
   formNovaMusica = this.fb.group({
     id: '',
@@ -61,17 +63,17 @@ export class CriarMusicaComponent implements OnInit {
 
   addSongToPlaylist(){
     let musica = this.criarMusica();
-    this.playListDoGrupo.musicas.push(musica);
+    
     localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
-    this.playlistService.addSongToPlaylist(this.playListDoGrupo).then(resAddSong => {
-      console.log("musica adiciona a playlist ", musica);      
+    this.playlistService.addSongToPlaylist(musica, this.playListDoGrupo.idGrupo).then(resAddSong => {
+      console.log("musica adiciona a playlist ");      
     });
   }
 
   criarMusica(){
     console.log("tags", this.tags)
     let novaMusica: Musica = {
-      id: "musica",
+      id: this.generateMusicId(this.formNovaMusica.value.nome),
       artista: this.formNovaMusica.value.artista,
       nome: this.formNovaMusica.value.nome,
       linkCifra: this.formNovaMusica.value.linkCifra,
@@ -81,7 +83,12 @@ export class CriarMusicaComponent implements OnInit {
       quantidadeVezesTocada: this.formNovaMusica.value.quantidadeVezesTocada,
       ultimaVezTocada: this.formNovaMusica.value.ultimaVezTocada
     };
+    this.playListDoGrupo.musicas.push(novaMusica);    
     return novaMusica;
+  }
+
+  generateMusicId(nomeMusica){
+    return nomeMusica.toLowerCase().replace(" ",  "_");
   }
 
   add(event: MatChipInputEvent): void {
