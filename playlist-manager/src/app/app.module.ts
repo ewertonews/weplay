@@ -53,6 +53,7 @@ import { RepertoriosComponent } from './areas/repertorios/repertorios.component'
 import { ExcluirMusicaModalComponent } from './modals/excluir-musica-modal/excluir-musica-modal.component';
 import { EditarMusicaModalComponent } from './modals/editar-musica-modal/editar-musica-modal.component';
 import { EditarRepertorioModalComponent } from './modals/editar-repertorio-modal/editar-repertorio-modal.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { EditarRepertorioModalComponent } from './modals/editar-repertorio-modal
     MatIconModule,
     MatExpansionModule,
     MatInputModule,
+    DragDropModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
