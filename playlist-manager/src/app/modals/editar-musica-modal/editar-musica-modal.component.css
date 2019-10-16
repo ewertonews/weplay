@@ -1,0 +1,8 @@
+.half-width {
+    width: 32%;
+    margin: 0 5px 3px 5px;
+}
+
+.full-width{
+    width:100%;
+}

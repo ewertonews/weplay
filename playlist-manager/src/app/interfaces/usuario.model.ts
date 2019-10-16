@@ -6,4 +6,5 @@ export class Usuario {
     sexo: string;
     urlFoto: string;
     idGrupos: string[] = new Array<string>();
+    telefone: string;
 }

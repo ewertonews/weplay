@@ -29,6 +29,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatPaginatorIntl, MatNativeDateModule} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { LandingComponent } from './areas/landing/landing.component';
@@ -37,7 +38,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-//import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 import { environment } from '../environments/environment';
@@ -50,6 +50,9 @@ import { MusicasComponent } from './areas/musicas/musicas.component';
 import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.component';
 import { getPortuguesePaginatorIntl } from './areas/musicas/portuguese-paginator-intl';
 import { RepertoriosComponent } from './areas/repertorios/repertorios.component';
+import { ExcluirMusicaModalComponent } from './modals/excluir-musica-modal/excluir-musica-modal.component';
+import { EditarMusicaModalComponent } from './modals/editar-musica-modal/editar-musica-modal.component';
+import { EditarRepertorioModalComponent } from './modals/editar-repertorio-modal/editar-repertorio-modal.component';
 
 @NgModule({
   declarations: [
@@ -62,15 +65,17 @@ import { RepertoriosComponent } from './areas/repertorios/repertorios.component'
     GruposComponent,
     MusicasComponent,
     CriarMusicaComponent,
-    RepertoriosComponent
+    RepertoriosComponent,
+    ExcluirMusicaModalComponent,
+    EditarMusicaModalComponent,
+    EditarRepertorioModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule.forRoot(adminLteConf),
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatInputModule,
+    ReactiveFormsModule,    
     MatSelectModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -88,6 +93,8 @@ import { RepertoriosComponent } from './areas/repertorios/repertorios.component'
     MatTabsModule,
     MatBadgeModule,
     MatIconModule,
+    MatExpansionModule,
+    MatInputModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
@@ -100,6 +107,11 @@ import { RepertoriosComponent } from './areas/repertorios/repertorios.component'
     MatDatepickerModule
   ],
   bootstrap: [AppComponent],
-  entryComponents: [CriarGrupoModalComponent, CriarMusicaComponent]
+  entryComponents: [
+    CriarGrupoModalComponent, 
+    CriarMusicaComponent,
+    ExcluirMusicaModalComponent,
+    EditarMusicaModalComponent
+  ]
 })
 export class AppModule { }

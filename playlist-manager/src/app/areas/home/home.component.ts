@@ -89,6 +89,7 @@ export class HomeComponent implements OnInit {
           idGrupos: [],
           papel: null,
           sexo: null,
+          telefone: null
     };
 
     this.userService.getUserByEmail(loggedUser.user.email).subscribe(respUserQuery => {
@@ -127,7 +128,7 @@ export class HomeComponent implements OnInit {
       this.grupoService.associateUserToGroup(grupo.id, this.usuario);
     });
 
-    this.playListService.createPlaylist(grupo.id).then(res => {
+    this.playListService.createPlaylist(grupo).then(res => {
       console.log("PLAYLIST CRIADA");
     }, error => {
       console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      

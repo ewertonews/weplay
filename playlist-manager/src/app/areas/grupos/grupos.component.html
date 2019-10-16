@@ -4,12 +4,34 @@
     <!-- <div class="col-md-4">
         <img height="10%" mat-card-image src="{{grupo.foto}}" alt="foto de {{grupo.nome}}">
     </div> -->
-    <div class="col-md-12">
+    <div class="col-md-7">
       <h1>{{grupo.nome}}</h1>
     </div>
+    <div class="col-md-5">
+        <mat-expansion-panel class="integrantes">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h4>Integrantes</h4>
+              </mat-panel-title>               
+            </mat-expansion-panel-header>
+            <mat-list>
+              <div>
+                  <mat-list-item *ngFor="let usuario of usuariosDoGrupo">
+                      {{usuario.nome}} - {{usuario.email}} - Guitarra 
+                   </mat-list-item>
+                  <mat-divider></mat-divider>
+              </div>
+              </mat-list> 
+          </mat-expansion-panel>
+    </div>
   </div>
+  <!-- <div class="row">
+      <div class="col-md-6">        
+       
+      </div>
+   </div> -->
   <div class="row">          
-      <div class="col-lg-9">
+      <div class="col-lg-12">
           <mat-card>
             <mat-card-content>
                 <mat-tab-group mat-stretch-tabs selectedIndex="tabSelecionada">                  
@@ -26,19 +48,11 @@
                       <i class="fa fa-list-ul fa-lg" aria-hidden="true"></i>
                       &nbsp;Repertórios
                     </ng-template> 
-                   {{musicasParaRepertorio | json}}
+                    <app-repertorios [musicasRepertorio]="musicasParaRepertorio"></app-repertorios>                  
                   </mat-tab>               
                 </mat-tab-group>
             </mat-card-content>
           </mat-card>
-        </div>
-        <div class="col-lg-3">
-            <mat-card>
-              <mat-card-title>Integrantes</mat-card-title>
-            </mat-card>
-            <mat-card>
-                <mat-card-title>Líderes</mat-card-title>
-              </mat-card>
-        </div>
+        </div>        
   </div>
 </div>

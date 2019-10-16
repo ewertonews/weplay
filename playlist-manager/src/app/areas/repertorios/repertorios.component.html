@@ -1,29 +1,27 @@
-
 <mat-card *ngIf="musicasRepertorio">
   <br>
   <mat-card-title>
     <h3>Novo Repertório</h3>
   </mat-card-title>
-  <mat-card-content [formGroup]="formNovoRepertorio">
-      <div class="row">
-          <div class="col-md-4">
-            <mat-form-field class="full-width">
-              <input matInput placeholder="Título do evento" formControlName="titulo" autocomplete="off">
-            </mat-form-field>
-          </div>
-          <div class="col-md-4">
-            <mat-form-field class="full-width">
-                <input matInput [matDatepicker]="picker" placeholder="Data do evento" formControlName="dataEvento" autocomplete="off">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-          </div>´
-          <div class="col-md-4">
-            <mat-form-field class="full-width">
-                <button class="mat-raised-button"(click)="criarRepertorio()">Salvar</button>
-            </mat-form-field>
-          </div>         
-        </div>
+  <mat-card-content>
+    <div class="row" [formGroup]="formNovoRepertorio">
+      <div class="col-md-4">
+        <mat-form-field class="full-width"> 
+          <input matInput type="text" placeholder="Título do evento" formControlName="titulo" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="full-width">
+          <input matInput [matDatepicker]="picker" placeholder="Data do evento" formControlName="dataEvento" autocomplete="off">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>´
+      
+      <div class="col-md-4">        
+          <button class="mat-raised-button" (click)="criarRepertorio()">Salvar</button>
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>
 {{ musicasRepertorio | json}}

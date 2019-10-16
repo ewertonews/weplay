@@ -4,6 +4,10 @@ import { CriarMusicaComponent } from 'src/app/modals/criar-musica/criar-musica.c
 import { Musica } from 'src/app/interfaces/musica.model';
 import {MatTableDataSource} from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { ExcluirMusicaModalComponent } from 'src/app/modals/excluir-musica-modal/excluir-musica-modal.component';
+import { PlaylistService } from 'src/app/services/playlist.service';
+import { Playlist } from 'src/app/interfaces/playlist.model';
+import { EditarMusicaModalComponent } from 'src/app/modals/editar-musica-modal/editar-musica-modal.component';
 
 @Component({
   selector: 'app-musicas',
@@ -22,15 +26,17 @@ export class MusicasComponent implements OnInit {
   
   tabSelecionada = 0;
   textoBotaoRepertorio: string;
-
+  playlist: Playlist;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private musicaDialog: MatDialog) { }
+  constructor(private modalDialog: MatDialog, private playlistService: PlaylistService) { }
 
-  displayedColumns: string[] = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
+  // tslint:disable-next-line:max-line-length
+  displayedColumns: string[] = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
 
   ngOnInit() {
+    
     if (this.dataSource){
       this.dataSource.data = this.musicas;
     }else{
@@ -41,9 +47,12 @@ export class MusicasComponent implements OnInit {
     this.dataSource.sort = this.sort;
     if (this.musicas.length > 0){ 
       console.log("musicas", this.musicas);
-      console.log(this.dataSource.data);     
-
+      console.log(this.dataSource.data); 
       this.temMusicas = true;
+           
+
+      this.playlist = JSON.parse(localStorage.getItem("playlist"));
+      
     }    
   }
 
@@ -55,20 +64,17 @@ export class MusicasComponent implements OnInit {
     dialogConfig.hasBackdrop = true;
     dialogConfig.width = "70%";
     dialogConfig.height = "55%";
-    let dialogRef = this.musicaDialog.open(CriarMusicaComponent, dialogConfig);
+    let criarMusicadialogRef = this.modalDialog.open(CriarMusicaComponent, dialogConfig);
 
-    dialogRef.afterClosed().subscribe(
-      () => {
-        this.musicas = JSON.parse(localStorage.getItem("playlist")).musicas;
+    criarMusicadialogRef.afterClosed().subscribe(
+      () => {        
+        this.playlist = JSON.parse(localStorage.getItem('playlist'));
+        this.musicas = this.playlist.musicas;
         this.dataSource.data = this.musicas;
         if(this.musicas.length > 0){
           this.temMusicas = true;
         }
-        // setTimeout(() => {
-
-         
-          
-        // }, 10);         
+                
       }      
     );
   }
@@ -124,5 +130,65 @@ export class MusicasComponent implements OnInit {
   sendTabSelecionada(musicas) {
     console.log("vai emitir o evento");
     this.musicasSelecionadasEvent.emit(musicas);
+  }
+
+  editarMusica(musica, indiceMusica){
+    console.log("musica para editar: ", musica);
+    console.log("indice da musica: ", indiceMusica);
+    const editarMusicadialogRef = this.modalDialog.open(EditarMusicaModalComponent, {
+      disableClose: true,
+      autoFocus: true,
+      hasBackdrop: true,
+      width: "70%",
+      height: "55%",
+      data: musica
+    });
+
+    editarMusicadialogRef.afterClosed().subscribe(musicaEditada => {
+      if (musicaEditada){    
+        this.playlistService.editSongFromPlaylist(musicaEditada, JSON.parse(localStorage.getItem('grupo'))).then(res => {            
+          console.log("edicao:", res);
+          this.musicas[indiceMusica] = musicaEditada;
+          this.dataSource.data = this.musicas;   
+          this.updateDbPlaylist();
+        });       
+      }      
+    });
+  }
+
+  excluirMusica(musica, indiceMusica){
+    console.log("musica para exluir: ", musica);
+    const dialogRef = this.modalDialog.open(ExcluirMusicaModalComponent, {
+      width: '390px',
+      data: musica
+    });
+
+    dialogRef.afterClosed().subscribe(excluir =>{
+      if(excluir){
+        this.playlistService.removeSongFromPlaylist(musica, JSON.parse(localStorage.getItem('grupo'))).then(res => {
+          
+          this.musicas.splice(indiceMusica, 1);
+          this.dataSource.data = this.musicas;
+
+          this.updateDbPlaylist();
+          
+          alert("Musica excluida!");
+          console.log("musica excluida", res);
+          console.log("nova playlist:", this.playlist);
+
+          if(this.musicas.length == 0){
+            this.temMusicas = false;
+          }
+        }).catch(error => {
+          console.log("DEU ERRO!!", error);
+        });
+      }
+      
+    });
+  }
+
+  updateDbPlaylist(){
+    this.playlist.musicas = this.musicas;
+    localStorage.setItem('playlist', JSON.stringify(this.playlist));
   }
 }

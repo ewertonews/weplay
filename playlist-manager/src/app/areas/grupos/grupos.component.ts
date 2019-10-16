@@ -5,6 +5,10 @@ import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
 import { MusicasComponent } from '../musicas/musicas.component';
 import { Musica } from 'src/app/interfaces/musica.model';
+import { MusicasGrupo } from 'src/app/interfaces/musicasGrupos';
+import { MusicasService } from 'src/app/services/musicas.service';
+import { GruposService } from 'src/app/services/grupos.service';
+import { UsuarioGrupo } from 'src/app/interfaces/usuarioGrupo.model';
 
 @Component({
   selector: 'app-grupos',
@@ -18,10 +22,12 @@ export class GruposComponent implements OnInit {
   playlistDoGrupo: Playlist;
   tabSelecionada = 0;
   qtdMusicas;
-
+  usuariosDoGrupo: Usuario[];
   musicasParaRepertorio: Musica[];
 
-  constructor(private playlistService: PlaylistService) { 
+  constructor(
+    private playlistService: PlaylistService,
+    private gruposService: GruposService) { 
     this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
     console.log("currentUser", this.currentUser);
   }
@@ -32,13 +38,29 @@ export class GruposComponent implements OnInit {
     if (grupoSelecionado){
       this.grupo = JSON.parse(grupoSelecionado);
     }
+   
+    this.playlistService.getGroupSongs(this.grupo)
+      .subscribe(resp => {
+        console.log("getPlaylist 2", resp);
 
-    this.playlistService.getPlayList(this.grupo.id).subscribe(res => {
-      //console.log('getPlaylist: ', res.data);
-      this.playlistDoGrupo = res.data() as Playlist;
-      localStorage.setItem("playlist", JSON.stringify(this.playlistDoGrupo));
-      console.log("PlaylistDoGrupo ", this.playlistDoGrupo);
-      this.qtdMusicas = this.playlistDoGrupo.musicas.length;
+        let retornoMusicas = resp.map(obj => {
+          let musicaGrupo = obj as MusicasGrupo;
+          return musicaGrupo.musica;
+        } );
+
+        this.playlistDoGrupo = {
+          idGrupo: this.grupo.id,
+          musicas: retornoMusicas
+        };
+
+        this.qtdMusicas = this.playlistDoGrupo.musicas.length;
+        localStorage.setItem("playlist", JSON.stringify(this.playlistDoGrupo));
+        console.log("PlaylistDoGrupo ", this.playlistDoGrupo);
+      });
+
+    this.gruposService.getGroupUsers(this.grupo.id).subscribe(grupo => {
+      let grupoUsuario = grupo as UsuarioGrupo;
+      this.usuariosDoGrupo = grupoUsuario.usuarios;
     });
   }
 

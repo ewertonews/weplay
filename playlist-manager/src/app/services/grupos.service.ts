@@ -21,6 +21,10 @@ export class GruposService {
     return this.firestore.collection('grupos', ref => ref.where('emailMembros', 'array-contains', emailUsuario)).valueChanges();
   }
 
+  getGroupUsers(idGrupo){
+    return this.firestore.collection('usuariosPorGrupo').doc(idGrupo).valueChanges();
+  }
+
   associateUserToGroup(idGrupo: string, usuario: Usuario){
     let jaTemAssoc: boolean;
     let associacao: MembrosPorGrupo;

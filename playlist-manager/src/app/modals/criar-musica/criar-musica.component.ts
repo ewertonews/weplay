@@ -7,6 +7,7 @@ import { Musica } from 'src/app/interfaces/musica.model';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
 import { MusicasService } from 'src/app/services/musicas.service';
+import { Grupo } from 'src/app/interfaces/grupo.model';
 
 @Component({
   selector: 'app-criar-musica',
@@ -16,6 +17,7 @@ import { MusicasService } from 'src/app/services/musicas.service';
 export class CriarMusicaComponent implements OnInit {
 
   playListDoGrupo: Playlist;
+  grupo: Grupo;
   visible = true;
   selectable = true;
   removable = true;
@@ -45,6 +47,7 @@ export class CriarMusicaComponent implements OnInit {
   
   ngOnInit() {
     this.playListDoGrupo = JSON.parse(localStorage.getItem("playlist"));
+    this.grupo = JSON.parse(localStorage.getItem("grupo"));
   }
 
   close(){
@@ -61,11 +64,12 @@ export class CriarMusicaComponent implements OnInit {
     this.formNovaMusica.reset();
   }
 
+  //mover esse metodo para componente musicas
   addSongToPlaylist(){
     let musica = this.criarMusica();
     
     localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
-    this.playlistService.addSongToPlaylist(musica, this.playListDoGrupo.idGrupo).then(resAddSong => {
+    this.playlistService.addSongToPlaylist(musica, this.grupo).then(resAddSong => {
       console.log("musica adiciona a playlist ");      
     });
   }
