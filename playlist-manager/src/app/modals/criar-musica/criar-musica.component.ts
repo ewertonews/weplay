@@ -8,6 +8,7 @@ import { PlaylistService } from 'src/app/services/playlist.service';
 import { Playlist } from 'src/app/interfaces/playlist.model';
 import { MusicasService } from 'src/app/services/musicas.service';
 import { Grupo } from 'src/app/interfaces/grupo.model';
+import { replaceAll } from 'src/app/shared/GLOBAL_FUNCTIONS';
 
 @Component({
   selector: 'app-criar-musica',
@@ -55,27 +56,44 @@ export class CriarMusicaComponent implements OnInit {
   }
 
   save() {
-    this.addSongToPlaylist();
-    this.dialogRef.close();
+    if(this.addSongToPlaylist()){
+      this.dialogRef.close();
+    }     
   } 
 
   saveAndContinue(){
-    this.addSongToPlaylist();
-    this.formNovaMusica.reset();
+    if(this.addSongToPlaylist()){
+      this.formNovaMusica.reset();
+    }    
   }
 
   //mover esse metodo para componente musicas
   addSongToPlaylist(){
+    let tudocerto = true;
     let musica = this.criarMusica();
+    if(!musica){
+      alert("Esta música já está cadastrada!");
+      return false;
+    }else{
+      localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
+      this.playlistService.addSongToPlaylist(musica, this.grupo).then(resAddSong => {
+        console.log("musica adiciona a playlist ");           
+      });
+      return tudocerto;    
+    }
     
-    localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
-    this.playlistService.addSongToPlaylist(musica, this.grupo).then(resAddSong => {
-      console.log("musica adiciona a playlist ");      
-    });
   }
 
   criarMusica(){
     console.log("tags", this.tags)
+    let nomeMusica = this.formNovaMusica.value.nome.trim();
+
+    let nomesMusicas = this.playListDoGrupo.musicas.map(m => m.nome.trim());
+
+    if (nomesMusicas.includes(nomeMusica)){
+      return null;
+    }
+
     let novaMusica: Musica = {
       id: this.generateMusicId(this.formNovaMusica.value.nome),
       artista: this.formNovaMusica.value.artista,
@@ -91,8 +109,9 @@ export class CriarMusicaComponent implements OnInit {
     return novaMusica;
   }
 
+
   generateMusicId(nomeMusica){
-    return nomeMusica.toLowerCase().replace(" ",  "_");
+    return replaceAll(nomeMusica.toLowerCase(), " ", "_") + "_" + this.grupo.id;    
   }
 
   add(event: MatChipInputEvent): void {

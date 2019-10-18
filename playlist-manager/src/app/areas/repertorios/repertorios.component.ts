@@ -4,6 +4,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import { RepertoriosService } from 'src/app/services/repertorios.service';
+import { Repertorio } from 'src/app/interfaces/repertorio.model';
+import { Setlist } from 'src/app/interfaces/setlist.model';
+import { generateId } from 'src/app/shared/GLOBAL_FUNCTIONS';
+import { Grupo } from 'src/app/interfaces/grupo.model';
 @Component({
   selector: 'app-repertorios',
   templateUrl: './repertorios.component.html',
@@ -18,8 +23,12 @@ export class RepertoriosComponent implements OnInit {
   addOnBlur = true;
   readonly separatorKeysCodes: number[] = [COMMA, ENTER];
   momentos = [];
+  grupo: Grupo;
+  grupoSetLists: Setlist[] = [];
   //setList: any[] = this.musicasRepertorio;
-  constructor(private fb: FormBuilder) { }
+  constructor(    
+    private fb: FormBuilder, 
+    private repertorioService: RepertoriosService) { }
 
 
   formNovoRepertorio = this.fb.group({
@@ -29,7 +38,36 @@ export class RepertoriosComponent implements OnInit {
   });
 
   ngOnInit() {
-    // tslint:disable-next-line:no-unused-expression   
+    this.grupo = JSON.parse(localStorage.getItem('grupo'));
+    this.repertorioService.getSetLists(this.grupo).subscribe(setlists => {
+      this.grupoSetLists = setlists as Setlist[];
+      this.grupoSetLists.sort((a, b) => (a.dataEvento > b.dataEvento) ? 1 : -1);
+      console.log("SETLISTS", this.grupoSetLists);
+    }, error => {
+      alert("Falha ao obter setlists");
+    });
+  }
+
+
+  criarRepertorio(){
+    let repertorio: Setlist = {
+      id: this.grupo.id + "_" + generateId(),
+      idGrupo: this.grupo.id,
+      tituloEvento: this.formNovoRepertorio.value.titulo.toString(),
+      dataEvento: this.formNovoRepertorio.value.dataEvento,
+      items: this.musicasRepertorio     
+    };
+    console.log("REPERTORIO", repertorio);
+    this.repertorioService.createSetlist(this.grupo, repertorio).then(res => {
+      //this.grupoSetLists.unshift(repertorio);
+      //alert("Repertório criado com sucesso");
+      this.musicasRepertorio = [];
+      console.log(repertorio);
+    }).catch(error => {
+      alert("Deu errado! :(");
+      console.log(error);
+    });
+    
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -49,8 +87,8 @@ export class RepertoriosComponent implements OnInit {
 
     // Add our fruit
     if ((value || '').trim()) {
-      this.momentos.push(value.trim());
-      this.musicasRepertorio.push(value.trim());
+      this.momentos.unshift(value.trim());
+      this.musicasRepertorio.unshift(value.trim());
     }
 
     // Reset the input value

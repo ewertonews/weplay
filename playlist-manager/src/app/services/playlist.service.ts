@@ -8,6 +8,7 @@ import { Grupo } from '../interfaces/grupo.model';
 import { MusicasGrupo } from '../interfaces/musicasGrupos';
 import { resolve } from 'url';
 import { reject } from 'q';
+import { getAnoMesCriacaoGrupo } from '../shared/GLOBAL_FUNCTIONS';
 //import * as firebase from 'firebase';
 
 
@@ -24,7 +25,8 @@ export class PlaylistService {
     
     return new Promise((resolve) => {
       let dataCricao = new Date(grupo.criadoEm);
-      let anomes = dataCricao.getFullYear() + "_" + dataCricao.getDate();
+      let anomes = dataCricao.getFullYear().toString() + "_" + dataCricao.getMonth().toString();
+      console.log("ANOMES", anomes);
       this.firestore.collection('musicasGrupos/').doc(anomes).get().subscribe(res => {
         if(!res.exists){
           resolve(this.firestore.collection('musicasGrupos').doc(anomes).collection('musicas').add({}));
@@ -38,23 +40,21 @@ export class PlaylistService {
 
 
   getGroupSongs(grupo: Grupo){
-    let anomes = this.getAnoMes(grupo);
+    let anomes = getAnoMesCriacaoGrupo(grupo);
     return this.firestore.collection('musicasGrupos/' + anomes + '/musicas', ref => ref.where('idGrupo', '==', grupo.id)).valueChanges();
   }
 
   
   
   removeSongFromPlaylist(musica, grupo){    
-    let anomes = this.getAnoMes(grupo);
+    let anomes = getAnoMesCriacaoGrupo(grupo);
     return this.firestore.collection('musicasGrupos/' + anomes + '/musicas').doc(musica.id).delete();    
   }
 
-  // addSongToPlaylist(playlist: Playlist){
-  //   return this.firestore.doc('playlists/' + playlist.idGrupo).update(playlist);
-  // }
+
 
   editSongFromPlaylist(novaMusica, grupo){
-    let anomes = this.getAnoMes(grupo);
+    let anomes = getAnoMesCriacaoGrupo(grupo);
     let novoRegistro: MusicasGrupo = {
       idGrupo: grupo.id,
       musica: novaMusica
@@ -62,13 +62,11 @@ export class PlaylistService {
     return this.firestore.doc('musicasGrupos/' + anomes + '/musicas/' + novaMusica.id).update(novoRegistro);
   }
 
-  getAnoMes(grupo: Grupo){
-    let dataCricao = new Date(grupo.criadoEm);
-    let anomes = dataCricao.getFullYear() + "_" + dataCricao.getDate();
-    return anomes;
-  }
+  
+
   addSongToPlaylist(musicaNova, grupo: Grupo){
-    let anomes = this.getAnoMes(grupo);
+    let anomes = getAnoMesCriacaoGrupo(grupo);
+    
     let regMusica: MusicasGrupo = {
       idGrupo: grupo.id,
       musica: musicaNova 

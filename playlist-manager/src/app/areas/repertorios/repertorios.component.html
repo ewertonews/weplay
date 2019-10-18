@@ -1,4 +1,4 @@
-<mat-card *ngIf="musicasRepertorio">
+<mat-card *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
   <br>
   <mat-card-title>
     <h3>Novo Repertório</h3>
@@ -6,74 +6,95 @@
   <mat-card-content>
     <div class="row" [formGroup]="formNovoRepertorio">
       <div class="col-md-5">
-        <mat-form-field class="full-width"> 
+        <mat-form-field class="full-width">
           <input matInput type="text" placeholder="Título do evento" formControlName="titulo" autocomplete="off">
         </mat-form-field>
       </div>
       <div class="col-md-4">
         <mat-form-field class="full-width">
-          <input matInput [matDatepicker]="picker" placeholder="Data do evento" formControlName="dataEvento" autocomplete="off">
+          <input matInput [matDatepicker]="picker" placeholder="Data do evento" formControlName="dataEvento"
+            autocomplete="off">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-      </div>      
-      
-      <div class="col-md-3 btn-novo-repertorio">        
-          <button class="mat-raised-button" (click)="criarRepertorio()">Salvar</button>
+      </div>
+
+      <div class="col-md-3 btn-novo-repertorio">
+        <button class="mat-raised-button" (click)="criarRepertorio()">Salvar</button>
       </div>
     </div>
   </mat-card-content>
   <div class="row">
-    <div class="col-md-3">
-        <mat-form-field class="full-width">
-            <mat-chip-list #chipList aria-label="Seleção de momentos">              
-              <input placeholder="Seções do evento"
-                      [matChipInputFor]="chipList"
-                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                      [matChipInputAddOnBlur]="addOnBlur"
-                      (matChipInputTokenEnd)="add($event)"
-                      formControlName="momentos" autocomplete="off">
-            </mat-chip-list>    
-            <mat-hint  align="start">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>        
-          </mat-form-field>
+    <div class="col-md-3" [formGroup]="formNovoRepertorio">
+      <mat-form-field class="full-width">
+        <mat-chip-list #chipList aria-label="Seleção de momentos">
+          <input placeholder="Seções do evento" [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)" formControlName="momentos" autocomplete="off">
+        </mat-chip-list>
+        <mat-hint align="start">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>
+      </mat-form-field>
     </div>
-    <div class="col-md-9">       
-        <mat-chip *ngFor="let momento of momentos" [selectable]="selectable"
-        [removable]="removable" (removed)="remove(momento)">
-      {{momento}}
-      <mat-icon matChipRemove *ngIf="removable">cancelar</mat-icon>
+    <div class="col-md-9">
+      <mat-chip *ngFor="let momento of momentos" [selectable]="selectable" [removable]="removable"
+        (removed)="remove(momento)">
+        {{momento}}
+        <mat-icon matChipRemove *ngIf="removable">cancelar</mat-icon>
       </mat-chip>
-    </div>    
-  </div>
-  <div class="row">  
-      <div class="col-md-4">
-          <mat-card class="card-rep">
-              <mat-card-content>
-                  <div>
-                    <label>Título do evento</label><br>
-                    {{formNovoRepertorio.value.titulo}}    
-                    <br>   
-                    <label>Data</label><br>
-                    {{formNovoRepertorio.value.dataEvento | date:'dd/MM/yyyy'}}
-                  </div>      
-                  <label>Musicas</label>                  
-                  <div class="example-container">
-                       <div
-                         cdkDropList
-                         #todoList="cdkDropList"
-                         [cdkDropListData]="musicasRepertorio"
-                         class="example-list"
-                         (cdkDropListDropped)="drop($event)">
-                         
-                         <div class="example-box" *ngFor="let item of musicasRepertorio; let i = index" cdkDrag>
-                           <span style="width: 10px;" *ngIf="item.nome"></span> {{item.nome || item}}
-                            <i class="fa fa-ellipsis-v pull-right"></i>
-                         </div>
-                       </div>
-                     </div>
-              </mat-card-content>
-          </mat-card>
-      </div>      
     </div>
+  </div>
+  <div class="row" *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
+    <div class="col-md-4">
+      <br>
+      <mat-card class="card-rep">
+        <mat-card-content>
+          <div>
+            <strong>Título do evento</strong><br>
+            {{formNovoRepertorio.value.titulo}}
+            <br>
+            <label>Data</label><br>
+            {{formNovoRepertorio.value.dataEvento | date:'dd/MM/yyyy'}}
+          </div>
+          <label>Musicas</label>
+          <div class="example-container">
+            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="musicasRepertorio" class="example-list"
+              (cdkDropListDropped)="drop($event)">
 
-
+              <div class="example-box" *ngFor="let item of musicasRepertorio; let i = index" cdkDrag>
+                <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
+                <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
+                <i class="fa fa-ellipsis-v pull-right"></i>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</mat-card>
+<div class="row" *ngIf="grupoSetLists.length > 0">
+    <div class="col-sm-4" *ngFor="let setlist of grupoSetLists">
+      <br>
+      <mat-card class="card-rep">
+        <mat-card-content>
+          <div>
+            <strong>Título do evento</strong><br>
+            {{setlist.titulo}}
+            <br>
+            <label>Data</label><br>
+            {{setlist.dataEvento.toDate() | date:'dd/MM/yyyy'}}
+          </div>
+          <label>Musicas</label>
+          <div class="example-container">
+            <div class="example-list">
+              <div class="example-box" *ngFor="let item of setlist.items; let i = index">
+                <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
+                <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
+                <i class="fa fa-ellipsis-v pull-right"></i>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

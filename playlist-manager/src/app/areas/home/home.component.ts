@@ -112,7 +112,7 @@ export class HomeComponent implements OnInit {
 
   criarGrupo(data){
     let grupo = new Grupo();    
-    grupo.id = this.generateIdGrupo();
+    grupo.id = this.generateIdGrupo().toString();
     grupo.nome = data.nome;
     grupo.criadoEm = new Date().toLocaleDateString();
     this.usuario.idGrupos.push(grupo.id);
@@ -128,11 +128,11 @@ export class HomeComponent implements OnInit {
       this.grupoService.associateUserToGroup(grupo.id, this.usuario);
     });
 
-    this.playListService.createPlaylist(grupo).then(res => {
-      console.log("PLAYLIST CRIADA");
-    }, error => {
-      console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      
-    });
+    // this.playListService.createPlaylist(grupo).then(res => {
+    //   console.log("PLAYLIST CRIADA");
+    // }, error => {
+    //   console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      
+    // });
 
     console.log("grupos do usuario: ", this.gruposDoUsuario);
 
@@ -141,9 +141,8 @@ export class HomeComponent implements OnInit {
 
   generateIdGrupo(){
     let hoje = new Date();
-    return Math.random().toString(36).substring(2) + "_" 
-    + hoje.getDate() + hoje.getMonth() + hoje.getFullYear()
-    + hoje.getSeconds() + hoje.getMilliseconds();
+    //Math.random().toString(36).substring(2) 
+    return "G" + hoje.getMilliseconds() + hoje.getSeconds() + hoje.getDate() + hoje.getMonth() + hoje.getFullYear();
   }
   
   obterGruposDoUsuario(){

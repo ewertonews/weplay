@@ -68,8 +68,12 @@ export class GruposComponent implements OnInit {
     console.log("recebeu o evento");
     this.musicasParaRepertorio = $event;
     console.log("musicasParaRepertorio", this.musicasParaRepertorio);
-    let tabRep = document.getElementById('mat-tab-label-0-1') as HTMLElement;
-    tabRep.click();
+    if(localStorage.getItem("tab")){
+      let tabRep = document.getElementById('mat-tab-label-0-1') as HTMLElement;
+      tabRep.click();
+      localStorage.removeItem("tab");
+    }
+    
   }
 
 }

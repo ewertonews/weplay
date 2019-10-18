@@ -27,34 +27,40 @@ export class MusicasComponent implements OnInit {
   tabSelecionada = 0;
   textoBotaoRepertorio: string;
   playlist: Playlist;
+  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private modalDialog: MatDialog, private playlistService: PlaylistService) { }
+  constructor(private modalDialog: MatDialog, private playlistService: PlaylistService) {
+    console.log("=========================== musicas.component =================================");
+  }
 
   // tslint:disable-next-line:max-line-length
-  displayedColumns: string[] = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
+  displayedColumns: string[] = 
+  ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
 
-  ngOnInit() {
-    
-    if (this.dataSource){
-      this.dataSource.data = this.musicas;
-    }else{
-      this.dataSource = new MatTableDataSource(this.musicas);
-    }    
-
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-    if (this.musicas.length > 0){ 
-      console.log("musicas", this.musicas);
-      console.log(this.dataSource.data); 
+  ngOnInit() {    
+    // if (this.dataSource){
+    //   this.dataSource.data = this.musicas;
+    // }else{
+      
+    // }    
+    if (this.musicas.length > 0){     
+      
+      this.initPaginator();
       this.temMusicas = true;
-           
-
       this.playlist = JSON.parse(localStorage.getItem("playlist"));
       
     }    
   }
+  
+
+
+  // tslint:disable-next-line:use-life-cycle-interface
+  // ngAfterViewInit() {
+    
+  // }
+
 
   openCriarMusicaDialog() {
     console.log("Chamou o open dialog")
@@ -70,13 +76,22 @@ export class MusicasComponent implements OnInit {
       () => {        
         this.playlist = JSON.parse(localStorage.getItem('playlist'));
         this.musicas = this.playlist.musicas;
-        this.dataSource.data = this.musicas;
+       // this.dataSource.data = this.musicas;
         if(this.musicas.length > 0){
           this.temMusicas = true;
+          this.initPaginator();
         }
                 
       }      
     );
+  }
+
+  initPaginator() {
+    this.dataSource = new MatTableDataSource(this.musicas);           
+    setTimeout(() => {
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
   }
 
   applyFilter(filterValue: string) {
@@ -85,8 +100,6 @@ export class MusicasComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-
-    console.log("selection", this.selection);
   }
 
   /** The label for the checkbox on the passed row */
@@ -109,6 +122,7 @@ export class MusicasComponent implements OnInit {
 
   clearSelection(){
     this.musicasSelecionadas = [];
+    this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
     this.selection.clear();
   }
 
@@ -117,13 +131,14 @@ export class MusicasComponent implements OnInit {
       this.selection.toggle(row);
       console.log(this.selection.selected);
       this.musicasSelecionadas = this.selection.selected;
+      this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
     } 
     //return null;
   }
 
   enviarMusicasCriarRepertorio(){
     console.log("chamou enviarMusicasCriarRepertorio");
-    this.tabSelecionada = 1;
+    localStorage.setItem("tab", "1");
     this.sendTabSelecionada(this.musicasSelecionadas);
   }
 
