@@ -87,11 +87,23 @@
           <label>Musicas</label>
           <div class="example-container">
             <div class="example-list">
-              <div class="example-box" *ngFor="let item of setlist.items; let i = index">
+              <mat-accordion [displayMode]="flat">
+                  <mat-expansion-panel *ngFor="let item of setlist.items; let i = index" [disabled]="!item.nome">
+                      <mat-expansion-panel-header>
+                          <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
+                          <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
+                      </mat-expansion-panel-header>
+                      <div>
+                        <button [disabled]="!item.linkOuvir" class="mat-raised-button">Ouvir</button>&nbsp;
+                        <button [disabled]="!item.linkCifra" class="mat-raised-button">Cifra</button>
+                      </div>
+                  </mat-expansion-panel>
+              </mat-accordion>
+              <!-- <div class="example-box" *ngFor="let item of setlist.items; let i = index">
                 <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
                 <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
                 <i class="fa fa-ellipsis-v pull-right"></i>
-              </div>
+              </div> -->
             </div>
           </div>
         </mat-card-content>
