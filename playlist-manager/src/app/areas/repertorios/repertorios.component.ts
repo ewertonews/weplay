@@ -107,10 +107,10 @@ export class RepertoriosComponent implements OnInit {
     }
   }
 
-  podeEditarSetlist(setlist: Setlist){
-    let hoje = new Date();
-    return setlist.dataEvento.toDate() >= hoje;
-  }
+  // podeEditarSetlist(setlist: Setlist){
+  //   let hoje = new Date();
+  //   return setlist.dataEvento.toDate() >= hoje;
+  // }
 
   editarSetlist(setlist: Setlist){
     // if(!this.podeEditarSetlist(setlist)){

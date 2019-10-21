@@ -1,5 +1,292 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -180,20 +467,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_badge__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/badge */ "./node_modules/@angular/material/esm5/badge.es5.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
-/* harmony import */ var _areas_landing_landing_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./areas/landing/landing.component */ "./src/app/areas/landing/landing.component.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _autenticacao_auth_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./autenticacao/auth.service */ "./src/app/autenticacao/auth.service.ts");
-/* harmony import */ var _modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./modals/criar-grupo/criar-grupo-modal.component */ "./src/app/modals/criar-grupo/criar-grupo-modal.component.ts");
-/* harmony import */ var _areas_grupos_card_grupo_card_grupo_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./areas/grupos/card-grupo/card-grupo.component */ "./src/app/areas/grupos/card-grupo/card-grupo.component.ts");
-/* harmony import */ var _areas_grupos_grupos_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./areas/grupos/grupos.component */ "./src/app/areas/grupos/grupos.component.ts");
-/* harmony import */ var _services_usuarios_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./services/usuarios.service */ "./src/app/services/usuarios.service.ts");
-/* harmony import */ var _areas_musicas_musicas_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./areas/musicas/musicas.component */ "./src/app/areas/musicas/musicas.component.ts");
-/* harmony import */ var _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./modals/criar-musica/criar-musica.component */ "./src/app/modals/criar-musica/criar-musica.component.ts");
-/* harmony import */ var _areas_musicas_portuguese_paginator_intl__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./areas/musicas/portuguese-paginator-intl */ "./src/app/areas/musicas/portuguese-paginator-intl.ts");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm5/expansion.es5.js");
+/* harmony import */ var _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material-moment-adapter */ "./node_modules/@angular/material-moment-adapter/esm5/material-moment-adapter.es5.js");
+/* harmony import */ var _areas_landing_landing_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./areas/landing/landing.component */ "./src/app/areas/landing/landing.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _autenticacao_auth_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./autenticacao/auth.service */ "./src/app/autenticacao/auth.service.ts");
+/* harmony import */ var _modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./modals/criar-grupo/criar-grupo-modal.component */ "./src/app/modals/criar-grupo/criar-grupo-modal.component.ts");
+/* harmony import */ var _areas_grupos_card_grupo_card_grupo_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./areas/grupos/card-grupo/card-grupo.component */ "./src/app/areas/grupos/card-grupo/card-grupo.component.ts");
+/* harmony import */ var _areas_grupos_grupos_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./areas/grupos/grupos.component */ "./src/app/areas/grupos/grupos.component.ts");
+/* harmony import */ var _services_usuarios_service__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./services/usuarios.service */ "./src/app/services/usuarios.service.ts");
+/* harmony import */ var _areas_musicas_musicas_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./areas/musicas/musicas.component */ "./src/app/areas/musicas/musicas.component.ts");
+/* harmony import */ var _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./modals/criar-musica/criar-musica.component */ "./src/app/modals/criar-musica/criar-musica.component.ts");
+/* harmony import */ var _areas_musicas_portuguese_paginator_intl__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./areas/musicas/portuguese-paginator-intl */ "./src/app/areas/musicas/portuguese-paginator-intl.ts");
+/* harmony import */ var _areas_repertorios_repertorios_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./areas/repertorios/repertorios.component */ "./src/app/areas/repertorios/repertorios.component.ts");
+/* harmony import */ var _modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./modals/excluir-musica-modal/excluir-musica-modal.component */ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.ts");
+/* harmony import */ var _modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./modals/editar-musica-modal/editar-musica-modal.component */ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.ts");
+/* harmony import */ var _modals_editar_repertorio_modal_editar_repertorio_modal_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./modals/editar-repertorio-modal/editar-repertorio-modal.component */ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.ts");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
+
+
+
+
+
+
+
 
 
 
@@ -246,12 +547,16 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                 _areas_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
                 _header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
-                _areas_landing_landing_component__WEBPACK_IMPORTED_MODULE_29__["LandingComponent"],
-                _modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_36__["CriarGrupoModalComponent"],
-                _areas_grupos_card_grupo_card_grupo_component__WEBPACK_IMPORTED_MODULE_37__["CardGrupoComponent"],
-                _areas_grupos_grupos_component__WEBPACK_IMPORTED_MODULE_38__["GruposComponent"],
-                _areas_musicas_musicas_component__WEBPACK_IMPORTED_MODULE_40__["MusicasComponent"],
-                _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_41__["CriarMusicaComponent"]
+                _areas_landing_landing_component__WEBPACK_IMPORTED_MODULE_31__["LandingComponent"],
+                _modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_38__["CriarGrupoModalComponent"],
+                _areas_grupos_card_grupo_card_grupo_component__WEBPACK_IMPORTED_MODULE_39__["CardGrupoComponent"],
+                _areas_grupos_grupos_component__WEBPACK_IMPORTED_MODULE_40__["GruposComponent"],
+                _areas_musicas_musicas_component__WEBPACK_IMPORTED_MODULE_42__["MusicasComponent"],
+                _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__["CriarMusicaComponent"],
+                _areas_repertorios_repertorios_component__WEBPACK_IMPORTED_MODULE_45__["RepertoriosComponent"],
+                _modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__["ExcluirMusicaModalComponent"],
+                _modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"],
+                _modals_editar_repertorio_modal_editar_repertorio_modal_component__WEBPACK_IMPORTED_MODULE_48__["EditarRepertorioModalComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -259,7 +564,6 @@ var AppModule = /** @class */ (function () {
                 angular_admin_lte__WEBPACK_IMPORTED_MODULE_5__["LayoutModule"].forRoot(_admin_lte_conf__WEBPACK_IMPORTED_MODULE_7__["adminLteConf"]),
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_11__["MatInputModule"],
                 _angular_material_select__WEBPACK_IMPORTED_MODULE_12__["MatSelectModule"],
                 _angular_material_button__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
                 _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_14__["MatCheckboxModule"],
@@ -277,19 +581,29 @@ var AppModule = /** @class */ (function () {
                 _angular_material_tabs__WEBPACK_IMPORTED_MODULE_25__["MatTabsModule"],
                 _angular_material_badge__WEBPACK_IMPORTED_MODULE_26__["MatBadgeModule"],
                 _angular_material_icon__WEBPACK_IMPORTED_MODULE_28__["MatIconModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_30__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_34__["environment"].firebase),
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_31__["AngularFirestoreModule"],
-                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_32__["AngularFireAuthModule"],
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_33__["AngularFireDatabaseModule"]
+                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_29__["MatExpansionModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_11__["MatInputModule"],
+                _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_49__["DragDropModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_32__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_36__["environment"].firebase),
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_33__["AngularFirestoreModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_34__["AngularFireAuthModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_35__["AngularFireDatabaseModule"]
             ],
             providers: [
-                _autenticacao_auth_service__WEBPACK_IMPORTED_MODULE_35__["AuthService"],
-                _services_usuarios_service__WEBPACK_IMPORTED_MODULE_39__["UsuariosService"],
-                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatPaginatorIntl"], useValue: Object(_areas_musicas_portuguese_paginator_intl__WEBPACK_IMPORTED_MODULE_42__["getPortuguesePaginatorIntl"])() },
+                _autenticacao_auth_service__WEBPACK_IMPORTED_MODULE_37__["AuthService"],
+                _services_usuarios_service__WEBPACK_IMPORTED_MODULE_41__["UsuariosService"],
+                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatPaginatorIntl"], useValue: Object(_areas_musicas_portuguese_paginator_intl__WEBPACK_IMPORTED_MODULE_44__["getPortuguesePaginatorIntl"])() },
+                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_27__["DateAdapter"], useClass: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_30__["MomentDateAdapter"], deps: [_angular_material__WEBPACK_IMPORTED_MODULE_27__["MAT_DATE_LOCALE"]] },
+                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_27__["MAT_DATE_FORMATS"], useValue: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_30__["MAT_MOMENT_DATE_FORMATS"] },
                 _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_16__["MatDatepickerModule"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
-            entryComponents: [_modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_36__["CriarGrupoModalComponent"], _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_41__["CriarMusicaComponent"]]
+            entryComponents: [
+                _modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_38__["CriarGrupoModalComponent"],
+                _modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__["CriarMusicaComponent"],
+                _modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__["ExcluirMusicaModalComponent"],
+                _modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"]
+            ]
         })
     ], AppModule);
     return AppModule;
@@ -378,7 +692,7 @@ var CardGrupoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJlYXMvZ3J1cG9zL2dydXBvcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL2FyZWFzL2dydXBvcy9ncnVwb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50b3BvLWdydXBve1xyXG4gICAgaGVpZ2h0OiAxMHZoO1xyXG59XHJcblxyXG5tYXQtY2FyZHtcclxuICAgIG1hcmdpbi1ib3R0b206IDF2aDtcclxufSJdfQ== */"
+module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n\r\n.integrantes{\r\n    margin-top: 3vh;\r\n    margin-bottom: 2vh;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJlYXMvZ3J1cG9zL2dydXBvcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcmVhcy9ncnVwb3MvZ3J1cG9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9wby1ncnVwb3tcclxuICAgIGhlaWdodDogMTB2aDtcclxufVxyXG5cclxubWF0LWNhcmR7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxdmg7XHJcbn1cclxuXHJcbi5pbnRlZ3JhbnRlc3tcclxuICAgIG1hcmdpbi10b3A6IDN2aDtcclxuICAgIG1hcmdpbi1ib3R0b206IDJ2aDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -389,7 +703,7 @@ module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <!-- <div class=\"col-md-4\">\r\n        <img height=\"10%\" mat-card-image src=\"{{grupo.foto}}\" alt=\"foto de {{grupo.nome}}\">\r\n    </div> -->\r\n    <div class=\"col-md-12\">\r\n      <h1>{{grupo.nome}}</h1>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-9\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs>\r\n                  <mat-tab label=\"Músicas\"> \r\n                   <app-musicas *ngIf=\"playlistDoGrupo\" [musicas]=\" playlistDoGrupo.musicas\"></app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\"> \r\n                    Content 2 \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>\r\n        <div class=\"col-lg-3\">\r\n            <mat-card>\r\n              <mat-card-title>Integrantes</mat-card-title>\r\n            </mat-card>\r\n            <mat-card>\r\n                <mat-card-title>Líderes</mat-card-title>\r\n              </mat-card>\r\n        </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h2>{{grupo.nome}}</h2>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <mat-expansion-panel class=\"integrantes\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                <h4>Integrantes</h4>\r\n              </mat-panel-title>               \r\n            </mat-expansion-panel-header>\r\n            <mat-list>\r\n              <div>\r\n                  <mat-list-item *ngFor=\"let usuario of usuariosDoGrupo\">\r\n                      {{usuario.nome}} - {{usuario.email}} - Guitarra \r\n                   </mat-list-item>\r\n                  <mat-divider></mat-divider>\r\n              </div>\r\n              </mat-list> \r\n          </mat-expansion-panel>\r\n    </div>\r\n  </div>\r\n  <!-- <div class=\"row\">\r\n      <div class=\"col-md-6\">        \r\n       \r\n      </div>\r\n   </div> -->\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-12\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs selectedIndex=\"tabSelecionada\">                  \r\n                  <mat-tab> \r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtdMusicas\" matBadge=\"{{qtdMusicas}}\" matBadgeOverlap=\"false\">Músicas</span>\r\n                      <span *ngIf=\"!qtdMusicas\">Músicas</span>\r\n                    </ng-template>\r\n                   <app-musicas (musicasSelecionadasEvent)=\"receiveMusicasSelecionadas($event)\" *ngIf=\"playlistDoGrupo\" [musicas]=\"playlistDoGrupo.musicas\"></app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\">\r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtsSetlists\" matBadge=\"{{qtsSetlists}}\" matBadgeOverlap=\"false\">Repertórios</span>\r\n                      <span *ngIf=\"!qtsSetlists\">Repertórios</span>\r\n                    </ng-template>                    \r\n                    <app-repertorios (qtdGroupSetListsEvent)=\"qtdGroupSetListsEvent($event)\" [musicasRepertorio]=\"musicasParaRepertorio\"></app-repertorios>                  \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>        \r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -406,12 +720,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/playlist.service */ "./src/app/services/playlist.service.ts");
+/* harmony import */ var src_app_services_grupos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/grupos.service */ "./src/app/services/grupos.service.ts");
+
 
 
 
 var GruposComponent = /** @class */ (function () {
-    function GruposComponent(playlistService) {
+    function GruposComponent(playlistService, gruposService) {
         this.playlistService = playlistService;
+        this.gruposService = gruposService;
+        this.tabSelecionada = 0;
         this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
         console.log("currentUser", this.currentUser);
     }
@@ -422,12 +740,38 @@ var GruposComponent = /** @class */ (function () {
         if (grupoSelecionado) {
             this.grupo = JSON.parse(grupoSelecionado);
         }
-        this.playlistService.getPlayList(this.grupo.id).subscribe(function (res) {
-            //console.log('getPlaylist: ', res.data);
-            _this.playlistDoGrupo = res.data();
+        this.playlistService.getGroupSongs(this.grupo)
+            .subscribe(function (resp) {
+            console.log("getPlaylist 2", resp);
+            var retornoMusicas = resp.map(function (obj) {
+                var musicaGrupo = obj;
+                return musicaGrupo.musica;
+            });
+            _this.playlistDoGrupo = {
+                idGrupo: _this.grupo.id,
+                musicas: retornoMusicas
+            };
+            _this.qtdMusicas = _this.playlistDoGrupo.musicas.length;
             localStorage.setItem("playlist", JSON.stringify(_this.playlistDoGrupo));
             console.log("PlaylistDoGrupo ", _this.playlistDoGrupo);
         });
+        this.gruposService.getGroupUsers(this.grupo.id).subscribe(function (grupo) {
+            var grupoUsuario = grupo;
+            _this.usuariosDoGrupo = grupoUsuario.usuarios;
+        });
+    };
+    GruposComponent.prototype.receiveMusicasSelecionadas = function ($event) {
+        console.log("recebeu o evento");
+        this.musicasParaRepertorio = $event;
+        console.log("musicasParaRepertorio", this.musicasParaRepertorio);
+        if (localStorage.getItem("tab")) {
+            var tabRep = document.getElementById('mat-tab-label-0-1');
+            tabRep.click();
+            localStorage.removeItem("tab");
+        }
+    };
+    GruposComponent.prototype.qtdGroupSetListsEvent = function ($event) {
+        this.qtsSetlists = $event;
     };
     GruposComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -435,7 +779,8 @@ var GruposComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./grupos.component.html */ "./src/app/areas/grupos/grupos.component.html"),
             styles: [__webpack_require__(/*! ./grupos.component.css */ "./src/app/areas/grupos/grupos.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_2__["PlaylistService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_2__["PlaylistService"],
+            src_app_services_grupos_service__WEBPACK_IMPORTED_MODULE_3__["GruposService"]])
     ], GruposComponent);
     return GruposComponent;
 }());
@@ -554,6 +899,7 @@ var HomeComponent = /** @class */ (function () {
             idGrupos: [],
             papel: null,
             sexo: null,
+            telefone: null
         };
         this.userService.getUserByEmail(loggedUser.user.email).subscribe(function (respUserQuery) {
             if (respUserQuery.length === 0) {
@@ -574,7 +920,7 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.criarGrupo = function (data) {
         var _this = this;
         var grupo = new src_app_interfaces_grupo_model__WEBPACK_IMPORTED_MODULE_6__["Grupo"]();
-        grupo.id = this.generateIdGrupo();
+        grupo.id = this.generateIdGrupo().toString();
         grupo.nome = data.nome;
         grupo.criadoEm = new Date().toLocaleDateString();
         this.usuario.idGrupos.push(grupo.id);
@@ -587,18 +933,17 @@ var HomeComponent = /** @class */ (function () {
             console.log('RESPOSTA CRIAÇÃO GRUPO: ', res);
             _this.grupoService.associateUserToGroup(grupo.id, _this.usuario);
         });
-        this.playListService.createPlaylist(grupo.id).then(function (res) {
-            console.log("PLAYLIST CRIADA");
-        }, function (error) {
-            console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");
-        });
+        // this.playListService.createPlaylist(grupo).then(res => {
+        //   console.log("PLAYLIST CRIADA");
+        // }, error => {
+        //   console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      
+        // });
         console.log("grupos do usuario: ", this.gruposDoUsuario);
     };
     HomeComponent.prototype.generateIdGrupo = function () {
         var hoje = new Date();
-        return Math.random().toString(36).substring(2) + "_"
-            + hoje.getDate() + hoje.getMonth() + hoje.getFullYear()
-            + hoje.getSeconds() + hoje.getMilliseconds();
+        //Math.random().toString(36).substring(2) 
+        return "G" + hoje.getMilliseconds() + hoje.getSeconds() + hoje.getDate() + hoje.getMonth() + hoje.getFullYear();
     };
     HomeComponent.prototype.obterGruposDoUsuario = function () {
         var _this = this;
@@ -718,7 +1063,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".btn-cadastrar{\r\n    margin: 5px 0 7px 7px;\r\n}\r\n\r\n/* mat-card{\r\n    overflow: auto;\r\n} */\r\n\r\ntable {\r\n    width: 100%;\r\n    table-layout: fixed;\r\n    overflow: auto;\r\n}\r\n\r\n.mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n}\r\n\r\n/* td, th {\r\n    width: 45%;\r\n} */\r\n\r\nth, td {\r\n    overflow: hidden;\r\n    width: 160px;\r\n    text-overflow: ellipsis;\r\n    white-space: pre-wrap;\r\n    margin-right: 35px;\r\n  }\r\n\r\n.filtro{\r\n    width: 40%;\r\n}\r\n\r\n.mat-row, .mat-header-row {  \r\n    min-width: 850px;  \r\n    width: 100%;  \r\n}\r\n\r\n/* th.th-nome div.mat-sort-header-container{\r\n    width: 500px;\r\n} */\r\n\r\n/* #mat-tab-content-0-0 > div > app-musicas > div.mat-elevation-z8 > table > thead > tr > th.th-nome.mat-header-cell.ng-tns-c11-3.cdk-column-nome.mat-column-nome.ng-star-inserted > div {\r\n    width: 150px;\r\n} */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJlYXMvbXVzaWNhcy9tdXNpY2FzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7QUFDekI7O0FBRUE7O0dBRUc7O0FBRUg7SUFDSSxXQUFXO0lBQ1gsbUJBQW1CO0lBQ25CLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsV0FBVztBQUNmOztBQUVBOztHQUVHOztBQUVIO0lBQ0ksZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIscUJBQXFCO0lBQ3JCLGtCQUFrQjtFQUNwQjs7QUFFRjtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixXQUFXO0FBQ2Y7O0FBR0E7O0dBRUc7O0FBQ0g7O0dBRUciLCJmaWxlIjoic3JjL2FwcC9hcmVhcy9tdXNpY2FzL211c2ljYXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idG4tY2FkYXN0cmFye1xyXG4gICAgbWFyZ2luOiA1cHggMCA3cHggN3B4O1xyXG59XHJcblxyXG4vKiBtYXQtY2FyZHtcclxuICAgIG92ZXJmbG93OiBhdXRvO1xyXG59ICovXHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRhYmxlLWxheW91dDogZml4ZWQ7XHJcbiAgICBvdmVyZmxvdzogYXV0bztcclxufVxyXG4gIFxyXG4ubWF0LWZvcm0tZmllbGQge1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuICBcclxuLyogdGQsIHRoIHtcclxuICAgIHdpZHRoOiA0NSU7XHJcbn0gKi9cclxuXHJcbnRoLCB0ZCB7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgd2lkdGg6IDE2MHB4O1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbiAgICB3aGl0ZS1zcGFjZTogcHJlLXdyYXA7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDM1cHg7XHJcbiAgfVxyXG5cclxuLmZpbHRyb3tcclxuICAgIHdpZHRoOiA0MCU7XHJcbn1cclxuXHJcbi5tYXQtcm93LCAubWF0LWhlYWRlci1yb3cgeyAgXHJcbiAgICBtaW4td2lkdGg6IDg1MHB4OyAgXHJcbiAgICB3aWR0aDogMTAwJTsgIFxyXG59ICBcclxuXHJcblxyXG4vKiB0aC50aC1ub21lIGRpdi5tYXQtc29ydC1oZWFkZXItY29udGFpbmVye1xyXG4gICAgd2lkdGg6IDUwMHB4O1xyXG59ICovXHJcbi8qICNtYXQtdGFiLWNvbnRlbnQtMC0wID4gZGl2ID4gYXBwLW11c2ljYXMgPiBkaXYubWF0LWVsZXZhdGlvbi16OCA+IHRhYmxlID4gdGhlYWQgPiB0ciA+IHRoLnRoLW5vbWUubWF0LWhlYWRlci1jZWxsLm5nLXRucy1jMTEtMy5jZGstY29sdW1uLW5vbWUubWF0LWNvbHVtbi1ub21lLm5nLXN0YXItaW5zZXJ0ZWQgPiBkaXYge1xyXG4gICAgd2lkdGg6IDE1MHB4O1xyXG59ICovIl19 */"
+module.exports = ".btn-cadastrar{\r\n    margin: 5px 0 7px 7px;\r\n}\r\n\r\n/* mat-card{\r\n    overflow: auto;\r\n} */\r\n\r\ntable {\r\n    width: 100%;\r\n    table-layout: fixed;\r\n    overflow: auto;\r\n}\r\n\r\n.mat-form-field {\r\n    font-size: 14px;\r\n    width: 100%;\r\n}\r\n\r\n/* td, th {\r\n    width: 45%;\r\n} */\r\n\r\nth, td {\r\n    overflow: hidden;\r\n    width: 160px;\r\n    text-overflow: ellipsis;\r\n    white-space: pre-wrap;\r\n    margin-right: 35px;\r\n  }\r\n\r\n.mat-row, .mat-header-row {  \r\n    min-width: 850px;  \r\n    width: 100%;  \r\n}\r\n\r\n.botoes{\r\n    margin-top: 2vh;\r\n}\r\n\r\n.botoes button{\r\n    margin-bottom: 3px;\r\n}\r\n\r\n.btn-musicas{\r\n    width: 104px;\r\n    padding: 0px;\r\n}\r\n\r\n.btn-icon{\r\n    padding: 0px; \r\n    width: 40px!important;\r\n    min-width: unset!important;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJlYXMvbXVzaWNhcy9tdXNpY2FzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7QUFDekI7O0FBRUE7O0dBRUc7O0FBRUg7SUFDSSxXQUFXO0lBQ1gsbUJBQW1CO0lBQ25CLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsV0FBVztBQUNmOztBQUVBOztHQUVHOztBQUVIO0lBQ0ksZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIscUJBQXFCO0lBQ3JCLGtCQUFrQjtFQUNwQjs7QUFHRjtJQUNJLGdCQUFnQjtJQUNoQixXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0lBQ3JCLDBCQUEwQjtBQUM5QiIsImZpbGUiOiJzcmMvYXBwL2FyZWFzL211c2ljYXMvbXVzaWNhcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ0bi1jYWRhc3RyYXJ7XHJcbiAgICBtYXJnaW46IDVweCAwIDdweCA3cHg7XHJcbn1cclxuXHJcbi8qIG1hdC1jYXJke1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbn0gKi9cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGFibGUtbGF5b3V0OiBmaXhlZDtcclxuICAgIG92ZXJmbG93OiBhdXRvO1xyXG59XHJcbiAgXHJcbi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG4gIFxyXG4vKiB0ZCwgdGgge1xyXG4gICAgd2lkdGg6IDQ1JTtcclxufSAqL1xyXG5cclxudGgsIHRkIHtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICB3aWR0aDogMTYwcHg7XHJcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcclxuICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcDtcclxuICAgIG1hcmdpbi1yaWdodDogMzVweDtcclxuICB9XHJcblxyXG5cclxuLm1hdC1yb3csIC5tYXQtaGVhZGVyLXJvdyB7ICBcclxuICAgIG1pbi13aWR0aDogODUwcHg7ICBcclxuICAgIHdpZHRoOiAxMDAlOyAgXHJcbn0gIFxyXG5cclxuLmJvdG9lc3tcclxuICAgIG1hcmdpbi10b3A6IDJ2aDtcclxufVxyXG5cclxuLmJvdG9lcyBidXR0b257XHJcbiAgICBtYXJnaW4tYm90dG9tOiAzcHg7XHJcbn1cclxuXHJcbi5idG4tbXVzaWNhc3tcclxuICAgIHdpZHRoOiAxMDRweDtcclxuICAgIHBhZGRpbmc6IDBweDtcclxufVxyXG5cclxuLmJ0bi1pY29ue1xyXG4gICAgcGFkZGluZzogMHB4OyBcclxuICAgIHdpZHRoOiA0MHB4IWltcG9ydGFudDtcclxuICAgIG1pbi13aWR0aDogdW5zZXQhaW1wb3J0YW50O1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -729,7 +1074,7 @@ module.exports = ".btn-cadastrar{\r\n    margin: 5px 0 7px 7px;\r\n}\r\n\r\n/* m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"btn-cadastrar\">    \n    <mat-form-field class=\"filtro\">\n        <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Procurar música\" autocomplete=\"off\">\n    </mat-form-field>\n    <div class=\"pull-right\">\n        <button mat-mini-fab color=\"primary\" (click)=\"openCriarMusicaDialog()\"><i class=\"fa fa-plus\"></i></button>\n        Adicionar Música\n    </div>             \n</div>\n<div *ngIf=\"!musicas\">\n    <p>Este grupo ainda não tem músicas cadastradas</p>\n</div>\n<div class=\"mat-elevation-z8\">\n\n    <table mat-table [dataSource]=\"dataSource\" matSort>    \n         <!-- Checkbox Column -->\n        <ng-container matColumnDef=\"select\">\n            <th mat-header-cell *matHeaderCellDef>\n                <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                                [checked]=\"selection.hasValue() && isAllSelected()\"\n                                [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                                [aria-label]=\"checkboxLabel()\">\n                </mat-checkbox>\n            </th>\n            <td mat-cell *matCellDef=\"let row\">\n                <mat-checkbox (click)=\"$event.stopPropagation()\"\n                                (change)=\"$event ? selection.toggle(row) : null\"\n                                [checked]=\"selection.isSelected(row)\"\n                                [aria-label]=\"checkboxLabel(row)\">\n                </mat-checkbox>\n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"nome\">\n            <th style=\"font-weight: bold;\" class=\"th-nome\" mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>\n            <td mat-cell class=\"th-nome\" *matCellDef=\"let row\"> {{row.nome}} </td>\n        </ng-container>\n    \n        <ng-container matColumnDef=\"artista\">\n            <th style=\"font-weight: bold\" mat-header-cell class=\"th-nome\" *matHeaderCellDef mat-sort-header> Artista </th>\n            <td mat-cell class=\"th-nome\" *matCellDef=\"let row\"> {{row.artista}} </td>\n        </ng-container>\n    \n        <ng-container matColumnDef=\"linkOuvir\">\n            <th style=\"font-weight: bold; width: 45px\" mat-header-cell *matHeaderCellDef mat-sort-header>Ouvir</th>\n            <td mat-cell *matCellDef=\"let row\">\n                <a *ngIf=\"row.linkOuvir\" href=\"{{row.linkOuvir}}\" target=\"_blank\"><i class=\"fa fa-play-circle fa-2x\" aria-hidden=\"true\"></i></a>              \n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"linkCifra\">\n            <th style=\"font-weight: bold; width: 45px\" mat-header-cell *matHeaderCellDef mat-sort-header> Link Cifra </th>\n            <td mat-cell *matCellDef=\"let row\">\n                <a *ngIf=\"row.linkCifra\" href=\"{{row.linkCifra}}\" target=\"_blank\"><img src=\"../../../assets/img/cifraclub.png\" height=\"31vh\" /> </a>         \n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"quantidadeVezesTocada\">\n            <th style=\"font-weight: bold; width: 75px;\" mat-header-cell *matHeaderCellDef mat-sort-header># Tocadas</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.quantidadeVezesTocada}} </td>\n        </ng-container>\n    \n        <ng-container matColumnDef=\"ultimaVezTocada\">\n            <th style=\"font-weight: bold; width: 100px\" mat-header-cell *matHeaderCellDef mat-sort-header>Ultima vez tocada</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.ultimaVezTocada}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"tags\">\n            <th style=\"font-weight: bold; width: 100px\" mat-header-cell *matHeaderCellDef mat-sort-header>Temas</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.tags}} </td>\n        </ng-container>\n\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n    \n    <mat-paginator [pageSizeOptions]=\"[10, 25, 100, 150]\"></mat-paginator>\n    </div>\n    <!-- <iframe src=\"https://open.spotify.com/embed/album/4dINu1pPco8xAJcJkg8U2J\" width=\"500\" height=\"280\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> -->\n"
+module.exports = "<div class=\"row btn-cadastrar\">\n    <div class=\"col-md-8 botoes\">        \n        <button mat-raised-button color=\"primary\" class=\"btn-musicas\" (click)=\"openCriarMusicaDialog()\"><i class=\"fa fa-plus\"></i> &nbsp;Add\n            Música</button>\n        &nbsp;&nbsp;\n        <button mat-raised-button color=\"primary\" [disabled]=\"!(musicasSelecionadas && musicasSelecionadas.length > 0)\"\n            (click)=\"enviarMusicasCriarRepertorio()\">Criar Repertório</button>\n        <!-- <img src=\"../../../assets/img/music-list.JPG\" height=\"18vh\" /> &nbsp;-->         \n                 \n    </div>\n    <div class=\"col-md-4\">\n        <mat-form-field *ngIf=\"temMusicas\">\n            <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Procurar música\" autocomplete=\"off\">\n        </mat-form-field>\n    </div>\n</div>\n<div *ngIf=\"!temMusicas\">\n    <p>Este grupo ainda não tem músicas cadastradas</p>\n</div>\n<div *ngIf=\"temMusicas\" class=\"mat-elevation-z8\">\n    <table mat-table [dataSource]=\"dataSource\" matSort>\n\n        <!-- Checkbox Column -->\n        <ng-container matColumnDef=\"select\">\n            <th mat-header-cell *matHeaderCellDef style=\"width: 45px\">\n                <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\" [aria-label]=\"checkboxLabel()\">\n                </mat-checkbox>\n            </th>\n            <td mat-cell *matCellDef=\"let row\">\n                <mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"selectMusica($event, row)\"\n                    [checked]=\"selection.isSelected(row)\">\n                </mat-checkbox>\n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"nome\">\n            <th style=\"font-weight: bold;\" class=\"th-nome\" mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>\n            <td mat-cell class=\"th-nome\" *matCellDef=\"let row\"> {{row.nome}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"artista\">\n            <th style=\"font-weight: bold\" mat-header-cell class=\"th-nome\" *matHeaderCellDef mat-sort-header> Artista\n            </th>\n            <td mat-cell class=\"th-nome\" *matCellDef=\"let row\"> {{row.artista}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"linkOuvir\">\n            <th style=\"font-weight: bold; width: 50px\" mat-header-cell *matHeaderCellDef mat-sort-header>Ouvir</th>\n            <td mat-cell *matCellDef=\"let row\">\n                <a *ngIf=\"row.linkOuvir\" href=\"{{row.linkOuvir}}\" target=\"_blank\"><i class=\"fa fa-play-circle fa-2x\"\n                        aria-hidden=\"true\"></i></a>\n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"linkCifra\">\n            <th style=\"font-weight: bold; width: 45px\" mat-header-cell *matHeaderCellDef mat-sort-header> Link Cifra\n            </th>\n            <td mat-cell *matCellDef=\"let row\">\n                <a *ngIf=\"row.linkCifra\" href=\"{{row.linkCifra}}\" target=\"_blank\"><img\n                        src=\"../../../assets/img/cifraclub.png\" height=\"31vh\" /> </a>\n            </td>\n        </ng-container>\n        <ng-container matColumnDef=\"quantidadeVezesTocada\">\n            <th style=\"font-weight: bold; width: 75px;\" mat-header-cell *matHeaderCellDef mat-sort-header># Tocadas</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.quantidadeVezesTocada}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"ultimaVezTocada\">\n            <th style=\"font-weight: bold; width: 100px\" mat-header-cell *matHeaderCellDef mat-sort-header>Ultima vez\n                tocada</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.ultimaVezTocada}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"tags\">\n            <th style=\"font-weight: bold; width: 100px\" mat-header-cell *matHeaderCellDef mat-sort-header>Temas</th>\n            <td mat-cell *matCellDef=\"let row\"> {{row.tags}} </td>\n        </ng-container>\n\n        <ng-container matColumnDef=\"acoes\">\n            <th style=\"font-weight: bold\" mat-header-cell *matHeaderCellDef>Ações</th>\n            <td mat-cell *matCellDef=\"let row; let i = index\">\n                <button mat-raised-button color=\"primary\" class=\"btn-icon\" (click)=\"editarMusica(row, i)\"><i class=\"fa fa-edit\"></i>\n                </button>\n                &nbsp;&nbsp; \n                <button mat-raised-button color=\"warn\" class=\"btn-icon\" (click)=\"excluirMusica(row, i)\"><i class=\"fa fa-trash\"></i>\n                </button>  \n            </td>\n        </ng-container>\n        <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n        <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n\n    <mat-paginator [pageSizeOptions]=\"[10, 25, 100, 150]\"></mat-paginator>\n</div>\n<!-- <iframe src=\"https://open.spotify.com/embed/album/4dINu1pPco8xAJcJkg8U2J\" width=\"500\" height=\"280\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe> -->"
 
 /***/ }),
 
@@ -749,6 +1094,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/modals/criar-musica/criar-musica.component */ "./src/app/modals/criar-musica/criar-musica.component.ts");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
+/* harmony import */ var src_app_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/modals/excluir-musica-modal/excluir-musica-modal.component */ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.ts");
+/* harmony import */ var src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/playlist.service */ "./src/app/services/playlist.service.ts");
+/* harmony import */ var src_app_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/modals/editar-musica-modal/editar-musica-modal.component */ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.ts");
+
+
+
 
 
 
@@ -756,22 +1107,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MusicasComponent = /** @class */ (function () {
-    function MusicasComponent(musicaDialog) {
-        this.musicaDialog = musicaDialog;
+    function MusicasComponent(modalDialog, playlistService) {
+        this.modalDialog = modalDialog;
+        this.playlistService = playlistService;
+        this.temMusicas = false;
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_5__["SelectionModel"](true, []);
-        this.displayedColumns = ['nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags'];
+        this.musicasSelecionadasEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.tabSelecionada = 0;
+        // tslint:disable-next-line:max-line-length
+        this.displayedColumns = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
+        console.log("=========================== musicas.component =================================");
     }
     MusicasComponent.prototype.ngOnInit = function () {
-        if (this.dataSource) {
-            this.dataSource.data = this.musicas;
+        // if (this.dataSource){
+        //   this.dataSource.data = this.musicas;
+        // }else{
+        // }    
+        if (this.musicas.length > 0) {
+            this.initPaginator();
+            this.temMusicas = true;
+            this.playlist = JSON.parse(localStorage.getItem("playlist"));
         }
-        else {
-            this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.musicas);
-        }
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        console.log("Datasource 2: ", JSON.stringify(this.dataSource));
     };
+    // tslint:disable-next-line:use-life-cycle-interface
+    // ngAfterViewInit() {
+    // }
     MusicasComponent.prototype.openCriarMusicaDialog = function () {
         var _this = this;
         console.log("Chamou o open dialog");
@@ -781,12 +1141,23 @@ var MusicasComponent = /** @class */ (function () {
         dialogConfig.hasBackdrop = true;
         dialogConfig.width = "70%";
         dialogConfig.height = "55%";
-        var dialogRef = this.musicaDialog.open(src_app_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_3__["CriarMusicaComponent"], dialogConfig);
-        dialogRef.afterClosed().subscribe(function () {
-            setTimeout(function () {
-                _this.musicas = JSON.parse(localStorage.getItem("playlist")).musicas;
-                _this.dataSource.data = _this.musicas;
-            }, 500);
+        var criarMusicadialogRef = this.modalDialog.open(src_app_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_3__["CriarMusicaComponent"], dialogConfig);
+        criarMusicadialogRef.afterClosed().subscribe(function () {
+            _this.playlist = JSON.parse(localStorage.getItem('playlist'));
+            _this.musicas = _this.playlist.musicas;
+            // this.dataSource.data = this.musicas;
+            if (_this.musicas.length > 0) {
+                _this.temMusicas = true;
+                _this.initPaginator();
+            }
+        });
+    };
+    MusicasComponent.prototype.initPaginator = function () {
+        var _this = this;
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](this.musicas);
+        setTimeout(function () {
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
         });
     };
     MusicasComponent.prototype.applyFilter = function (filterValue) {
@@ -794,11 +1165,10 @@ var MusicasComponent = /** @class */ (function () {
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
         }
-        console.log("selection", this.selection);
     };
     /** The label for the checkbox on the passed row */
     MusicasComponent.prototype.checkboxLabel = function (row) {
-        return (this.selection.isSelected(row) ? 'deselect' : 'select') + " row " + (row.nome + 1);
+        return "" + (this.selection.isSelected(row) ? 'deselect' : 'select');
     };
     MusicasComponent.prototype.isAllSelected = function () {
         var numSelected = this.selection.selected.length;
@@ -809,13 +1179,92 @@ var MusicasComponent = /** @class */ (function () {
     MusicasComponent.prototype.masterToggle = function () {
         var _this = this;
         this.isAllSelected() ?
-            this.selection.clear() :
+            this.clearSelection() :
             this.dataSource.data.forEach(function (row) { return _this.selection.select(row); });
+    };
+    MusicasComponent.prototype.clearSelection = function () {
+        this.musicasSelecionadas = [];
+        this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
+        this.selection.clear();
+    };
+    MusicasComponent.prototype.selectMusica = function ($event, row) {
+        if ($event) {
+            this.selection.toggle(row);
+            console.log(this.selection.selected);
+            this.musicasSelecionadas = this.selection.selected;
+            this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
+        }
+        //return null;
+    };
+    MusicasComponent.prototype.enviarMusicasCriarRepertorio = function () {
+        console.log("chamou enviarMusicasCriarRepertorio");
+        localStorage.setItem("tab", "1");
+        this.sendTabSelecionada(this.musicasSelecionadas);
+    };
+    MusicasComponent.prototype.sendTabSelecionada = function (musicas) {
+        console.log("vai emitir o evento");
+        this.musicasSelecionadasEvent.emit(musicas);
+    };
+    MusicasComponent.prototype.editarMusica = function (musica, indiceMusica) {
+        var _this = this;
+        console.log("musica para editar: ", musica);
+        console.log("indice da musica: ", indiceMusica);
+        var editarMusicadialogRef = this.modalDialog.open(src_app_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_8__["EditarMusicaModalComponent"], {
+            disableClose: true,
+            autoFocus: true,
+            hasBackdrop: true,
+            width: "70%",
+            height: "55%",
+            data: musica
+        });
+        editarMusicadialogRef.afterClosed().subscribe(function (musicaEditada) {
+            if (musicaEditada) {
+                _this.playlistService.editSongFromPlaylist(musicaEditada, JSON.parse(localStorage.getItem('grupo'))).then(function (res) {
+                    console.log("edicao:", res);
+                    _this.musicas[indiceMusica] = musicaEditada;
+                    _this.dataSource.data = _this.musicas;
+                    _this.updateDbPlaylist();
+                });
+            }
+        });
+    };
+    MusicasComponent.prototype.excluirMusica = function (musica, indiceMusica) {
+        var _this = this;
+        console.log("musica para exluir: ", musica);
+        var dialogRef = this.modalDialog.open(src_app_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_6__["ExcluirMusicaModalComponent"], {
+            width: '390px',
+            data: musica
+        });
+        dialogRef.afterClosed().subscribe(function (excluir) {
+            if (excluir) {
+                _this.playlistService.removeSongFromPlaylist(musica, JSON.parse(localStorage.getItem('grupo'))).then(function (res) {
+                    _this.musicas.splice(indiceMusica, 1);
+                    _this.dataSource.data = _this.musicas;
+                    _this.updateDbPlaylist();
+                    alert("Musica excluida!");
+                    console.log("musica excluida", res);
+                    console.log("nova playlist:", _this.playlist);
+                    if (_this.musicas.length == 0) {
+                        _this.temMusicas = false;
+                    }
+                }).catch(function (error) {
+                    console.log("DEU ERRO!!", error);
+                });
+            }
+        });
+    };
+    MusicasComponent.prototype.updateDbPlaylist = function () {
+        this.playlist.musicas = this.musicas;
+        localStorage.setItem('playlist', JSON.stringify(this.playlist));
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
     ], MusicasComponent.prototype, "musicas", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], MusicasComponent.prototype, "musicasSelecionadasEvent", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"]),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
@@ -830,7 +1279,7 @@ var MusicasComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./musicas.component.html */ "./src/app/areas/musicas/musicas.component.html"),
             styles: [__webpack_require__(/*! ./musicas.component.css */ "./src/app/areas/musicas/musicas.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"], src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_7__["PlaylistService"]])
     ], MusicasComponent);
     return MusicasComponent;
 }());
@@ -871,6 +1320,224 @@ function getPortuguesePaginatorIntl() {
     paginatorIntl.getRangeLabel = dutchRangeLabel;
     return paginatorIntl;
 }
+
+
+/***/ }),
+
+/***/ "./src/app/areas/repertorios/repertorios.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/areas/repertorios/repertorios.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n.btn-novo-repertorio{\r\n    margin-top: 5px;\r\n}\r\n\r\n.card-rep{\r\n    background-color: #cff7f3;\r\n    /* width: 90%; */\r\n    padding: 8px;\r\n    \r\n}\r\n\r\n.row {\r\n  margin-left: 0px;\r\n  margin-right: 2px;\r\n}\r\n\r\n.reps{\r\n    width: 90%;\r\n}\r\n\r\n.example-container {\r\n    width: 400px;\r\n    max-width: 100%;\r\n    margin: 0 25px 25px 0;\r\n    display: inline-block;\r\n    vertical-align: top;\r\n  }\r\n\r\n.example-list {\r\n    border: solid 1px #ccc;\r\n    min-height: 40px;\r\n    background: white;\r\n    border-radius: 1px;\r\n    overflow: auto;\r\n    display: block;\r\n    height: 200px;\r\n  }\r\n\r\n.example-box {\r\n    padding: 20px 10px;\r\n    border-bottom: solid 1px #ccc;\r\n    color: rgba(0, 0, 0, 0.87);\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-sizing: border-box;\r\n    cursor: move;\r\n    background: white;\r\n    font-size: 14px;\r\n    height: 10px;\r\n  }\r\n\r\n.cdk-drag-preview {\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\r\n                0 8px 10px 1px rgba(0, 0, 0, 0.14),\r\n                0 3px 14px 2px rgba(0, 0, 0, 0.12);\r\n  }\r\n\r\n.cdk-drag-placeholder {\r\n    opacity: 0;\r\n  }\r\n\r\n.cdk-drag-animating {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.example-box:last-child {\r\n    border: none;\r\n  }\r\n\r\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.drag-icon{\r\n    margin-left: 0.1em;\r\n    color: lightgray;\r\n  }\r\n\r\n.drag-handle{\r\n    width: 22px;\r\n    height: 26px;\r\n    padding: 5px 4px;\r\n  }\r\n\r\n.rep-actions{\r\n    margin: -13px 0px -3px 2px;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJlYXMvcmVwZXJ0b3Jpb3MvcmVwZXJ0b3Jpb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsZ0JBQWdCO0lBQ2hCLFlBQVk7O0FBRWhCOztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YscUJBQXFCO0lBQ3JCLHFCQUFxQjtJQUNyQixtQkFBbUI7RUFDckI7O0FBRUE7SUFDRSxzQkFBc0I7SUFDdEIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGNBQWM7SUFDZCxhQUFhO0VBQ2Y7O0FBRUE7SUFDRSxrQkFBa0I7SUFDbEIsNkJBQTZCO0lBQzdCLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQiw4QkFBOEI7SUFDOUIsc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLFlBQVk7RUFDZDs7QUFFQTtJQUNFLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEI7O2tEQUU4QztFQUNoRDs7QUFFQTtJQUNFLFVBQVU7RUFDWjs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLFlBQVk7RUFDZDs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLGtCQUFrQjtJQUNsQixnQkFBZ0I7RUFDbEI7O0FBRUE7SUFDRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLDBCQUEwQjtFQUM1QiIsImZpbGUiOiJzcmMvYXBwL2FyZWFzL3JlcGVydG9yaW9zL3JlcGVydG9yaW9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13aWR0aHtcclxuICAgIHdpZHRoOjEwMCU7XHJcbn1cclxuXHJcbi5idG4tbm92by1yZXBlcnRvcmlve1xyXG4gICAgbWFyZ2luLXRvcDogNXB4O1xyXG59XHJcblxyXG4uY2FyZC1yZXB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2ZmN2YzO1xyXG4gICAgLyogd2lkdGg6IDkwJTsgKi9cclxuICAgIHBhZGRpbmc6IDhweDtcclxuICAgIFxyXG59XHJcbi5yb3cge1xyXG4gIG1hcmdpbi1sZWZ0OiAwcHg7XHJcbiAgbWFyZ2luLXJpZ2h0OiAycHg7XHJcbn1cclxuXHJcbi5yZXBze1xyXG4gICAgd2lkdGg6IDkwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiA0MDBweDtcclxuICAgIG1heC13aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMCAyNXB4IDI1cHggMDtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWxpc3Qge1xyXG4gICAgYm9yZGVyOiBzb2xpZCAxcHggI2NjYztcclxuICAgIG1pbi1oZWlnaHQ6IDQwcHg7XHJcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDFweDtcclxuICAgIG92ZXJmbG93OiBhdXRvO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBoZWlnaHQ6IDIwMHB4O1xyXG4gIH1cclxuICBcclxuICAuZXhhbXBsZS1ib3gge1xyXG4gICAgcGFkZGluZzogMjBweCAxMHB4O1xyXG4gICAgYm9yZGVyLWJvdHRvbTogc29saWQgMXB4ICNjY2M7XHJcbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjg3KTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBjdXJzb3I6IG1vdmU7XHJcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGhlaWdodDogMTBweDtcclxuICB9XHJcbiAgXHJcbiAgLmNkay1kcmFnLXByZXZpZXcge1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIGJveC1zaGFkb3c6IDAgNXB4IDVweCAtM3B4IHJnYmEoMCwgMCwgMCwgMC4yKSxcclxuICAgICAgICAgICAgICAgIDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksXHJcbiAgICAgICAgICAgICAgICAwIDNweCAxNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xyXG4gIH1cclxuICBcclxuICAuY2RrLWRyYWctcGxhY2Vob2xkZXIge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICB9XHJcbiAgXHJcbiAgLmNkay1kcmFnLWFuaW1hdGluZyB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWJveDpsYXN0LWNoaWxkIHtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtbGlzdC5jZGstZHJvcC1saXN0LWRyYWdnaW5nIC5leGFtcGxlLWJveDpub3QoLmNkay1kcmFnLXBsYWNlaG9sZGVyKSB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5kcmFnLWljb257XHJcbiAgICBtYXJnaW4tbGVmdDogMC4xZW07XHJcbiAgICBjb2xvcjogbGlnaHRncmF5O1xyXG4gIH1cclxuXHJcbiAgLmRyYWctaGFuZGxle1xyXG4gICAgd2lkdGg6IDIycHg7XHJcbiAgICBoZWlnaHQ6IDI2cHg7XHJcbiAgICBwYWRkaW5nOiA1cHggNHB4O1xyXG4gIH1cclxuXHJcbiAgLnJlcC1hY3Rpb25ze1xyXG4gICAgbWFyZ2luOiAtMTNweCAwcHggLTNweCAycHg7XHJcbiAgfSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/areas/repertorios/repertorios.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/areas/repertorios/repertorios.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card *ngIf=\"musicasRepertorio && musicasRepertorio.length > 0\">\n  <br>\n  <mat-card-title>\n    <h3>{{tituloRepertorio}}</h3>\n  </mat-card-title>\n  <mat-card-content>\n    <div class=\"row\" [formGroup]=\"formNovoRepertorio\">\n      <div class=\"col-md-3\">\n        <mat-form-field class=\"full-width\">\n          <input matInput type=\"text\" placeholder=\"Título do evento\" formControlName=\"titulo\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n      <div class=\"col-md-3\">\n        <mat-form-field class=\"full-width\">\n          <input matInput [matDatepicker]=\"picker\" (click)=\"picker.open()\" placeholder=\"Data do evento\" formControlName=\"dataEvento\"\n            autocomplete=\"off\">\n          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n          <mat-datepicker touchUi #picker></mat-datepicker>\n        </mat-form-field>\n      </div>\n      <div class=\"col-md-3\">\n        <mat-form-field class=\"full-width\">\n          <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\n            <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\n              [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\n              (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\n          </mat-chip-list>\n          <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\n        </mat-form-field>\n      </div>\n      <div class=\"col-md-3 btn-novo-repertorio\">\n        <button class=\"mat-raised-button\" (click)=\"criarRepertorio()\">Salvar</button>\n        &nbsp;<button class=\"mat-raised-button\" (click)=\"cancelarCriacaoRepertorio()\">Cancelar</button>\n      </div>\n    </div>\n  </mat-card-content>\n  <div class=\"row\">\n    <!-- <div class=\"col-md-3\" [formGroup]=\"formNovoRepertorio\">\n      <mat-form-field class=\"full-width\">\n        <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\n          <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\n            [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\n            (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\n        </mat-chip-list>\n        <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\n      </mat-form-field>\n    </div> -->\n    <div class=\"col-md-9\">\n      <mat-chip *ngFor=\"let momento of momentos\" [selectable]=\"selectable\" [removable]=\"removable\"\n        (removed)=\"remove(momento)\">\n        {{momento}}\n        <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\n      </mat-chip>\n    </div>\n  </div>\n  <!-- card criação e edicao -->\n  <div class=\"row\" *ngIf=\"musicasRepertorio && musicasRepertorio.length > 0\">\n    <div class=\"col-md-4\">\n      <br>\n      <mat-card class=\"card-rep\">\n        <mat-card-content>\n          <div>\n            <strong>Título do evento</strong><br>\n            {{formNovoRepertorio.value.titulo}}\n            <br>\n            <label>Data</label><br>\n            {{formNovoRepertorio.value.dataEvento | date:'dd/MM/yyyy'}}\n          </div>\n          <label>Musicas</label>\n          <div class=\"example-container\">\n            <div cdkDropList #todoList=\"cdkDropList\" [cdkDropListData]=\"musicasRepertorio\" class=\"example-list\"\n              (cdkDropListDropped)=\"drop($event)\">\n\n              <div class=\"example-box\" *ngFor=\"let item of musicasRepertorio; let i = index\" cdkDrag>\n                <div *ngIf=\"item.nome\">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>\n                <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\n                <div class=\"drag-handle\" cdkDragHandle>\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\n                </div>                \n              </div>\n            </div>\n          </div>\n        </mat-card-content>\n      </mat-card>\n    </div>\n  </div>\n</mat-card>\n<div class=\"row\" *ngIf=\"grupoSetLists.length > 0\">\n    <div class=\"col-sm-4\" *ngFor=\"let setlist of grupoSetLists\">\n      <br>\n      <mat-card class=\"card-rep\">\n        <mat-card-content>\n          <div>\n            <strong>Título do evento</strong><br>\n            {{setlist.tituloEvento}}\n            <br>\n            <label>Data</label><br>\n            {{setlist.dataEvento.toDate() | date:'dd/MM/yyyy'}}\n          </div>\n          <label>Musicas</label>\n          <div class=\"example-container\">\n            <div class=\"example-list\">\n              <mat-accordion [displayMode]=\"flat\">\n                  <mat-expansion-panel *ngFor=\"let item of setlist.items; let i = index\" [disabled]=\"!item.nome\">\n                      <mat-expansion-panel-header>\n                          <div *ngIf=\"item.nome\">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>\n                          <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\n                      </mat-expansion-panel-header>\n                      <div>\n                        <button [disabled]=\"!item.linkOuvir\" class=\"mat-raised-button\">Ouvir</button>&nbsp;\n                        <button [disabled]=\"!item.linkCifra\" class=\"mat-raised-button\">Cifra</button>\n                      </div>\n                  </mat-expansion-panel>\n              </mat-accordion>             \n            </div>\n          </div>\n          <div class=\"rep-actions\">\n              <button mat-icon-button color=\"accent\">\n                  <mat-icon>delete</mat-icon>\n              </button>\n              <button (click)=\"editarSetlist(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\n                  <mat-icon>edit</mat-icon>\n              </button>\n              <button (click)=\"compartilhar(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\n                  <mat-icon>share</mat-icon>\n              </button>           \n          </div> \n        </mat-card-content>\n      </mat-card>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/areas/repertorios/repertorios.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/areas/repertorios/repertorios.component.ts ***!
+  \************************************************************/
+/*! exports provided: RepertoriosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RepertoriosComponent", function() { return RepertoriosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
+/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm5/keycodes.es5.js");
+/* harmony import */ var src_app_services_repertorios_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/repertorios.service */ "./src/app/services/repertorios.service.ts");
+/* harmony import */ var src_app_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/GLOBAL_FUNCTIONS */ "./src/app/shared/GLOBAL_FUNCTIONS.ts");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/esm5/core.es5.js");
+/* harmony import */ var ng_navigator_share__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-navigator-share */ "./node_modules/ng-navigator-share/fesm5/ng-navigator-share.js");
+
+
+
+
+
+
+
+
+
+var RepertoriosComponent = /** @class */ (function () {
+    //setList: any[] = this.musicasRepertorio;
+    function RepertoriosComponent(fb, repertorioService, _adapter, shareService) {
+        this.fb = fb;
+        this.repertorioService = repertorioService;
+        this._adapter = _adapter;
+        this.shareService = shareService;
+        this.qtdGroupSetListsEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.visible = true;
+        this.selectable = true;
+        this.removable = true;
+        this.addOnBlur = true;
+        this.separatorKeysCodes = [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__["COMMA"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__["ENTER"]];
+        this.momentos = [];
+        this.grupoSetLists = [];
+        this.tituloRepertorio = "Novo Repertório";
+        this.formNovoRepertorio = this.fb.group({
+            titulo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            dataEvento: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            momentos: ['']
+        });
+    }
+    RepertoriosComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._adapter.setLocale('pt-BR');
+        this.grupo = JSON.parse(localStorage.getItem('grupo'));
+        this.repertorioService.getSetLists(this.grupo).subscribe(function (setlists) {
+            _this.grupoSetLists = setlists;
+            _this.grupoSetLists.sort(function (a, b) { return (a.dataEvento > b.dataEvento) ? 1 : -1; });
+            console.log("SETLISTS", _this.grupoSetLists);
+            _this.qtdGroupSetListsEvent.emit(_this.grupoSetLists.length);
+        }, function (error) {
+            alert("Falha ao obter setlists");
+        });
+    };
+    RepertoriosComponent.prototype.criarRepertorio = function () {
+        var _this = this;
+        var repertorio = {
+            id: this.setlistEdicao ? this.setlistEdicao.id : this.grupo.id + "_" + Object(src_app_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_6__["generateId"])(),
+            idGrupo: this.setlistEdicao ? this.setlistEdicao.idGrupo : this.grupo.id,
+            tituloEvento: this.formNovoRepertorio.value.titulo.toString(),
+            dataEvento: this.formNovoRepertorio.value.dataEvento,
+            items: this.musicasRepertorio
+        };
+        console.log("REPERTORIO", repertorio);
+        this.repertorioService.createSetlist(this.grupo, repertorio).then(function (res) {
+            _this.musicasRepertorio = [];
+            console.log(repertorio);
+            _this.setlistEdicao = null;
+            _this.tituloRepertorio = "Novo Repertório";
+        }).catch(function (error) {
+            alert("Deu errado! :(");
+            console.log(error);
+        });
+    };
+    RepertoriosComponent.prototype.cancelarCriacaoRepertorio = function () {
+        this.musicasRepertorio = [];
+        this.momentos = [];
+        this.formNovoRepertorio.setValue({
+            titulo: null,
+            dataEvento: null,
+            momentos: []
+        });
+    };
+    RepertoriosComponent.prototype.compartilhar = function (setlist) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var sharedResponse, error_1;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.shareService.share({
+                                title: '`Web Articles and Tutorials',
+                                text: 'Check out my blog — its worth looking.',
+                                url: 'www.codershood.info'
+                            })];
+                    case 1:
+                        sharedResponse = _a.sent();
+                        console.log(sharedResponse);
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _a.sent();
+                        console.log('You app is not shared, reason: ', error_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    // podeEditarSetlist(setlist: Setlist){
+    //   let hoje = new Date();
+    //   return setlist.dataEvento.toDate() >= hoje;
+    // }
+    RepertoriosComponent.prototype.editarSetlist = function (setlist) {
+        // if(!this.podeEditarSetlist(setlist)){
+        //   alert("Não é possível editar a lista de um evento passado");
+        //   return;
+        // }
+        // this.tituloRepertorio = "Editar Repertório";
+        // console.log("Editar setlist")
+        // this.momentos = setlist.items.filter(i => !i.nome);
+        // this.musicasRepertorio = setlist.items;
+        // window.scroll(0, 0);
+        // this.formNovoRepertorio.setValue({
+        //   titulo: setlist.tituloEvento,
+        //   dataEvento: setlist.dataEvento.toDate(),
+        //   momentos:[]
+        // });  
+        // this.setlistEdicao = setlist;
+        // console.log(this.formNovoRepertorio.value.dataEvento);
+    };
+    RepertoriosComponent.prototype.drop = function (event) {
+        if (event.previousContainer === event.container) {
+            Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__["moveItemInArray"])(event.container.data, event.previousIndex, event.currentIndex);
+        }
+        else {
+            Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__["transferArrayItem"])(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
+        }
+    };
+    RepertoriosComponent.prototype.add = function (event) {
+        var input = event.input;
+        var value = event.value;
+        // Add our fruit
+        if ((value || '').trim()) {
+            this.momentos.unshift(value.trim());
+            this.musicasRepertorio.unshift(value.trim());
+        }
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
+    };
+    RepertoriosComponent.prototype.remove = function (momento) {
+        var indexMomentos = this.momentos.indexOf(momento);
+        var indexMusicas = this.musicasRepertorio.indexOf(momento);
+        if (indexMomentos >= 0) {
+            this.momentos.splice(indexMomentos, 1);
+        }
+        if (indexMusicas >= 0) {
+            this.musicasRepertorio.splice(indexMusicas, 1);
+        }
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], RepertoriosComponent.prototype, "musicasRepertorio", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], RepertoriosComponent.prototype, "qtdGroupSetListsEvent", void 0);
+    RepertoriosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-repertorios',
+            template: __webpack_require__(/*! ./repertorios.component.html */ "./src/app/areas/repertorios/repertorios.component.html"),
+            styles: [__webpack_require__(/*! ./repertorios.component.css */ "./src/app/areas/repertorios/repertorios.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            src_app_services_repertorios_service__WEBPACK_IMPORTED_MODULE_5__["RepertoriosService"],
+            _angular_material_core__WEBPACK_IMPORTED_MODULE_7__["DateAdapter"],
+            ng_navigator_share__WEBPACK_IMPORTED_MODULE_8__["NgNavigatorShareService"]])
+    ], RepertoriosComponent);
+    return RepertoriosComponent;
+}());
+
 
 
 /***/ }),
@@ -1128,7 +1795,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 mat-dialog-title>Novo grupo</h2>\r\n<mat-dialog-content [formGroup]=\"formNovoGrupo\">\r\n  \r\n    <mat-form-field style=\"width: 100%\">\r\n        <input matInput\r\n              placeholder=\"Nome do grupo/banda\"\r\n              formControlName=\"nome\" autocomplete=\"off\">\r\n    </mat-form-field>\r\n    <!-- <label for=\"file\">Foto do grupo:</label>\r\n    <input type=\"file\" formControlName=\"foto\" (change)=\"getFotoRef($event)\" accept=\".png,.jpg\" /> -->\r\n</mat-dialog-content>\r\n\r\n<mat-dialog-actions>\r\n    <button class=\"mat-raised-button\"(click)=\"close()\">Close</button>\r\n    <button class=\"mat-raised-button mat-primary\"(click)=\"save()\">Save</button>\r\n</mat-dialog-actions>\r\n\r\n"
+module.exports = "<h2 mat-dialog-title>Novo grupo</h2>\r\n<mat-dialog-content [formGroup]=\"formNovoGrupo\">\r\n  \r\n    <mat-form-field style=\"width: 100%\">\r\n        <input matInput\r\n              placeholder=\"Nome do grupo/banda\"\r\n              formControlName=\"nome\" autocomplete=\"off\">\r\n    </mat-form-field>\r\n    <!-- <label for=\"file\">Foto do grupo:</label>\r\n    <input type=\"file\" formControlName=\"foto\" (change)=\"getFotoRef($event)\" accept=\".png,.jpg\" /> -->\r\n</mat-dialog-content>\r\n\r\n<mat-dialog-actions>\r\n    <button class=\"mat-raised-button\"(click)=\"close()\">Fechar</button>\r\n    <button class=\"mat-raised-button mat-primary\"(click)=\"save()\">Salvar</button>\r\n</mat-dialog-actions>\r\n\r\n"
 
 /***/ }),
 
@@ -1208,7 +1875,7 @@ module.exports = ".half-width {\r\n    width: 32%;\r\n    margin: 0 5px 3px 5px;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 mat-dialog-title>Nova música</h2>\n<mat-dialog-content [formGroup]=\"formNovaMusica\">\n\n\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Nome da música\" formControlName=\"nome\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Artista ou banda\" formControlName=\"artista\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input type=\"url\" matInput placeholder=\"Link p/ ouvir a música\" formControlName=\"linkOuvir\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Link da música no Youtube, Spotify, etc</mat-hint>\n      </mat-form-field>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <mat-form-field class=\"full-width\">\n          <input type=\"url\"  matInput placeholder=\"Link Cifra\" formControlName=\"linkCifra\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput type=\"number\" placeholder=\"Qtd. de vezes tocada\" formControlName=\"quantidadeVezesTocada\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Qtd. real ou aproximada que a música já foi tocada</mat-hint>\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\"> \n        <input matInput [matDatepicker]=\"picker\" placeholder=\"Ultima vez tocada\" formControlName=\"ultimaVezTocada\" autocomplete=\"off\">\n        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n        <mat-datepicker #picker></mat-datepicker>\n        <mat-hint  align=\"start\">Se lembrar, especifique a data</mat-hint>\n      </mat-form-field>\n    </div>    \n  </div>\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n          <mat-form-field class=\"full-width\">\n            <input matInput placeholder=\"Rítmo da Música\" formControlName=\"ritmo\" autocomplete=\"off\">\n          </mat-form-field>\n        </div>\n      <div class=\"col-md-8\">\n        <mat-form-field class=\"full-width\">\n            <mat-chip-list #chipList aria-label=\"Seleção de tags\">\n              <mat-chip *ngFor=\"let tag of tags\" [selectable]=\"selectable\"\n                        [removable]=\"removable\" (removed)=\"remove(tag)\">\n                {{tag}}\n                <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\n              </mat-chip>\n              <input placeholder=\"Tags (separadas por vírgula)\"\n                      [matChipInputFor]=\"chipList\"\n                      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                      [matChipInputAddOnBlur]=\"addOnBlur\"\n                      (matChipInputTokenEnd)=\"add($event)\"\n                      formControlName=\"tags\" autocomplete=\"off\">\n            </mat-chip-list>\n          <!-- <input matInput placeholder=\"Tags (separadas por vírgula)\" formControlName=\"tags\" autocomplete=\"off\"> -->\n        </mat-form-field>\n      </div>\n        \n    </div>\n\n\n  <!-- <div class=\"row\">\n      <mat-form-field class=\"half-width\">\n          <input matInput placeholder=\"Ritmo\" formControlName=\"ritmo\" autocomplete=\"off\">\n        </mat-form-field>\n        <mat-form-field class=\"half-width\">\n          <input matInput placeholder=\"Link YouTube\" formControlName=\"linkVideo\" autocomplete=\"off\">\n        </mat-form-field>\n  </div> -->\n\n\n</mat-dialog-content>\n\n<mat-dialog-actions>\n  <button class=\"mat-raised-button\" (click)=\"close()\">Fechar</button>\n  <button class=\"mat-raised-button mat-primary\" (click)=\"save()\">Salvar</button>\n  <button class=\"mat-raised-button mat-primary\" (click)=\"saveAndContinue()\">Salvar e cadastrar outra</button>\n</mat-dialog-actions>"
+module.exports = "<h2 mat-dialog-title>Nova música</h2>\n<mat-dialog-content [formGroup]=\"formNovaMusica\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Nome da música\" formControlName=\"nome\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Artista ou banda\" formControlName=\"artista\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input type=\"url\" matInput placeholder=\"Link p/ ouvir a música\" formControlName=\"linkOuvir\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Link da música no Youtube, Spotify, etc</mat-hint>\n      </mat-form-field>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <mat-form-field class=\"full-width\">\n          <input type=\"url\"  matInput placeholder=\"Link Cifra\" formControlName=\"linkCifra\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput type=\"number\" placeholder=\"Qtd. de vezes tocada\" formControlName=\"quantidadeVezesTocada\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Qtd. real ou aproximada que a música já foi tocada</mat-hint>\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\"> \n        <input matInput [matDatepicker]=\"picker\" placeholder=\"Ultima vez tocada\" formControlName=\"ultimaVezTocada\" autocomplete=\"off\">\n        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n        <mat-datepicker #picker></mat-datepicker>\n        <mat-hint  align=\"start\">Se lembrar, especifique a data</mat-hint>\n      </mat-form-field>\n    </div>    \n  </div>\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n          <mat-form-field class=\"full-width\">\n            <input matInput placeholder=\"Rítmo da Música\" formControlName=\"ritmo\" autocomplete=\"off\">\n          </mat-form-field>\n        </div>\n      <div class=\"col-md-8\">\n        <mat-form-field class=\"full-width\">\n            <mat-chip-list #chipList aria-label=\"Seleção de tags\">\n              <mat-chip *ngFor=\"let tag of tags\" [selectable]=\"selectable\"\n                        [removable]=\"removable\" (removed)=\"remove(tag)\">\n                {{tag}}\n                <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\n              </mat-chip>\n              <input placeholder=\"Tags (separadas por vírgula)\"\n                      [matChipInputFor]=\"chipList\"\n                      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                      [matChipInputAddOnBlur]=\"addOnBlur\"\n                      (matChipInputTokenEnd)=\"add($event)\"\n                      formControlName=\"tags\" autocomplete=\"off\">\n            </mat-chip-list>\n          <!-- <input matInput placeholder=\"Tags (separadas por vírgula)\" formControlName=\"tags\" autocomplete=\"off\"> -->\n        </mat-form-field>\n      </div>\n        \n    </div>\n\n\n  <!-- <div class=\"row\">\n      <mat-form-field class=\"half-width\">\n          <input matInput placeholder=\"Ritmo\" formControlName=\"ritmo\" autocomplete=\"off\">\n        </mat-form-field>\n        <mat-form-field class=\"half-width\">\n          <input matInput placeholder=\"Link YouTube\" formControlName=\"linkVideo\" autocomplete=\"off\">\n        </mat-form-field>\n  </div> -->\n\n\n</mat-dialog-content>\n\n<mat-dialog-actions>\n  <button class=\"mat-raised-button\" (click)=\"close()\">Fechar</button>\n  <button class=\"mat-raised-button mat-primary\" (click)=\"save()\">Salvar</button>\n  <button class=\"mat-raised-button mat-primary\" (click)=\"saveAndContinue()\">Salvar e cadastrar outra</button>\n</mat-dialog-actions>"
 
 /***/ }),
 
@@ -1228,6 +1895,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm5/keycodes.es5.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/playlist.service */ "./src/app/services/playlist.service.ts");
+/* harmony import */ var src_app_services_musicas_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/musicas.service */ "./src/app/services/musicas.service.ts");
+/* harmony import */ var src_app_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/GLOBAL_FUNCTIONS */ "./src/app/shared/GLOBAL_FUNCTIONS.ts");
+
+
 
 
 
@@ -1235,11 +1906,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CriarMusicaComponent = /** @class */ (function () {
-    function CriarMusicaComponent(dialogRef, data, fb, playlistService) {
+    function CriarMusicaComponent(dialogRef, data, fb, playlistService, musicaService) {
         this.dialogRef = dialogRef;
         this.data = data;
         this.fb = fb;
         this.playlistService = playlistService;
+        this.musicaService = musicaService;
         this.visible = true;
         this.selectable = true;
         this.removable = true;
@@ -1260,30 +1932,46 @@ var CriarMusicaComponent = /** @class */ (function () {
     }
     CriarMusicaComponent.prototype.ngOnInit = function () {
         this.playListDoGrupo = JSON.parse(localStorage.getItem("playlist"));
+        this.grupo = JSON.parse(localStorage.getItem("grupo"));
     };
     CriarMusicaComponent.prototype.close = function () {
         this.dialogRef.close();
     };
     CriarMusicaComponent.prototype.save = function () {
-        this.addSongToPlaylist();
-        this.dialogRef.close();
+        if (this.addSongToPlaylist()) {
+            this.dialogRef.close();
+        }
     };
     CriarMusicaComponent.prototype.saveAndContinue = function () {
-        this.addSongToPlaylist();
-        this.formNovaMusica.reset();
+        if (this.addSongToPlaylist()) {
+            this.formNovaMusica.reset();
+        }
     };
+    //mover esse metodo para componente musicas
     CriarMusicaComponent.prototype.addSongToPlaylist = function () {
+        var tudocerto = true;
         var musica = this.criarMusica();
-        this.playListDoGrupo.musicas.push(musica);
-        localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
-        this.playlistService.addSongToPlaylist(this.playListDoGrupo).then(function (resAddSong) {
-            console.log("musica adiciona a playlist ", musica);
-        });
+        if (!musica) {
+            alert("Esta música já está cadastrada!");
+            return false;
+        }
+        else {
+            localStorage.setItem("playlist", JSON.stringify(this.playListDoGrupo));
+            this.playlistService.addSongToPlaylist(musica, this.grupo).then(function (resAddSong) {
+                console.log("musica adiciona a playlist ");
+            });
+            return tudocerto;
+        }
     };
     CriarMusicaComponent.prototype.criarMusica = function () {
         console.log("tags", this.tags);
+        var nomeMusica = this.formNovaMusica.value.nome.trim();
+        var nomesMusicas = this.playListDoGrupo.musicas.map(function (m) { return m.nome.trim(); });
+        if (nomesMusicas.includes(nomeMusica)) {
+            return null;
+        }
         var novaMusica = {
-            id: "musica",
+            id: this.generateMusicId(this.formNovaMusica.value.nome),
             artista: this.formNovaMusica.value.artista,
             nome: this.formNovaMusica.value.nome,
             linkCifra: this.formNovaMusica.value.linkCifra,
@@ -1293,7 +1981,11 @@ var CriarMusicaComponent = /** @class */ (function () {
             quantidadeVezesTocada: this.formNovaMusica.value.quantidadeVezesTocada,
             ultimaVezTocada: this.formNovaMusica.value.ultimaVezTocada
         };
+        this.playListDoGrupo.musicas.push(novaMusica);
         return novaMusica;
+    };
+    CriarMusicaComponent.prototype.generateMusicId = function (nomeMusica) {
+        return Object(src_app_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_7__["replaceAll"])(nomeMusica.toLowerCase(), " ", "_") + "_" + this.grupo.id;
     };
     CriarMusicaComponent.prototype.add = function (event) {
         var input = event.input;
@@ -1321,9 +2013,243 @@ var CriarMusicaComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
-            src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_5__["PlaylistService"]])
+            src_app_services_playlist_service__WEBPACK_IMPORTED_MODULE_5__["PlaylistService"],
+            src_app_services_musicas_service__WEBPACK_IMPORTED_MODULE_6__["MusicasService"]])
     ], CriarMusicaComponent);
     return CriarMusicaComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.css":
+/*!******************************************************************************!*\
+  !*** ./src/app/modals/editar-musica-modal/editar-musica-modal.component.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".half-width {\r\n    width: 32%;\r\n    margin: 0 5px 3px 5px;\r\n}\r\n\r\n.full-width{\r\n    width:100%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kYWxzL2VkaXRhci1tdXNpY2EtbW9kYWwvZWRpdGFyLW11c2ljYS1tb2RhbC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtJQUNWLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZCIsImZpbGUiOiJzcmMvYXBwL21vZGFscy9lZGl0YXItbXVzaWNhLW1vZGFsL2VkaXRhci1tdXNpY2EtbW9kYWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oYWxmLXdpZHRoIHtcclxuICAgIHdpZHRoOiAzMiU7XHJcbiAgICBtYXJnaW46IDAgNXB4IDNweCA1cHg7XHJcbn1cclxuXHJcbi5mdWxsLXdpZHRoe1xyXG4gICAgd2lkdGg6MTAwJTtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/app/modals/editar-musica-modal/editar-musica-modal.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 mat-dialog-title>Editar música</h2>\n<mat-dialog-content [formGroup]=\"formEditarMusica\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Nome da música\" formControlName=\"nome\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput placeholder=\"Artista ou banda\" formControlName=\"artista\" autocomplete=\"off\">\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input type=\"url\" matInput placeholder=\"Link p/ ouvir a música\" formControlName=\"linkOuvir\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Link da música no Youtube, Spotify, etc</mat-hint>\n      </mat-form-field>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <mat-form-field class=\"full-width\">\n          <input type=\"url\"  matInput placeholder=\"Link Cifra\" formControlName=\"linkCifra\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\">\n        <input matInput type=\"number\" placeholder=\"Qtd. de vezes tocada\" formControlName=\"quantidadeVezesTocada\" autocomplete=\"off\">\n        <mat-hint  align=\"start\">Qtd. real ou aproximada que a música já foi tocada</mat-hint>\n      </mat-form-field>\n    </div>\n    <div class=\"col-md-4\">\n      <mat-form-field class=\"full-width\"> \n        <input matInput [matDatepicker]=\"picker\" placeholder=\"Ultima vez tocada\" formControlName=\"ultimaVezTocada\" autocomplete=\"off\">\n        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n        <mat-datepicker #picker></mat-datepicker>\n        <mat-hint  align=\"start\">Se lembrar, especifique a data</mat-hint>\n      </mat-form-field>\n    </div>    \n  </div>\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n          <mat-form-field class=\"full-width\">\n            <input matInput placeholder=\"Rítmo da Música\" formControlName=\"ritmo\" autocomplete=\"off\">\n          </mat-form-field>\n        </div>\n      <div class=\"col-md-8\">\n        <mat-form-field class=\"full-width\">\n            <mat-chip-list #chipList aria-label=\"Seleção de tags\">\n              <div *ngIf=\"tags.length > 0\">\n                  <mat-chip *ngFor=\"let tag of tags\" [selectable]=\"selectable\"\n                          [removable]=\"removable\" (removed)=\"remove(tag)\">\n                  {{tag}}\n                  <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\n                </mat-chip>\n              </div>\n              \n              <input placeholder=\"Tags (separadas por vírgula)\"\n                      [matChipInputFor]=\"chipList\"\n                      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n                      [matChipInputAddOnBlur]=\"addOnBlur\"\n                      (matChipInputTokenEnd)=\"add($event)\"\n                      formControlName=\"tags\" autocomplete=\"off\">\n            </mat-chip-list>\n          <!-- <input matInput placeholder=\"Tags (separadas por vírgula)\" formControlName=\"tags\" autocomplete=\"off\"> -->\n        </mat-form-field>\n      </div>\n        \n    </div>\n\n\n</mat-dialog-content>\n\n<mat-dialog-actions>\n  <button class=\"mat-raised-button\" (click)=\"onCancelar()\">Cancelar</button>\n  <button class=\"mat-raised-button mat-primary\" (click)=\"salvar()\">Salvar</button>\n</mat-dialog-actions>"
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/modals/editar-musica-modal/editar-musica-modal.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: EditarMusicaModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditarMusicaModalComponent", function() { return EditarMusicaModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/keycodes */ "./node_modules/@angular/cdk/esm5/keycodes.es5.js");
+
+
+
+
+
+var EditarMusicaModalComponent = /** @class */ (function () {
+    function EditarMusicaModalComponent(dialogRef, musica, fb) {
+        this.dialogRef = dialogRef;
+        this.musica = musica;
+        this.fb = fb;
+        this.visible = true;
+        this.selectable = true;
+        this.removable = true;
+        this.addOnBlur = true;
+        this.separatorKeysCodes = [_angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__["COMMA"], _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_4__["ENTER"]];
+        this.tags = [];
+    }
+    EditarMusicaModalComponent.prototype.ngOnInit = function () {
+        this.tags = this.musica.tags.split(",");
+        this.formEditarMusica = this.fb.group({
+            id: this.musica.id,
+            nome: [this.musica.nome, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            artista: [this.musica.artista, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            ritmo: this.musica.ritmo,
+            linkOuvir: [this.musica.linkOuvir],
+            quantidadeVezesTocada: this.musica.quantidadeVezesTocada,
+            ultimaVezTocada: this.musica.ultimaVezTocada,
+            linkCifra: this.musica.linkCifra,
+            tags: ['']
+        });
+        this.formEditarMusica.valueChanges.subscribe(console.log);
+    };
+    EditarMusicaModalComponent.prototype.onCancelar = function () {
+        this.dialogRef.close();
+    };
+    EditarMusicaModalComponent.prototype.salvar = function () {
+        //this.formEditarMusica.setValue({tags: this.tags.join(", ")});
+        this.dialogRef.close(this.formEditarMusica.value);
+    };
+    EditarMusicaModalComponent.prototype.add = function (event) {
+        var input = event.input;
+        var value = event.value;
+        // Add our fruit
+        if ((value || '').trim()) {
+            this.tags.push(value.trim());
+        }
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
+    };
+    EditarMusicaModalComponent.prototype.remove = function (tag) {
+        var index = this.tags.indexOf(tag);
+        if (index >= 0) {
+            this.tags.splice(index, 1);
+        }
+    };
+    EditarMusicaModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-editar-musica-modal',
+            template: __webpack_require__(/*! ./editar-musica-modal.component.html */ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.html"),
+            styles: [__webpack_require__(/*! ./editar-musica-modal.component.css */ "./src/app/modals/editar-musica-modal/editar-musica-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], EditarMusicaModalComponent);
+    return EditarMusicaModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.css":
+/*!**************************************************************************************!*\
+  !*** ./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.css ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZGFscy9lZGl0YXItcmVwZXJ0b3Jpby1tb2RhbC9lZGl0YXItcmVwZXJ0b3Jpby1tb2RhbC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  editar-repertorio-modal works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: EditarRepertorioModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditarRepertorioModalComponent", function() { return EditarRepertorioModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var EditarRepertorioModalComponent = /** @class */ (function () {
+    function EditarRepertorioModalComponent() {
+    }
+    EditarRepertorioModalComponent.prototype.ngOnInit = function () {
+    };
+    EditarRepertorioModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-editar-repertorio-modal',
+            template: __webpack_require__(/*! ./editar-repertorio-modal.component.html */ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.html"),
+            styles: [__webpack_require__(/*! ./editar-repertorio-modal.component.css */ "./src/app/modals/editar-repertorio-modal/editar-repertorio-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], EditarRepertorioModalComponent);
+    return EditarRepertorioModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.css":
+/*!********************************************************************************!*\
+  !*** ./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.css ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".msg-excluir{    \r\n    padding: 2px;\r\n    margin: 5px;\r\n    background-color: rgb(233, 165, 165);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kYWxzL2V4Y2x1aXItbXVzaWNhLW1vZGFsL2V4Y2x1aXItbXVzaWNhLW1vZGFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osV0FBVztJQUNYLG9DQUFvQztBQUN4QyIsImZpbGUiOiJzcmMvYXBwL21vZGFscy9leGNsdWlyLW11c2ljYS1tb2RhbC9leGNsdWlyLW11c2ljYS1tb2RhbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1zZy1leGNsdWlyeyAgICBcclxuICAgIHBhZGRpbmc6IDJweDtcclxuICAgIG1hcmdpbjogNXB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzMywgMTY1LCAxNjUpO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.html":
+/*!*********************************************************************************!*\
+  !*** ./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.html ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div mat-dialog-content>  \n  <p class=\"msg-excluir\">\n    Tem certeza que deseja excluir a música <strong>{{data.nome}} - {{data.artista}}</strong>?\n  </p>  \n</div>\n<div mat-dialog-actions class=\"pull-right\">\n  <button mat-raised-button (click)=\"onNoClick()\" cdkFocusInitial>Cancelar</button>\n  <button mat-raised-button (click)=\"excluir()\">Sim</button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.ts ***!
+  \*******************************************************************************/
+/*! exports provided: ExcluirMusicaModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExcluirMusicaModalComponent", function() { return ExcluirMusicaModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var ExcluirMusicaModalComponent = /** @class */ (function () {
+    function ExcluirMusicaModalComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ExcluirMusicaModalComponent.prototype.ngOnInit = function () {
+    };
+    ExcluirMusicaModalComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ExcluirMusicaModalComponent.prototype.excluir = function () {
+        this.dialogRef.close(true);
+    };
+    ExcluirMusicaModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-excluir-musica-modal',
+            template: __webpack_require__(/*! ./excluir-musica-modal.component.html */ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.html"),
+            styles: [__webpack_require__(/*! ./excluir-musica-modal.component.css */ "./src/app/modals/excluir-musica-modal/excluir-musica-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], ExcluirMusicaModalComponent);
+    return ExcluirMusicaModalComponent;
 }());
 
 
@@ -1357,6 +2283,9 @@ var GruposService = /** @class */ (function () {
     };
     GruposService.prototype.getUserGroups = function (emailUsuario) {
         return this.firestore.collection('grupos', function (ref) { return ref.where('emailMembros', 'array-contains', emailUsuario); }).valueChanges();
+    };
+    GruposService.prototype.getGroupUsers = function (idGrupo) {
+        return this.firestore.collection('usuariosPorGrupo').doc(idGrupo).valueChanges();
     };
     GruposService.prototype.associateUserToGroup = function (idGrupo, usuario) {
         var _this = this;
@@ -1404,6 +2333,42 @@ var GruposService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/musicas.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/musicas.service.ts ***!
+  \*********************************************/
+/*! exports provided: MusicasService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MusicasService", function() { return MusicasService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
+
+
+var MusicasService = /** @class */ (function () {
+    function MusicasService(firestore) {
+        this.firestore = firestore;
+    }
+    MusicasService.prototype.createSong = function (musica) {
+        return this.firestore.collection('musicas').doc(musica.id).set(musica);
+    };
+    MusicasService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], MusicasService);
+    return MusicasService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/playlist.service.ts":
 /*!**********************************************!*\
   !*** ./src/app/services/playlist.service.ts ***!
@@ -1417,25 +2382,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/GLOBAL_FUNCTIONS */ "./src/app/shared/GLOBAL_FUNCTIONS.ts");
 
 
 
+
+//import * as firebase from 'firebase';
 var PlaylistService = /** @class */ (function () {
     function PlaylistService(firestore) {
         this.firestore = firestore;
     }
-    PlaylistService.prototype.createPlaylist = function (grupoId) {
-        var playlist = {
-            idGrupo: grupoId,
-            musicas: []
+    PlaylistService.prototype.createPlaylist = function (grupo) {
+        var _this = this;
+        return new Promise(function (resolve) {
+            var dataCricao = new Date(grupo.criadoEm);
+            var anomes = dataCricao.getFullYear().toString() + "_" + dataCricao.getMonth().toString();
+            console.log("ANOMES", anomes);
+            _this.firestore.collection('musicasGrupos/').doc(anomes).get().subscribe(function (res) {
+                if (!res.exists) {
+                    resolve(_this.firestore.collection('musicasGrupos').doc(anomes).collection('musicas').add({}));
+                }
+                ;
+            });
+        });
+        //return this.firestore.collection('playlists').doc(grupoId).set(playlist);
+    };
+    PlaylistService.prototype.getGroupSongs = function (grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        return this.firestore.collection('musicasGrupos/' + anomes + '/musicas', function (ref) { return ref.where('idGrupo', '==', grupo.id); }).valueChanges();
+    };
+    PlaylistService.prototype.removeSongFromPlaylist = function (musica, grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        return this.firestore.collection('musicasGrupos/' + anomes + '/musicas').doc(musica.id).delete();
+    };
+    PlaylistService.prototype.editSongFromPlaylist = function (novaMusica, grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        var novoRegistro = {
+            idGrupo: grupo.id,
+            musica: novaMusica
         };
-        return this.firestore.collection('playlists').doc(grupoId).set(playlist);
+        return this.firestore.doc('musicasGrupos/' + anomes + '/musicas/' + novaMusica.id).update(novoRegistro);
     };
-    PlaylistService.prototype.getPlayList = function (idGrupo) {
-        return this.firestore.doc('playlists/' + idGrupo).get();
-    };
-    PlaylistService.prototype.addSongToPlaylist = function (playlist) {
-        return this.firestore.doc('playlists/' + playlist.idGrupo).update(playlist);
+    PlaylistService.prototype.addSongToPlaylist = function (musicaNova, grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        var regMusica = {
+            idGrupo: grupo.id,
+            musica: musicaNova
+        };
+        return this.firestore.collection('musicasGrupos/' + anomes + '/musicas').doc(musicaNova.id).set(regMusica);
+        // let washingtonRef = db.collection('cities').doc('DC');
+        // this.firestore.runTransaction(transaction => {
+        //     // This code may get re-run multiple times if there are conflicts.
+        //     return transaction.get(userRef).then(doc => {
+        //         if (!doc.data().bookings) {
+        //             transaction.set({
+        //                 bookings: [booking]
+        //             });
+        //         } else {
+        //             const bookings = doc.data().bookings;
+        //             bookings.push(booking);
+        //             transaction.update(userRef, { bookings: bookings });
+        //         }
+        //     });
+        // })
     };
     PlaylistService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1444,6 +2453,50 @@ var PlaylistService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
     ], PlaylistService);
     return PlaylistService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/repertorios.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/repertorios.service.ts ***!
+  \*************************************************/
+/*! exports provided: RepertoriosService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RepertoriosService", function() { return RepertoriosService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared/GLOBAL_FUNCTIONS */ "./src/app/shared/GLOBAL_FUNCTIONS.ts");
+
+
+
+
+var RepertoriosService = /** @class */ (function () {
+    function RepertoriosService(firestore) {
+        this.firestore = firestore;
+    }
+    RepertoriosService.prototype.createSetlist = function (grupo, repertorio) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        console.log(anomes);
+        return this.firestore.collection('setlists/' + anomes + '/sets').doc(repertorio.id).set(repertorio);
+    };
+    RepertoriosService.prototype.getSetLists = function (grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        return this.firestore.collection('setlists/' + anomes + '/sets', function (ref) { return ref.where('idGrupo', '==', grupo.id); }).valueChanges();
+    };
+    RepertoriosService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], RepertoriosService);
+    return RepertoriosService;
 }());
 
 
@@ -1492,6 +2545,39 @@ var UsuariosService = /** @class */ (function () {
     return UsuariosService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/GLOBAL_FUNCTIONS.ts":
+/*!********************************************!*\
+  !*** ./src/app/shared/GLOBAL_FUNCTIONS.ts ***!
+  \********************************************/
+/*! exports provided: replaceAll, getAnoMesCriacaoGrupo, generateId */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceAll", function() { return replaceAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAnoMesCriacaoGrupo", function() { return getAnoMesCriacaoGrupo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateId", function() { return generateId; });
+var replaceAll = function (str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+};
+var getAnoMesCriacaoGrupo = function (grupo) {
+    var arrayDatas = grupo.criadoEm.split("/");
+    var dataCriacao = new Date(arrayDatas[1] + "/" + arrayDatas[0] + "/" + arrayDatas[2]);
+    console.log("grupo.CriadoEm", grupo.criadoEm);
+    var anomes = dataCriacao.getFullYear().toString() + "_" + dataCriacao.getMonth().toString();
+    console.log("ANOMES", anomes);
+    return anomes;
+};
+var generateId = function () {
+    var date = new Date();
+    // tslint:disable-next-line:max-line-length
+    var id = date.getMilliseconds().toString() + date.getSeconds().toString() + date.getMinutes().toString() + date.getDate().toString() + date.getMonth().toString() + date.getFullYear().toString();
+    return id;
+};
 
 
 /***/ }),
