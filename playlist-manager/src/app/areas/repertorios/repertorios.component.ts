@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Musica } from 'src/app/interfaces/musica.model';
 import { FormBuilder, Validators } from '@angular/forms';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
@@ -9,6 +9,11 @@ import { Repertorio } from 'src/app/interfaces/repertorio.model';
 import { Setlist } from 'src/app/interfaces/setlist.model';
 import { generateId } from 'src/app/shared/GLOBAL_FUNCTIONS';
 import { Grupo } from 'src/app/interfaces/grupo.model';
+import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import { NgNavigatorShareService } from 'ng-navigator-share';
+
+
 @Component({
   selector: 'app-repertorios',
   templateUrl: './repertorios.component.html',
@@ -17,6 +22,7 @@ import { Grupo } from 'src/app/interfaces/grupo.model';
 export class RepertoriosComponent implements OnInit {
 
   @Input() musicasRepertorio: any[];
+  @Output() qtdGroupSetListsEvent = new EventEmitter<number>();
   visible = true;
   selectable = true;
   removable = true;
@@ -25,10 +31,14 @@ export class RepertoriosComponent implements OnInit {
   momentos = [];
   grupo: Grupo;
   grupoSetLists: Setlist[] = [];
+  tituloRepertorio = "Novo Repertório";
+  setlistEdicao: Setlist;
   //setList: any[] = this.musicasRepertorio;
   constructor(    
     private fb: FormBuilder, 
-    private repertorioService: RepertoriosService) { }
+    private repertorioService: RepertoriosService,
+    private _adapter: DateAdapter<any>,
+    private shareService: NgNavigatorShareService) { }
 
 
   formNovoRepertorio = this.fb.group({
@@ -38,11 +48,13 @@ export class RepertoriosComponent implements OnInit {
   });
 
   ngOnInit() {
+    this._adapter.setLocale('pt-BR');
     this.grupo = JSON.parse(localStorage.getItem('grupo'));
     this.repertorioService.getSetLists(this.grupo).subscribe(setlists => {
       this.grupoSetLists = setlists as Setlist[];
       this.grupoSetLists.sort((a, b) => (a.dataEvento > b.dataEvento) ? 1 : -1);
       console.log("SETLISTS", this.grupoSetLists);
+      this.qtdGroupSetListsEvent.emit(this.grupoSetLists.length);
     }, error => {
       alert("Falha ao obter setlists");
     });
@@ -51,23 +63,74 @@ export class RepertoriosComponent implements OnInit {
 
   criarRepertorio(){
     let repertorio: Setlist = {
-      id: this.grupo.id + "_" + generateId(),
-      idGrupo: this.grupo.id,
+      id: this.setlistEdicao ? this.setlistEdicao.id : this.grupo.id + "_" + generateId(),
+      idGrupo: this.setlistEdicao ? this.setlistEdicao.idGrupo : this.grupo.id,
       tituloEvento: this.formNovoRepertorio.value.titulo.toString(),
       dataEvento: this.formNovoRepertorio.value.dataEvento,
       items: this.musicasRepertorio     
     };
     console.log("REPERTORIO", repertorio);
-    this.repertorioService.createSetlist(this.grupo, repertorio).then(res => {
-      //this.grupoSetLists.unshift(repertorio);
-      //alert("Repertório criado com sucesso");
+    this.repertorioService.createSetlist(this.grupo, repertorio).then(res => {     
       this.musicasRepertorio = [];
       console.log(repertorio);
+
+      this.setlistEdicao = null;
+      this.tituloRepertorio = "Novo Repertório";
+
     }).catch(error => {
       alert("Deu errado! :(");
       console.log(error);
     });
     
+  }
+
+  cancelarCriacaoRepertorio(){
+    this.musicasRepertorio = [];
+    this.momentos = [];
+    this.formNovoRepertorio.setValue({
+      titulo:null,
+      dataEvento: null,
+      momentos:[]
+    });
+  }
+
+  async compartilhar(setlist){
+    try{
+      const sharedResponse = await this.shareService.share({
+        title:'`Web Articles and Tutorials',
+        text: 'Check out my blog — its worth looking.',
+        url: 'www.codershood.info'
+      });
+      console.log(sharedResponse);
+    } catch(error) {
+      console.log('You app is not shared, reason: ', error);
+    }
+  }
+
+  podeEditarSetlist(setlist: Setlist){
+    let hoje = new Date();
+    return setlist.dataEvento.toDate() >= hoje;
+  }
+
+  editarSetlist(setlist: Setlist){
+    // if(!this.podeEditarSetlist(setlist)){
+    //   alert("Não é possível editar a lista de um evento passado");
+    //   return;
+    // }
+    // this.tituloRepertorio = "Editar Repertório";
+    // console.log("Editar setlist")
+    // this.momentos = setlist.items.filter(i => !i.nome);
+    // this.musicasRepertorio = setlist.items;
+
+    // window.scroll(0, 0);
+    // this.formNovoRepertorio.setValue({
+    //   titulo: setlist.tituloEvento,
+    //   dataEvento: setlist.dataEvento.toDate(),
+    //   momentos:[]
+    // });  
+
+    // this.setlistEdicao = setlist;
+    // console.log(this.formNovoRepertorio.value.dataEvento);
   }
 
   drop(event: CdkDragDrop<string[]>) {

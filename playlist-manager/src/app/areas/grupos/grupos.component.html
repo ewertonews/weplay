@@ -42,10 +42,11 @@
                   </mat-tab>
                   <mat-tab label="Repertórios">
                     <ng-template mat-tab-label>
-                      <i class="fa fa-list-ul fa-lg" aria-hidden="true"></i>
-                      &nbsp;Repertórios
-                    </ng-template> 
-                    <app-repertorios [musicasRepertorio]="musicasParaRepertorio"></app-repertorios>                  
+                      <i class="fa fa-music fa-lg" aria-hidden="true"></i>
+                      &nbsp;<span *ngIf="qtsSetlists" matBadge="{{qtsSetlists}}" matBadgeOverlap="false">Repertórios</span>
+                      <span *ngIf="!qtsSetlists">Repertórios</span>
+                    </ng-template>                    
+                    <app-repertorios (qtdGroupSetListsEvent)="qtdGroupSetListsEvent($event)" [musicasRepertorio]="musicasParaRepertorio"></app-repertorios>                  
                   </mat-tab>               
                 </mat-tab-group>
             </mat-card-content>

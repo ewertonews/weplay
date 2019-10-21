@@ -1,31 +1,41 @@
 <mat-card *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
   <br>
   <mat-card-title>
-    <h3>Novo Repertório</h3>
+    <h3>{{tituloRepertorio}}</h3>
   </mat-card-title>
   <mat-card-content>
     <div class="row" [formGroup]="formNovoRepertorio">
-      <div class="col-md-5">
+      <div class="col-md-3">
         <mat-form-field class="full-width">
           <input matInput type="text" placeholder="Título do evento" formControlName="titulo" autocomplete="off">
         </mat-form-field>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <mat-form-field class="full-width">
-          <input matInput [matDatepicker]="picker" placeholder="Data do evento" formControlName="dataEvento"
+          <input matInput [matDatepicker]="picker" (click)="picker.open()" placeholder="Data do evento" formControlName="dataEvento"
             autocomplete="off">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
+          <mat-datepicker touchUi #picker></mat-datepicker>
         </mat-form-field>
       </div>
-
+      <div class="col-md-3">
+        <mat-form-field class="full-width">
+          <mat-chip-list #chipList aria-label="Seleção de momentos">
+            <input placeholder="Seções do evento" [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)" formControlName="momentos" autocomplete="off">
+          </mat-chip-list>
+          <mat-hint align="start">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>
+        </mat-form-field>
+      </div>
       <div class="col-md-3 btn-novo-repertorio">
         <button class="mat-raised-button" (click)="criarRepertorio()">Salvar</button>
+        &nbsp;<button class="mat-raised-button" (click)="cancelarCriacaoRepertorio()">Cancelar</button>
       </div>
     </div>
   </mat-card-content>
   <div class="row">
-    <div class="col-md-3" [formGroup]="formNovoRepertorio">
+    <!-- <div class="col-md-3" [formGroup]="formNovoRepertorio">
       <mat-form-field class="full-width">
         <mat-chip-list #chipList aria-label="Seleção de momentos">
           <input placeholder="Seções do evento" [matChipInputFor]="chipList"
@@ -34,7 +44,7 @@
         </mat-chip-list>
         <mat-hint align="start">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>
       </mat-form-field>
-    </div>
+    </div> -->
     <div class="col-md-9">
       <mat-chip *ngFor="let momento of momentos" [selectable]="selectable" [removable]="removable"
         (removed)="remove(momento)">
@@ -43,6 +53,7 @@
       </mat-chip>
     </div>
   </div>
+  <!-- card criação e edicao -->
   <div class="row" *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
     <div class="col-md-4">
       <br>
@@ -63,7 +74,10 @@
               <div class="example-box" *ngFor="let item of musicasRepertorio; let i = index" cdkDrag>
                 <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
                 <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
-                <i class="fa fa-ellipsis-v pull-right"></i>
+                <div class="drag-handle" cdkDragHandle>
+                  <i class="fa fa-ellipsis-v pull-right drag-icon"></i>
+                  <i class="fa fa-ellipsis-v pull-right drag-icon"></i>
+                </div>                
               </div>
             </div>
           </div>
@@ -79,7 +93,7 @@
         <mat-card-content>
           <div>
             <strong>Título do evento</strong><br>
-            {{setlist.titulo}}
+            {{setlist.tituloEvento}}
             <br>
             <label>Data</label><br>
             {{setlist.dataEvento.toDate() | date:'dd/MM/yyyy'}}
@@ -98,14 +112,20 @@
                         <button [disabled]="!item.linkCifra" class="mat-raised-button">Cifra</button>
                       </div>
                   </mat-expansion-panel>
-              </mat-accordion>
-              <!-- <div class="example-box" *ngFor="let item of setlist.items; let i = index">
-                <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
-                <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
-                <i class="fa fa-ellipsis-v pull-right"></i>
-              </div> -->
+              </mat-accordion>             
             </div>
           </div>
+          <div class="rep-actions">
+              <button mat-icon-button color="accent">
+                  <mat-icon>delete</mat-icon>
+              </button>
+              <button (click)="editarSetlist(setlist)" class="pull-right" mat-icon-button color="primary">
+                  <mat-icon>edit</mat-icon>
+              </button>
+              <button (click)="compartilhar(setlist)" class="pull-right" mat-icon-button color="primary">
+                  <mat-icon>share</mat-icon>
+              </button>           
+          </div> 
         </mat-card-content>
       </mat-card>
     </div>

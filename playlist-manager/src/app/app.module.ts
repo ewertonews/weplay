@@ -27,9 +27,10 @@ import { MatListModule } from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
-import {MatPaginatorIntl, MatNativeDateModule} from '@angular/material';
+import {MatPaginatorIntl, MatNativeDateModule, DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 
 
 import { LandingComponent } from './areas/landing/landing.component';
@@ -105,7 +106,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
   providers: [
     AuthService, 
     UsuariosService,  
-    { provide: MatPaginatorIntl, useValue: getPortuguesePaginatorIntl() },
+    {provide: MatPaginatorIntl, useValue: getPortuguesePaginatorIntl() },
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
     MatDatepickerModule
   ],
   bootstrap: [AppComponent],

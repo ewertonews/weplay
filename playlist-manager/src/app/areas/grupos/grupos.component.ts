@@ -24,6 +24,7 @@ export class GruposComponent implements OnInit {
   qtdMusicas;
   usuariosDoGrupo: Usuario[];
   musicasParaRepertorio: Musica[];
+  qtsSetlists: number;
 
   constructor(
     private playlistService: PlaylistService,
@@ -75,5 +76,11 @@ export class GruposComponent implements OnInit {
     }
     
   }
+
+  qtdGroupSetListsEvent($event){
+    this.qtsSetlists = $event;
+  }
+
+  
 
 }

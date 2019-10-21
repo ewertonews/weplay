@@ -7,13 +7,14 @@
 }
 
 .card-rep{
-    background-color: gainsboro;
+    background-color: #cff7f3;
     /* width: 90%; */
+    padding: 8px;
     
 }
 .row {
   margin-left: 0px;
-  margin-right: 0px;
+  margin-right: 2px;
 }
 
 .reps{
@@ -77,4 +78,17 @@
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
   
-  
+  .drag-icon{
+    margin-left: 0.1em;
+    color: lightgray;
+  }
+
+  .drag-handle{
+    width: 22px;
+    height: 26px;
+    padding: 5px 4px;
+  }
+
+  .rep-actions{
+    margin: -13px 0px -3px 2px;
+  }
