@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from 'angular-admin-lte';
-import { HomeComponent } from './areas/home/home.component';
+import { HomeComponent } from './componentes/home/home.component';
 import { adminLteConf } from './admin-lte.conf';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './componentes/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -33,7 +33,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 
 
-import { LandingComponent } from './areas/landing/landing.component';
+import { LandingComponent } from './componentes/landing/landing.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -43,18 +43,19 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 import { environment } from '../environments/environment';
 import { AuthService } from './autenticacao/auth.service';
-import { CriarGrupoModalComponent } from './modals/criar-grupo/criar-grupo-modal.component';
-import { CardGrupoComponent } from './areas/grupos/card-grupo/card-grupo.component';
-import { GruposComponent } from './areas/grupos/grupos.component';
-import { UsuariosService } from './services/usuarios.service';
-import { MusicasComponent } from './areas/musicas/musicas.component';
-import { CriarMusicaComponent } from './modals/criar-musica/criar-musica.component';
-import { getPortuguesePaginatorIntl } from './areas/musicas/portuguese-paginator-intl';
-import { RepertoriosComponent } from './areas/repertorios/repertorios.component';
-import { ExcluirMusicaModalComponent } from './modals/excluir-musica-modal/excluir-musica-modal.component';
-import { EditarMusicaModalComponent } from './modals/editar-musica-modal/editar-musica-modal.component';
-import { EditarRepertorioModalComponent } from './modals/editar-repertorio-modal/editar-repertorio-modal.component';
+import { CriarGrupoModalComponent } from './componentes/grupo/modals/criar-grupo/criar-grupo-modal.component';
+import { CardGrupoComponent } from './componentes/grupo/card-grupo/card-grupo.component';
+import { GrupoComponent } from './componentes/grupo/grupo.component';
+import { UsuariosService } from './componentes/usuario/services/usuarios.service';
+import { MusicasComponent } from './componentes/musicas/musicas.component';
+import { CriarMusicaComponent } from './componentes/musicas/modals/criar-musica/criar-musica.component';
+import { getPortuguesePaginatorIntl } from './componentes/musicas/portuguese-paginator-intl';
+import { RepertoriosComponent } from './componentes/repertorios/repertorios.component';
+import { ExcluirMusicaModalComponent } from './shared/modals/excluir-musica-modal/excluir-musica-modal.component';
+import { EditarMusicaModalComponent } from './componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component';
+import { EditarRepertorioModalComponent } from './componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { UsuarioComponent } from './componentes/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -64,13 +65,14 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     LandingComponent,
     CriarGrupoModalComponent,
     CardGrupoComponent,
-    GruposComponent,
+    GrupoComponent,
     MusicasComponent,
     CriarMusicaComponent,
     RepertoriosComponent,
     ExcluirMusicaModalComponent,
     EditarMusicaModalComponent,
-    EditarRepertorioModalComponent
+    EditarRepertorioModalComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

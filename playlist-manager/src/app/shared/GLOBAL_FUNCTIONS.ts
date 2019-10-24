@@ -1,4 +1,4 @@
-import { Grupo } from '../interfaces/grupo.model';
+import { Grupo } from '../componentes/grupo/interfaces/grupo.model';
 
 export const replaceAll = (str, find, replace) => {
     return str.replace(new RegExp(find, 'g'), replace);
