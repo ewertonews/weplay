@@ -13,6 +13,8 @@ import { Grupo } from 'src/app/componentes/grupo/interfaces/grupo.model';
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import { NgNavigatorShareService } from 'ng-navigator-share';
+import { MatDialog } from '@angular/material';
+import { CompartilharModalComponent } from 'src/app/shared/modals/compartilhar-modal/compartilhar-modal.component';
 
 
 @Component({
@@ -46,7 +48,8 @@ export class RepertoriosComponent implements OnInit {
     private fb: FormBuilder, 
     private repertorioService: RepertoriosService,
     private _adapter: DateAdapter<any>,
-    private shareService: NgNavigatorShareService) {
+    private shareService: NgNavigatorShareService,
+    private modalDialog: MatDialog) {
       
       this.instanciateSetlistEdicao();
   }
@@ -239,15 +242,30 @@ export class RepertoriosComponent implements OnInit {
   }
 
   async compartilhar(setlist){
-    try{
-      const sharedResponse = await this.shareService.share({
-        title:'`Web Articles and Tutorials',
-        text: 'Check out my blog — its worth looking.',
-        url: 'www.codershood.info'
-      });
+    let listaMusicas = "";
+
+    setlist.items.forEach(item => {
+      if (item.nome){
+        listaMusicas = listaMusicas + "  " + item.nome + item.artista + "\r\n";
+      }else{
+        listaMusicas = listaMusicas + item + "\r\n";
+      }     
+    });
+
+    let shareText = {
+      title: setlist.tituloEvento + " - " + setlist.dataEvento.toString(),
+      text: listaMusicas      
+    };
+    //url: 'www.codershood.info'
+    try{      
+      const sharedResponse = await this.shareService.share(shareText);
       console.log(sharedResponse);
-    } catch(error) {
+    } catch(error) {      
       console.log('You app is not shared, reason: ', error);
+      const dialogRef = this.modalDialog.open(CompartilharModalComponent, {
+        width: '450px',
+        data: shareText
+      });
     }
   }
 }

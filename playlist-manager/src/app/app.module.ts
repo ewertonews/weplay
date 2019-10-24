@@ -56,6 +56,7 @@ import { EditarMusicaModalComponent } from './componentes/musicas/modals/editar-
 import { EditarRepertorioModalComponent } from './componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
+import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/compartilhar-modal.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
     ExcluirMusicaModalComponent,
     EditarMusicaModalComponent,
     EditarRepertorioModalComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    CompartilharModalComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +120,8 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
     CriarGrupoModalComponent, 
     CriarMusicaComponent,
     ExcluirMusicaModalComponent,
-    EditarMusicaModalComponent
+    EditarMusicaModalComponent,
+    CompartilharModalComponent
   ]
 })
 export class AppModule { }
