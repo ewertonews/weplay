@@ -54,6 +54,13 @@
     height: 10px;
   }
   
+  .musica-artista{
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .cdk-drag-preview {
     box-sizing: border-box;
     border-radius: 4px;
@@ -92,3 +99,13 @@
   .rep-actions{
     margin: -13px 0px -3px 2px;
   }
+
+  .btn-excluir-musica{
+    margin-left: -12px;
+    margin-right: -5px;
+  }
+
+.mat-expansion-panel:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+    border: solid 0.5px lightgray;
+}

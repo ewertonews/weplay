@@ -23,8 +23,9 @@ export class GruposComponent implements OnInit {
   tabSelecionada = 0;
   qtdMusicas;
   usuariosDoGrupo: Usuario[];
-  musicasParaRepertorio: Musica[];
+  musicasParaRepertorio: Musica[] = [];
   qtsSetlists: number;
+  clearSelection = false;
 
   constructor(
     private playlistService: PlaylistService,
@@ -65,8 +66,18 @@ export class GruposComponent implements OnInit {
     });
   }
 
+  
   receiveMusicasSelecionadas($event) {
     console.log("recebeu o evento");
+    // let ehEditSetlist = localStorage.getItem("editlist");
+    // if(ehEditSetlist){
+
+    // }
+    // $event.forEach(musica => {
+    //   if(!this.musicasParaRepertorio.includes(musica)){
+    //     this.musicasParaRepertorio.push(musica);
+    //   }        
+    // });
     this.musicasParaRepertorio = $event;
     console.log("musicasParaRepertorio", this.musicasParaRepertorio);
     if(localStorage.getItem("tab")){
@@ -81,6 +92,9 @@ export class GruposComponent implements OnInit {
     this.qtsSetlists = $event;
   }
 
-  
+  limparSelecao(event){
+    console.log("limpar selecao", event);
+    this.clearSelection = event;
+  }
 
 }

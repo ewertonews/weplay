@@ -38,15 +38,24 @@
                       &nbsp;<span *ngIf="qtdMusicas" matBadge="{{qtdMusicas}}" matBadgeOverlap="false">Músicas</span>
                       <span *ngIf="!qtdMusicas">Músicas</span>
                     </ng-template>
-                   <app-musicas (musicasSelecionadasEvent)="receiveMusicasSelecionadas($event)" *ngIf="playlistDoGrupo" [musicas]="playlistDoGrupo.musicas"></app-musicas>
+                   <app-musicas 
+                      *ngIf="playlistDoGrupo" 
+                      (musicasSelecionadasEvent)="receiveMusicasSelecionadas($event)"                      
+                      [musicas]="playlistDoGrupo.musicas"
+                      [clearSelected]="clearSelection">
+                    </app-musicas>
                   </mat-tab>
                   <mat-tab label="Repertórios">
                     <ng-template mat-tab-label>
-                      <i class="fa fa-music fa-lg" aria-hidden="true"></i>
+                      <i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>
                       &nbsp;<span *ngIf="qtsSetlists" matBadge="{{qtsSetlists}}" matBadgeOverlap="false">Repertórios</span>
                       <span *ngIf="!qtsSetlists">Repertórios</span>
                     </ng-template>                    
-                    <app-repertorios (qtdGroupSetListsEvent)="qtdGroupSetListsEvent($event)" [musicasRepertorio]="musicasParaRepertorio"></app-repertorios>                  
+                    <app-repertorios 
+                      (qtdGroupSetListsEvent)="qtdGroupSetListsEvent($event)"
+                      (needToClearSelection)="limparSelecao($event)"
+                      [musicasRepertorio]="musicasParaRepertorio">
+                    </app-repertorios>                  
                   </mat-tab>               
                 </mat-tab-group>
             </mat-card-content>

@@ -16,8 +16,11 @@ import { EditarMusicaModalComponent } from 'src/app/modals/editar-musica-modal/e
 })
 export class MusicasComponent implements OnInit {
   temMusicas = false;
+  textoBotaoLista = "Criar Lista";
   @Input() musicas: Musica[];
-
+  // tslint:disable-next-line: variable-name
+  _clearSelected: boolean;
+  
   dataSource: MatTableDataSource<Musica>;
   selection = new SelectionModel<Musica>(true, []);
   musicasSelecionadas: Musica[];
@@ -40,11 +43,7 @@ export class MusicasComponent implements OnInit {
   ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
 
   ngOnInit() {    
-    // if (this.dataSource){
-    //   this.dataSource.data = this.musicas;
-    // }else{
       
-    // }    
     if (this.musicas.length > 0){     
       
       this.initPaginator();
@@ -53,14 +52,10 @@ export class MusicasComponent implements OnInit {
       
     }    
   }
-  
-
-
   // tslint:disable-next-line:use-life-cycle-interface
-  // ngAfterViewInit() {
-    
-  // }
-
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit");
+  }
 
   openCriarMusicaDialog() {
     console.log("Chamou o open dialog")
@@ -121,17 +116,23 @@ export class MusicasComponent implements OnInit {
   }
 
   clearSelection(){
-    this.musicasSelecionadas = [];
-    this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
     this.selection.clear();
+    this.musicasSelecionadas = this.selection.selected;
+    //this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
+   
   }
 
   selectMusica($event, row){
     if($event){      
       this.selection.toggle(row);
-      console.log(this.selection.selected);
+      console.log("selected", this.selection.selected);
       this.musicasSelecionadas = this.selection.selected;
-      this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
+      // this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);
+
+      // let ehEdicaoSetlist = localStorage.getItem("editlist");
+      // if(ehEdicaoSetlist){
+      //   this.textoBotaoLista = "Add à lista em edição";            
+      // }
     } 
     //return null;
   }
@@ -139,14 +140,10 @@ export class MusicasComponent implements OnInit {
   enviarMusicasCriarRepertorio(){
     console.log("chamou enviarMusicasCriarRepertorio");
     localStorage.setItem("tab", "1");
-    this.sendTabSelecionada(this.musicasSelecionadas);
+    this.musicasSelecionadasEvent.emit(this.musicasSelecionadas);    
   }
 
-  sendTabSelecionada(musicas) {
-    console.log("vai emitir o evento");
-    this.musicasSelecionadasEvent.emit(musicas);
-  }
-
+  
   editarMusica(musica, indiceMusica){
     console.log("musica para editar: ", musica);
     console.log("indice da musica: ", indiceMusica);
@@ -206,4 +203,15 @@ export class MusicasComponent implements OnInit {
     this.playlist.musicas = this.musicas;
     localStorage.setItem('playlist', JSON.stringify(this.playlist));
   }
+
+  @Input()
+  set clearSelected(clearSelected) {
+    console.log("RECEBEU CLEAR SELECTED", clearSelected);
+    this._clearSelected = clearSelected;
+    this.clearSelection();
+    this.textoBotaoLista = "Criar lista";
+    this._clearSelected = false;
+  }
+
+  get clearSelected(): boolean { return this._clearSelected; }
 }

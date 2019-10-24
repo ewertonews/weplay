@@ -1,4 +1,4 @@
-<mat-card *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
+<mat-card *ngIf="setlistEdicao.items.length > 0 || ehEdicao">
   <br>
   <mat-card-title>
     <h3>{{tituloRepertorio}}</h3>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <!-- card criação e edicao -->
-  <div class="row" *ngIf="musicasRepertorio && musicasRepertorio.length > 0">
+  <div class="row" *ngIf="setlistEdicao.items.length > 0 || ehEdicao">
     <div class="col-md-4">
       <br>
       <mat-card class="card-rep">
@@ -68,13 +68,19 @@
           </div>
           <label>Musicas</label>
           <div class="example-container">
-            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="musicasRepertorio" class="example-list"
+            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="setlistEdicao.items" class="example-list"
               (cdkDropListDropped)="drop($event)">
 
-              <div class="example-box" *ngFor="let item of musicasRepertorio; let i = index" cdkDrag>
-                <div *ngIf="item.nome">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>
+              <div class="example-box" *ngFor="let item of setlistEdicao.items; let i = index" cdkDrag>
+                <div class="musica-artista" *ngIf="item.nome">
+                  <button class="btn-excluir-musica" *ngIf="ehEdicao && item.nome" (click)="excluirMusica(item)" mat-icon-button color="accent">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                  &nbsp;{{item.nome || item}} - {{item?.artista}}
+                </div>
                 <div *ngIf="!item.nome"><strong>{{item}}</strong></div>
-                <div class="drag-handle" cdkDragHandle>
+                
+                <div class="drag-handle" cdkDragHandle>                   
                   <i class="fa fa-ellipsis-v pull-right drag-icon"></i>
                   <i class="fa fa-ellipsis-v pull-right drag-icon"></i>
                 </div>                
@@ -96,7 +102,7 @@
             {{setlist.tituloEvento}}
             <br>
             <label>Data</label><br>
-            {{setlist.dataEvento.toDate() | date:'dd/MM/yyyy'}}
+            {{setlist.dataEvento | date:'dd/MM/yyyy'}}
           </div>
           <label>Musicas</label>
           <div class="example-container">
