@@ -1,9 +1,17 @@
-<p>
-  compartilhar-modal works!
-  {{ data | json }} 
-  
+<h3 mat-dialog-title>Compartilhar Repertório</h3>
 
-</p>
 <div>
-  {{data.text}}
+  <h4>
+      {{data.repertorio.tituloEvento}}
+  </h4>
+  <p>{{data.repertorio.dataEvento}}</p>
+  <h4>Ordem:</h4>
+  <ul *ngFor="let item of data.repertorio.items">
+    <li *ngIf="item.nome">
+      {{item.nome}} - {{item.artista}}
+    </li>
+    <li *ngIf="!item.nome">
+      <strong>{{item}}</strong>
+    </li>
+  </ul>
 </div>

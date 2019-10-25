@@ -246,7 +246,7 @@ export class RepertoriosComponent implements OnInit {
 
     setlist.items.forEach(item => {
       if (item.nome){
-        listaMusicas = listaMusicas + "  " + item.nome + item.artista + "\r\n";
+        listaMusicas = listaMusicas + "  > " + item.nome +  " - " + item.artista + "\r\n";
       }else{
         listaMusicas = listaMusicas + item + "\r\n";
       }     
@@ -262,9 +262,10 @@ export class RepertoriosComponent implements OnInit {
       console.log(sharedResponse);
     } catch(error) {      
       console.log('You app is not shared, reason: ', error);
+      console.log(shareText);
       const dialogRef = this.modalDialog.open(CompartilharModalComponent, {
         width: '450px',
-        data: shareText
+        data: { share: shareText, repertorio: setlist }
       });
     }
   }
