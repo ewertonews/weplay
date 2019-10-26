@@ -1,17 +1,22 @@
 <h3 mat-dialog-title>Compartilhar Repertório</h3>
 
-<div>
+<div #conteudoCompartilhar>
   <h4>
       {{data.repertorio.tituloEvento}}
   </h4>
-  <p>{{data.repertorio.dataEvento}}</p>
+  <p>{{data.repertorio.dataEvento | date: 'dd/MM/yyyy'}}</p>
   <h4>Ordem:</h4>
   <ul *ngFor="let item of data.repertorio.items">
     <li *ngIf="item.nome">
-      {{item.nome}} - {{item.artista}}
+      &nbsp;&nbsp;{{item.nome}} - {{item.artista}}
     </li>
     <li *ngIf="!item.nome">
       <strong>{{item}}</strong>
     </li>
   </ul>
+</div>
+<br>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="copiar()"><i class="fa fa-copy fa-lg"></i> Copiar para área de transferência</button>
+  <a mat-raised-button target="_blank" class="whatsapp" href="https://web.whatsapp.com/send?text={{data.share.text}}" ><i class="fa fa-whatsapp fa-lg"></i>&nbsp;WhatsApp</a>
 </div>

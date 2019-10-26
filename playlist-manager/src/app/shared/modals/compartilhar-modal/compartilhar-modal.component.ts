@@ -16,4 +16,15 @@ export class CompartilharModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  copiar(){    
+    let conteudo = this.data.share;
+    // alert(conteudo.text);
+    const el = document.createElement('textarea');
+    el.value = conteudo.text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert("conteudo copiado!");
+  }
 }

@@ -1,0 +1,18 @@
+h4{
+    margin: 0;
+    font-size: 1.15em;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li{
+    margin-bottom: -12px;
+}
+
+.whatsapp{
+    background-color: #25D366;
+    color: white;
+}

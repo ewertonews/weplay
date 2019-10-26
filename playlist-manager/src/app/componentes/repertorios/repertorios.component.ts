@@ -242,8 +242,9 @@ export class RepertoriosComponent implements OnInit {
   }
 
   async compartilhar(setlist){
-    let listaMusicas = "";
-
+    console.log(setlist);
+    let listaMusicas = setlist.tituloEvento + "\r\n" + new Date(setlist.dataEvento).toLocaleDateString() + "\r\n";
+    listaMusicas = listaMusicas + "Ordem:\r\n";
     setlist.items.forEach(item => {
       if (item.nome){
         listaMusicas = listaMusicas + "  > " + item.nome +  " - " + item.artista + "\r\n";
@@ -254,7 +255,8 @@ export class RepertoriosComponent implements OnInit {
 
     let shareText = {
       title: setlist.tituloEvento + " - " + setlist.dataEvento.toString(),
-      text: listaMusicas      
+      text: listaMusicas,
+      url: ''
     };
     //url: 'www.codershood.info'
     try{      
