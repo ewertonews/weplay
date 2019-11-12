@@ -9,6 +9,8 @@ import { MusicasGrupo } from 'src/app/componentes/musicas/interfaces/musicasGrup
 import { MusicasService } from 'src/app/componentes/musicas/services/musicas.service';
 import { GruposService } from 'src/app/componentes/grupo/services/grupos.service';
 import { UsuarioGrupo } from 'src/app/componentes/usuario/interfaces/usuarioGrupo.model';
+import { MatDialogConfig, MatDialog } from '@angular/material';
+import { CadastrarIntegranteModalComponent } from './modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
 
 @Component({
   selector: 'app-grupo',
@@ -26,24 +28,26 @@ export class GrupoComponent implements OnInit {
   musicasParaRepertorio: Musica[] = [];
   qtsSetlists: number;
   clearSelection = false;
-
+  isAdmin = false;
+  
   constructor(
     private playlistService: PlaylistService,
-    private gruposService: GruposService) { 
+    private gruposService: GruposService,
+    private modalDialog: MatDialog) { 
     this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
     console.log("currentUser", this.currentUser);
   }
 
   ngOnInit() {    
     let grupoSelecionado = localStorage.getItem("grupo");
-    console.log('grupo selec', grupoSelecionado);
+    // console.log('grupo selec', grupoSelecionado);
     if (grupoSelecionado){
       this.grupo = JSON.parse(grupoSelecionado);
     }
    
     this.playlistService.getGroupSongs(this.grupo)
       .subscribe(resp => {
-        console.log("getPlaylist 2", resp);
+        // console.log("getPlaylist 2", resp);
 
         let retornoMusicas = resp.map(obj => {
           let musicaGrupo = obj as MusicasGrupo;
@@ -64,9 +68,11 @@ export class GrupoComponent implements OnInit {
       let grupoUsuario = grupo as UsuarioGrupo;
       this.usuariosDoGrupo = grupoUsuario.usuarios;
     });
+
+    this.isAdmin = this.verifyIfUserIsAdmin(this.grupo, this.currentUser);
   }
 
-  
+    
   receiveMusicasSelecionadas($event) {
     console.log("recebeu o evento");
     // let ehEditSetlist = localStorage.getItem("editlist");
@@ -88,6 +94,37 @@ export class GrupoComponent implements OnInit {
     
   }
 
+  openCadastrarIntegranteModal(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.width = "70%";
+    dialogConfig.height = "45%";
+    let criarMusicadialogRef = this.modalDialog.open(CadastrarIntegranteModalComponent, dialogConfig);
+
+    criarMusicadialogRef.afterClosed().subscribe(data => {
+      if (data){
+        console.log(data);
+      }
+    })
+  }
+
+  cadastrarNovoIntegrante(novoIntegrante: any){
+    let papelNoGrupo = novoIntegrante.outro === "" ? novoIntegrante.participacao : novoIntegrante.outro;
+    let novoMembro: Usuario = {
+      id: 
+      email: novoIntegrante.email_membro,
+      idGrupos: [this.grupo.id],
+      nome: novoIntegrante.nome,
+      papel: papelNoGrupo,
+      status: "pendente",
+      sexo: '',
+      telefone: '',
+      urlFoto: '',
+    };
+  }
+
   qtdGroupSetListsEvent($event){
     this.qtsSetlists = $event;
   }
@@ -95,6 +132,10 @@ export class GrupoComponent implements OnInit {
   limparSelecao(event){
     console.log("limpar selecao", event);
     this.clearSelection = event;
+  }
+
+  verifyIfUserIsAdmin(grupo: Grupo, usuario: Usuario){
+    return grupo.emailAdmins.includes(usuario.email);
   }
 
 }

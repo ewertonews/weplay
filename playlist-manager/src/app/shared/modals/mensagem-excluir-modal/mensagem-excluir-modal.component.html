@@ -1,0 +1,13 @@
+
+<div mat-dialog-content>  
+  <p *ngIf="data.entidade == 'música'" class="msg-excluir">
+    Tem certeza que deseja excluir a música <strong>{{data.obj.nome}} - {{data.obj.artista}}</strong>?
+  </p>  
+  <p *ngIf="data.entidade == 'repertório'" class="msg-excluir">
+    Tem certeza que deseja excluir a lista do(a) <strong>{{data.obj.tituloEvento}}</strong>?
+  </p>  
+</div>
+<div mat-dialog-actions class="pull-right">
+  <button mat-raised-button (click)="onNoClick()" cdkFocusInitial>Cancelar</button>
+  <button mat-raised-button (click)="excluir()">Sim</button>
+</div>

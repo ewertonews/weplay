@@ -1,4 +1,4 @@
-<app-header [usuario]="currentUser"></app-header>
+<!-- <app-header [usuario]="currentUser"></app-header> -->
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -19,6 +19,9 @@
                   <mat-divider></mat-divider>
               </div>
               </mat-list> 
+              <button (click)="openCadastrarIntegranteModal()" *ngIf="isAdmin" class="add-user" mat-mini-fab aria-label="Example icon-button with a heart icon" matTooltip="Adicionar membro ao grupo">
+                <mat-icon>add</mat-icon>
+              </button>
           </mat-expansion-panel>
     </div>
   </div>
@@ -38,12 +41,15 @@
                       &nbsp;<span *ngIf="qtdMusicas" matBadge="{{qtdMusicas}}" matBadgeOverlap="false">Músicas</span>
                       <span *ngIf="!qtdMusicas">Músicas</span>
                     </ng-template>
-                   <app-musicas 
-                      *ngIf="playlistDoGrupo" 
-                      (musicasSelecionadasEvent)="receiveMusicasSelecionadas($event)"                      
-                      [musicas]="playlistDoGrupo.musicas"
-                      [clearSelected]="clearSelection">
-                    </app-musicas>
+                    <div class="spinner-musicas" *ngIf="!playlistDoGrupo"> 
+                        <mat-spinner [diameter]="70" [strokeWidth]="7"></mat-spinner>
+                    </div>                    
+                    <app-musicas 
+                        *ngIf="playlistDoGrupo" 
+                        (musicasSelecionadasEvent)="receiveMusicasSelecionadas($event)"                      
+                        [musicas]="playlistDoGrupo.musicas"
+                        [clearSelected]="clearSelection">
+                      </app-musicas>
                   </mat-tab>
                   <mat-tab label="Repertórios">
                     <ng-template mat-tab-label>

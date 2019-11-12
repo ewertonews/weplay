@@ -51,12 +51,14 @@ import { MusicasComponent } from './componentes/musicas/musicas.component';
 import { CriarMusicaComponent } from './componentes/musicas/modals/criar-musica/criar-musica.component';
 import { getPortuguesePaginatorIntl } from './componentes/musicas/portuguese-paginator-intl';
 import { RepertoriosComponent } from './componentes/repertorios/repertorios.component';
-import { ExcluirMusicaModalComponent } from './shared/modals/excluir-musica-modal/excluir-musica-modal.component';
+import { MensagemExcluirModalComponent } from './shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component';
 import { EditarMusicaModalComponent } from './componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component';
 import { EditarRepertorioModalComponent } from './componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/compartilhar-modal.component';
+import { NovoIntegranteComponent } from './componentes/novo-integrante/novo-integrante.component';
+import { CadastrarIntegranteModalComponent } from './componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
 
 @NgModule({
   declarations: [
@@ -70,11 +72,13 @@ import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/c
     MusicasComponent,
     CriarMusicaComponent,
     RepertoriosComponent,
-    ExcluirMusicaModalComponent,
+    MensagemExcluirModalComponent,
     EditarMusicaModalComponent,
     EditarRepertorioModalComponent,
     UsuarioComponent,
-    CompartilharModalComponent
+    CompartilharModalComponent,
+    NovoIntegranteComponent,
+    CadastrarIntegranteModalComponent
   ],
   imports: [
     BrowserModule,
@@ -119,9 +123,10 @@ import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/c
   entryComponents: [
     CriarGrupoModalComponent, 
     CriarMusicaComponent,
-    ExcluirMusicaModalComponent,
+    MensagemExcluirModalComponent,
     EditarMusicaModalComponent,
-    CompartilharModalComponent
+    CompartilharModalComponent,
+    CadastrarIntegranteModalComponent
   ]
 })
 export class AppModule { }

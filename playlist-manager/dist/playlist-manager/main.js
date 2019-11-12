@@ -484,11 +484,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentes_musicas_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./componentes/musicas/modals/criar-musica/criar-musica.component */ "./src/app/componentes/musicas/modals/criar-musica/criar-musica.component.ts");
 /* harmony import */ var _componentes_musicas_portuguese_paginator_intl__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./componentes/musicas/portuguese-paginator-intl */ "./src/app/componentes/musicas/portuguese-paginator-intl.ts");
 /* harmony import */ var _componentes_repertorios_repertorios_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./componentes/repertorios/repertorios.component */ "./src/app/componentes/repertorios/repertorios.component.ts");
-/* harmony import */ var _shared_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./shared/modals/excluir-musica-modal/excluir-musica-modal.component */ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.ts");
+/* harmony import */ var _shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component */ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.ts");
 /* harmony import */ var _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component */ "./src/app/componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component.ts");
 /* harmony import */ var _componentes_repertorios_modals_editar_repertorio_modal_editar_repertorio_modal_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component */ "./src/app/componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component.ts");
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
 /* harmony import */ var _componentes_usuario_usuario_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./componentes/usuario/usuario.component */ "./src/app/componentes/usuario/usuario.component.ts");
+/* harmony import */ var _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./shared/modals/compartilhar-modal/compartilhar-modal.component */ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.ts");
+
 
 
 
@@ -556,10 +558,11 @@ var AppModule = /** @class */ (function () {
                 _componentes_musicas_musicas_component__WEBPACK_IMPORTED_MODULE_42__["MusicasComponent"],
                 _componentes_musicas_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__["CriarMusicaComponent"],
                 _componentes_repertorios_repertorios_component__WEBPACK_IMPORTED_MODULE_45__["RepertoriosComponent"],
-                _shared_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__["ExcluirMusicaModalComponent"],
+                _shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_46__["MensagemExcluirModalComponent"],
                 _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"],
                 _componentes_repertorios_modals_editar_repertorio_modal_editar_repertorio_modal_component__WEBPACK_IMPORTED_MODULE_48__["EditarRepertorioModalComponent"],
-                _componentes_usuario_usuario_component__WEBPACK_IMPORTED_MODULE_50__["UsuarioComponent"]
+                _componentes_usuario_usuario_component__WEBPACK_IMPORTED_MODULE_50__["UsuarioComponent"],
+                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -604,8 +607,9 @@ var AppModule = /** @class */ (function () {
             entryComponents: [
                 _componentes_grupo_modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_38__["CriarGrupoModalComponent"],
                 _componentes_musicas_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__["CriarMusicaComponent"],
-                _shared_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_46__["ExcluirMusicaModalComponent"],
-                _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"]
+                _shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_46__["MensagemExcluirModalComponent"],
+                _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"],
+                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"]
             ]
         })
     ], AppModule);
@@ -795,7 +799,7 @@ var CardGrupoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n\r\n.integrantes{\r\n    margin-top: 3vh;\r\n    margin-bottom: 2vh;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vZ3J1cG8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vZ3J1cG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50b3BvLWdydXBve1xyXG4gICAgaGVpZ2h0OiAxMHZoO1xyXG59XHJcblxyXG5tYXQtY2FyZHtcclxuICAgIG1hcmdpbi1ib3R0b206IDF2aDtcclxufVxyXG5cclxuLmludGVncmFudGVze1xyXG4gICAgbWFyZ2luLXRvcDogM3ZoO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMnZoO1xyXG59Il19 */"
+module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n\r\n.integrantes{\r\n    margin-top: 3vh;\r\n    margin-bottom: 2vh;\r\n}\r\n\r\n.spinner-musicas{\r\n    padding: 10px;\r\n    width: 93px;\r\n    height: 95px;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vZ3J1cG8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLFdBQVc7SUFDWCxZQUFZO0lBQ1osY0FBYztJQUNkLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2dydXBvL2dydXBvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9wby1ncnVwb3tcclxuICAgIGhlaWdodDogMTB2aDtcclxufVxyXG5cclxubWF0LWNhcmR7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxdmg7XHJcbn1cclxuXHJcbi5pbnRlZ3JhbnRlc3tcclxuICAgIG1hcmdpbi10b3A6IDN2aDtcclxuICAgIG1hcmdpbi1ib3R0b206IDJ2aDtcclxufVxyXG5cclxuLnNwaW5uZXItbXVzaWNhc3tcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICB3aWR0aDogOTNweDtcclxuICAgIGhlaWdodDogOTVweDtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -806,7 +810,7 @@ module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h2>{{grupo.nome}}</h2>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <mat-expansion-panel class=\"integrantes\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                <h4>Integrantes</h4>\r\n              </mat-panel-title>               \r\n            </mat-expansion-panel-header>\r\n            <mat-list>\r\n              <div>\r\n                  <mat-list-item *ngFor=\"let usuario of usuariosDoGrupo\">\r\n                      {{usuario.nome}} - {{usuario.email}} - Guitarra \r\n                   </mat-list-item>\r\n                  <mat-divider></mat-divider>\r\n              </div>\r\n              </mat-list> \r\n          </mat-expansion-panel>\r\n    </div>\r\n  </div>\r\n  <!-- <div class=\"row\">\r\n      <div class=\"col-md-6\">        \r\n       \r\n      </div>\r\n   </div> -->\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-12\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs selectedIndex=\"tabSelecionada\">                  \r\n                  <mat-tab> \r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtdMusicas\" matBadge=\"{{qtdMusicas}}\" matBadgeOverlap=\"false\">Músicas</span>\r\n                      <span *ngIf=\"!qtdMusicas\">Músicas</span>\r\n                    </ng-template>\r\n                   <app-musicas \r\n                      *ngIf=\"playlistDoGrupo\" \r\n                      (musicasSelecionadasEvent)=\"receiveMusicasSelecionadas($event)\"                      \r\n                      [musicas]=\"playlistDoGrupo.musicas\"\r\n                      [clearSelected]=\"clearSelection\">\r\n                    </app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\">\r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-list-alt fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtsSetlists\" matBadge=\"{{qtsSetlists}}\" matBadgeOverlap=\"false\">Repertórios</span>\r\n                      <span *ngIf=\"!qtsSetlists\">Repertórios</span>\r\n                    </ng-template>                    \r\n                    <app-repertorios \r\n                      (qtdGroupSetListsEvent)=\"qtdGroupSetListsEvent($event)\"\r\n                      (needToClearSelection)=\"limparSelecao($event)\"\r\n                      [musicasRepertorio]=\"musicasParaRepertorio\">\r\n                    </app-repertorios>                  \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>        \r\n  </div>\r\n</div>\r\n"
+module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h2>{{grupo.nome}}</h2>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <mat-expansion-panel class=\"integrantes\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                <h4>Integrantes</h4>\r\n              </mat-panel-title>               \r\n            </mat-expansion-panel-header>\r\n            <mat-list>\r\n              <div>\r\n                  <mat-list-item *ngFor=\"let usuario of usuariosDoGrupo\">\r\n                      {{usuario.nome}} - {{usuario.email}} - Guitarra \r\n                   </mat-list-item>\r\n                  <mat-divider></mat-divider>\r\n              </div>\r\n              </mat-list> \r\n          </mat-expansion-panel>\r\n    </div>\r\n  </div>\r\n  <!-- <div class=\"row\">\r\n      <div class=\"col-md-6\">        \r\n       \r\n      </div>\r\n   </div> -->\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-12\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs selectedIndex=\"tabSelecionada\">                  \r\n                  <mat-tab> \r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtdMusicas\" matBadge=\"{{qtdMusicas}}\" matBadgeOverlap=\"false\">Músicas</span>\r\n                      <span *ngIf=\"!qtdMusicas\">Músicas</span>\r\n                    </ng-template>\r\n                    <div class=\"spinner-musicas\" *ngIf=\"!playlistDoGrupo\"> \r\n                        <mat-spinner [diameter]=\"70\" [strokeWidth]=\"7\"></mat-spinner>\r\n                    </div>                    \r\n                    <app-musicas \r\n                        *ngIf=\"playlistDoGrupo\" \r\n                        (musicasSelecionadasEvent)=\"receiveMusicasSelecionadas($event)\"                      \r\n                        [musicas]=\"playlistDoGrupo.musicas\"\r\n                        [clearSelected]=\"clearSelection\">\r\n                      </app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\">\r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-list-alt fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtsSetlists\" matBadge=\"{{qtsSetlists}}\" matBadgeOverlap=\"false\">Repertórios</span>\r\n                      <span *ngIf=\"!qtsSetlists\">Repertórios</span>\r\n                    </ng-template>                    \r\n                    <app-repertorios \r\n                      (qtdGroupSetListsEvent)=\"qtdGroupSetListsEvent($event)\"\r\n                      (needToClearSelection)=\"limparSelecao($event)\"\r\n                      [musicasRepertorio]=\"musicasParaRepertorio\">\r\n                    </app-repertorios>                  \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>        \r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1758,7 +1762,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_componentes_musicas_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/componentes/musicas/modals/criar-musica/criar-musica.component */ "./src/app/componentes/musicas/modals/criar-musica/criar-musica.component.ts");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
-/* harmony import */ var src_app_shared_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component */ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.ts");
+/* harmony import */ var src_app_shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component */ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.ts");
 /* harmony import */ var src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/componentes/repertorios/services/playlist.service */ "./src/app/componentes/repertorios/services/playlist.service.ts");
 /* harmony import */ var src_app_componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component */ "./src/app/componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component.ts");
 
@@ -1781,7 +1785,6 @@ var MusicasComponent = /** @class */ (function () {
         this.tabSelecionada = 0;
         // tslint:disable-next-line:max-line-length
         this.displayedColumns = ['select', 'nome', 'artista', 'linkOuvir', 'linkCifra', 'quantidadeVezesTocada', 'ultimaVezTocada', 'tags', 'acoes'];
-        console.log("=========================== musicas.component =================================");
     }
     MusicasComponent.prototype.ngOnInit = function () {
         if (this.musicas.length > 0) {
@@ -1893,9 +1896,9 @@ var MusicasComponent = /** @class */ (function () {
     MusicasComponent.prototype.excluirMusica = function (musica, indiceMusica) {
         var _this = this;
         console.log("musica para exluir: ", musica);
-        var dialogRef = this.modalDialog.open(src_app_shared_modals_excluir_musica_modal_excluir_musica_modal_component__WEBPACK_IMPORTED_MODULE_6__["ExcluirMusicaModalComponent"], {
+        var dialogRef = this.modalDialog.open(src_app_shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_6__["MensagemExcluirModalComponent"], {
             width: '390px',
-            data: musica
+            data: { obj: musica, entidade: 'música' }
         });
         dialogRef.afterClosed().subscribe(function (excluir) {
             if (excluir) {
@@ -2102,7 +2105,7 @@ var EditarRepertorioModalComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n.btn-novo-repertorio{\r\n    margin-top: 5px;\r\n}\r\n\r\n.card-rep{\r\n    background-color: #cff7f3;\r\n    /* width: 90%; */\r\n    padding: 8px;\r\n    \r\n}\r\n\r\n.row {\r\n  margin-left: 0px;\r\n  margin-right: 2px;\r\n}\r\n\r\n.reps{\r\n    width: 90%;\r\n}\r\n\r\n.example-container {\r\n    width: 400px;\r\n    max-width: 100%;\r\n    margin: 0 25px 25px 0;\r\n    display: inline-block;\r\n    vertical-align: top;\r\n  }\r\n\r\n.example-list {\r\n    border: solid 1px #ccc;\r\n    min-height: 40px;\r\n    background: white;\r\n    border-radius: 1px;\r\n    overflow: auto;\r\n    display: block;\r\n    height: 200px;\r\n  }\r\n\r\n.example-box {\r\n    padding: 20px 10px;\r\n    border-bottom: solid 1px #ccc;\r\n    color: rgba(0, 0, 0, 0.87);\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-sizing: border-box;\r\n    cursor: move;\r\n    background: white;\r\n    font-size: 14px;\r\n    height: 10px;\r\n  }\r\n\r\n.musica-artista{\r\n    width: 270px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n  }\r\n\r\n.cdk-drag-preview {\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\r\n                0 8px 10px 1px rgba(0, 0, 0, 0.14),\r\n                0 3px 14px 2px rgba(0, 0, 0, 0.12);\r\n  }\r\n\r\n.cdk-drag-placeholder {\r\n    opacity: 0;\r\n  }\r\n\r\n.cdk-drag-animating {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.example-box:last-child {\r\n    border: none;\r\n  }\r\n\r\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.drag-icon{\r\n    margin-left: 0.1em;\r\n    color: lightgray;\r\n  }\r\n\r\n.drag-handle{\r\n    width: 22px;\r\n    height: 26px;\r\n    padding: 5px 4px;\r\n  }\r\n\r\n.rep-actions{\r\n    margin: -13px 0px -3px 2px;\r\n  }\r\n\r\n.btn-excluir-musica{\r\n    margin-left: -12px;\r\n    margin-right: -5px;\r\n  }\r\n\r\n.mat-expansion-panel:not([class*='mat-elevation-z']) {\r\n    box-shadow: none;\r\n    border: solid 0.5px lightgray;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvcmVwZXJ0b3Jpb3MvcmVwZXJ0b3Jpb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsZ0JBQWdCO0lBQ2hCLFlBQVk7O0FBRWhCOztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YscUJBQXFCO0lBQ3JCLHFCQUFxQjtJQUNyQixtQkFBbUI7RUFDckI7O0FBRUE7SUFDRSxzQkFBc0I7SUFDdEIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGNBQWM7SUFDZCxhQUFhO0VBQ2Y7O0FBRUE7SUFDRSxrQkFBa0I7SUFDbEIsNkJBQTZCO0lBQzdCLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQiw4QkFBOEI7SUFDOUIsc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLFlBQVk7RUFDZDs7QUFFQTtJQUNFLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEI7O2tEQUU4QztFQUNoRDs7QUFFQTtJQUNFLFVBQVU7RUFDWjs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLFlBQVk7RUFDZDs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLGtCQUFrQjtJQUNsQixnQkFBZ0I7RUFDbEI7O0FBRUE7SUFDRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLDBCQUEwQjtFQUM1Qjs7QUFFQTtJQUNFLGtCQUFrQjtJQUNsQixrQkFBa0I7RUFDcEI7O0FBRUY7SUFDSSxnQkFBZ0I7SUFDaEIsNkJBQTZCO0FBQ2pDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvcmVwZXJ0b3Jpb3MvcmVwZXJ0b3Jpb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mdWxsLXdpZHRoe1xyXG4gICAgd2lkdGg6MTAwJTtcclxufVxyXG5cclxuLmJ0bi1ub3ZvLXJlcGVydG9yaW97XHJcbiAgICBtYXJnaW4tdG9wOiA1cHg7XHJcbn1cclxuXHJcbi5jYXJkLXJlcHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNjZmY3ZjM7XHJcbiAgICAvKiB3aWR0aDogOTAlOyAqL1xyXG4gICAgcGFkZGluZzogOHB4O1xyXG4gICAgXHJcbn1cclxuLnJvdyB7XHJcbiAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICBtYXJnaW4tcmlnaHQ6IDJweDtcclxufVxyXG5cclxuLnJlcHN7XHJcbiAgICB3aWR0aDogOTAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDQwMHB4O1xyXG4gICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAwIDI1cHggMjVweCAwO1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgdmVydGljYWwtYWxpZ246IHRvcDtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtbGlzdCB7XHJcbiAgICBib3JkZXI6IHNvbGlkIDFweCAjY2NjO1xyXG4gICAgbWluLWhlaWdodDogNDBweDtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMXB4O1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWJveCB7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDEwcHg7XHJcbiAgICBib3JkZXItYm90dG9tOiBzb2xpZCAxcHggI2NjYztcclxuICAgIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODcpO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGN1cnNvcjogbW92ZTtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgaGVpZ2h0OiAxMHB4O1xyXG4gIH1cclxuICBcclxuICAubXVzaWNhLWFydGlzdGF7XHJcbiAgICB3aWR0aDogMjcwcHg7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xyXG4gIH1cclxuXHJcbiAgLmNkay1kcmFnLXByZXZpZXcge1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIGJveC1zaGFkb3c6IDAgNXB4IDVweCAtM3B4IHJnYmEoMCwgMCwgMCwgMC4yKSxcclxuICAgICAgICAgICAgICAgIDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksXHJcbiAgICAgICAgICAgICAgICAwIDNweCAxNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xyXG4gIH1cclxuICBcclxuICAuY2RrLWRyYWctcGxhY2Vob2xkZXIge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICB9XHJcbiAgXHJcbiAgLmNkay1kcmFnLWFuaW1hdGluZyB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWJveDpsYXN0LWNoaWxkIHtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtbGlzdC5jZGstZHJvcC1saXN0LWRyYWdnaW5nIC5leGFtcGxlLWJveDpub3QoLmNkay1kcmFnLXBsYWNlaG9sZGVyKSB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5kcmFnLWljb257XHJcbiAgICBtYXJnaW4tbGVmdDogMC4xZW07XHJcbiAgICBjb2xvcjogbGlnaHRncmF5O1xyXG4gIH1cclxuXHJcbiAgLmRyYWctaGFuZGxle1xyXG4gICAgd2lkdGg6IDIycHg7XHJcbiAgICBoZWlnaHQ6IDI2cHg7XHJcbiAgICBwYWRkaW5nOiA1cHggNHB4O1xyXG4gIH1cclxuXHJcbiAgLnJlcC1hY3Rpb25ze1xyXG4gICAgbWFyZ2luOiAtMTNweCAwcHggLTNweCAycHg7XHJcbiAgfVxyXG5cclxuICAuYnRuLWV4Y2x1aXItbXVzaWNhe1xyXG4gICAgbWFyZ2luLWxlZnQ6IC0xMnB4O1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAtNXB4O1xyXG4gIH1cclxuXHJcbi5tYXQtZXhwYW5zaW9uLXBhbmVsOm5vdChbY2xhc3MqPSdtYXQtZWxldmF0aW9uLXonXSkge1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxuICAgIGJvcmRlcjogc29saWQgMC41cHggbGlnaHRncmF5O1xyXG59Il19 */"
+module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n.btn-novo-repertorio{\r\n    margin-top: 5px;\r\n}\r\n\r\n.card-rep{\r\n    background-color: #cff7f3;\r\n    /* width: 90%; */\r\n    padding: 8px;\r\n    \r\n}\r\n\r\n.row {\r\n  margin-left: 0px;\r\n  margin-right: 2px;\r\n}\r\n\r\n.reps{\r\n    width: 90%;\r\n}\r\n\r\n.example-container {\r\n    width: 400px;\r\n    max-width: 100%;\r\n    margin: 0 25px 25px 0;\r\n    display: inline-block;\r\n    vertical-align: top;\r\n  }\r\n\r\n.example-list {\r\n    border: solid 1px #ccc;\r\n    min-height: 40px;\r\n    background: white;\r\n    border-radius: 1px;\r\n    overflow: auto;\r\n    display: block;\r\n    height: 200px;\r\n  }\r\n\r\n.example-box {\r\n    padding: 20px 10px;\r\n    border-bottom: solid 1px #ccc;\r\n    color: rgba(0, 0, 0, 0.87);\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    box-sizing: border-box;\r\n    cursor: move;\r\n    background: white;\r\n    font-size: 14px;\r\n    height: 10px;\r\n  }\r\n\r\n.musica-artista{\r\n    width: 270px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n  }\r\n\r\n.cdk-drag-preview {\r\n    box-sizing: border-box;\r\n    border-radius: 4px;\r\n    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\r\n                0 8px 10px 1px rgba(0, 0, 0, 0.14),\r\n                0 3px 14px 2px rgba(0, 0, 0, 0.12);\r\n  }\r\n\r\n.cdk-drag-placeholder {\r\n    opacity: 0;\r\n  }\r\n\r\n.cdk-drag-animating {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.example-box:last-child {\r\n    border: none;\r\n  }\r\n\r\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\r\n    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\r\n  }\r\n\r\n.drag-icon{\r\n    margin-left: 0.1em;\r\n    color: lightgray;\r\n  }\r\n\r\n.drag-handle{\r\n    width: 22px;\r\n    height: 26px;\r\n    padding: 5px 4px;\r\n  }\r\n\r\n.rep-actions{\r\n    margin: -13px 0px -3px 2px;\r\n  }\r\n\r\n.btn-excluir-musica{\r\n    margin-left: -12px;\r\n    margin-right: -5px;\r\n  }\r\n\r\n.mat-expansion-panel:not([class*='mat-elevation-z']) {\r\n    box-shadow: none;\r\n    border: solid 0.5px lightgray;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvcmVwZXJ0b3Jpb3MvcmVwZXJ0b3Jpb3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsZ0JBQWdCO0lBQ2hCLFlBQVk7O0FBRWhCOztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YscUJBQXFCO0lBQ3JCLHFCQUFxQjtJQUNyQixtQkFBbUI7RUFDckI7O0FBRUE7SUFDRSxzQkFBc0I7SUFDdEIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGNBQWM7SUFDZCxhQUFhO0VBQ2Y7O0FBRUE7SUFDRSxrQkFBa0I7SUFDbEIsNkJBQTZCO0lBQzdCLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQiw4QkFBOEI7SUFDOUIsc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLFlBQVk7RUFDZDs7QUFFQTtJQUNFLFlBQVk7SUFDWixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEI7O2tEQUU4QztFQUNoRDs7QUFFQTtJQUNFLFVBQVU7RUFDWjs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLFlBQVk7RUFDZDs7QUFFQTtJQUNFLHNEQUFzRDtFQUN4RDs7QUFFQTtJQUNFLGtCQUFrQjtJQUNsQixnQkFBZ0I7RUFDbEI7O0FBRUE7SUFDRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLDBCQUEwQjtFQUM1Qjs7QUFFQTtJQUNFLGtCQUFrQjtJQUNsQixrQkFBa0I7RUFDcEI7O0FBRUY7SUFDSSxnQkFBZ0I7SUFDaEIsNkJBQTZCO0FBQ2pDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvcmVwZXJ0b3Jpb3MvcmVwZXJ0b3Jpb3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mdWxsLXdpZHRoe1xyXG4gICAgd2lkdGg6MTAwJTtcclxufVxyXG5cclxuLmJ0bi1ub3ZvLXJlcGVydG9yaW97XHJcbiAgICBtYXJnaW4tdG9wOiA1cHg7XHJcbn1cclxuXHJcbi5jYXJkLXJlcHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNjZmY3ZjM7XHJcbiAgICAvKiB3aWR0aDogOTAlOyAqL1xyXG4gICAgcGFkZGluZzogOHB4O1xyXG4gICAgXHJcbn1cclxuLnJvdyB7XHJcbiAgbWFyZ2luLWxlZnQ6IDBweDtcclxuICBtYXJnaW4tcmlnaHQ6IDJweDtcclxufVxyXG5cclxuLnJlcHN7XHJcbiAgICB3aWR0aDogOTAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDQwMHB4O1xyXG4gICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAwIDI1cHggMjVweCAwO1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgdmVydGljYWwtYWxpZ246IHRvcDtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtbGlzdCB7XHJcbiAgICBib3JkZXI6IHNvbGlkIDFweCAjY2NjO1xyXG4gICAgbWluLWhlaWdodDogNDBweDtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMXB4O1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWJveCB7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDEwcHg7XHJcbiAgICBib3JkZXItYm90dG9tOiBzb2xpZCAxcHggI2NjYztcclxuICAgIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuODcpO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGN1cnNvcjogbW92ZTtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgaGVpZ2h0OiAxMHB4O1xyXG4gIH1cclxuICBcclxuICAubXVzaWNhLWFydGlzdGF7XHJcbiAgICB3aWR0aDogMjcwcHg7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xyXG4gIH1cclxuXHJcbiAgLmNkay1kcmFnLXByZXZpZXcge1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgIGJveC1zaGFkb3c6IDAgNXB4IDVweCAtM3B4IHJnYmEoMCwgMCwgMCwgMC4yKSxcclxuICAgICAgICAgICAgICAgIDAgOHB4IDEwcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNCksXHJcbiAgICAgICAgICAgICAgICAwIDNweCAxNHB4IDJweCByZ2JhKDAsIDAsIDAsIDAuMTIpO1xyXG4gIH1cclxuICBcclxuICAuY2RrLWRyYWctcGxhY2Vob2xkZXIge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICB9XHJcbiAgXHJcbiAgLmNkay1kcmFnLWFuaW1hdGluZyB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5leGFtcGxlLWJveDpsYXN0LWNoaWxkIHtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICB9XHJcbiAgXHJcbiAgLmV4YW1wbGUtbGlzdC5jZGstZHJvcC1saXN0LWRyYWdnaW5nIC5leGFtcGxlLWJveDpub3QoLmNkay1kcmFnLXBsYWNlaG9sZGVyKSB7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjUwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMiwgMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5kcmFnLWljb257XHJcbiAgICBtYXJnaW4tbGVmdDogMC4xZW07XHJcbiAgICBjb2xvcjogbGlnaHRncmF5O1xyXG4gIH1cclxuXHJcbiAgLmRyYWctaGFuZGxle1xyXG4gICAgd2lkdGg6IDIycHg7XHJcbiAgICBoZWlnaHQ6IDI2cHg7XHJcbiAgICBwYWRkaW5nOiA1cHggNHB4O1xyXG4gIH1cclxuXHJcbiAgLnJlcC1hY3Rpb25ze1xyXG4gICAgbWFyZ2luOiAtMTNweCAwcHggLTNweCAycHg7XHJcbiAgfVxyXG5cclxuICAuYnRuLWV4Y2x1aXItbXVzaWNhe1xyXG4gICAgbWFyZ2luLWxlZnQ6IC0xMnB4O1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAtNXB4O1xyXG4gIH1cclxuXHJcbi5tYXQtZXhwYW5zaW9uLXBhbmVsOm5vdChbY2xhc3MqPSdtYXQtZWxldmF0aW9uLXonXSkge1xyXG4gICAgYm94LXNoYWRvdzogbm9uZTtcclxuICAgIGJvcmRlcjogc29saWQgMC41cHggbGlnaHRncmF5O1xyXG59XHJcblxyXG4iXX0= */"
 
 /***/ }),
 
@@ -2113,7 +2116,7 @@ module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n.btn-novo-repertor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card *ngIf=\"setlistEdicao.items.length > 0 || ehEdicao\">\r\n  <br>\r\n  <mat-card-title>\r\n    <h3>{{tituloRepertorio}}</h3>\r\n  </mat-card-title>\r\n  <mat-card-content>\r\n    <div class=\"row\" [formGroup]=\"formNovoRepertorio\">\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <input matInput type=\"text\" placeholder=\"Título do evento\" formControlName=\"titulo\" autocomplete=\"off\">\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <input matInput [matDatepicker]=\"picker\" (click)=\"picker.open()\" placeholder=\"Data do evento\" formControlName=\"dataEvento\"\r\n            autocomplete=\"off\">\r\n          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n          <mat-datepicker touchUi #picker></mat-datepicker>\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\r\n            <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\r\n              [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\r\n              (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\r\n          </mat-chip-list>\r\n          <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3 btn-novo-repertorio\">\r\n        <button class=\"mat-raised-button\" (click)=\"criarRepertorio()\">Salvar</button>\r\n        &nbsp;<button class=\"mat-raised-button\" (click)=\"cancelarCriacaoRepertorio()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </mat-card-content>\r\n  <div class=\"row\">\r\n    <!-- <div class=\"col-md-3\" [formGroup]=\"formNovoRepertorio\">\r\n      <mat-form-field class=\"full-width\">\r\n        <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\r\n          <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\r\n            [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\r\n            (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\r\n        </mat-chip-list>\r\n        <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\r\n      </mat-form-field>\r\n    </div> -->\r\n    <div class=\"col-md-9\">\r\n      <mat-chip *ngFor=\"let momento of momentos\" [selectable]=\"selectable\" [removable]=\"removable\"\r\n        (removed)=\"remove(momento)\">\r\n        {{momento}}\r\n        <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\r\n      </mat-chip>\r\n    </div>\r\n  </div>\r\n  <!-- card criação e edicao -->\r\n  <div class=\"row\" *ngIf=\"setlistEdicao.items.length > 0 || ehEdicao\">\r\n    <div class=\"col-md-4\">\r\n      <br>\r\n      <mat-card class=\"card-rep\">\r\n        <mat-card-content>\r\n          <div>\r\n            <strong>Título do evento</strong><br>\r\n            {{formNovoRepertorio.value.titulo}}\r\n            <br>\r\n            <label>Data</label><br>\r\n            {{formNovoRepertorio.value.dataEvento | date:'dd/MM/yyyy'}}\r\n          </div>\r\n          <label>Musicas</label>\r\n          <div class=\"example-container\">\r\n            <div cdkDropList #todoList=\"cdkDropList\" [cdkDropListData]=\"setlistEdicao.items\" class=\"example-list\"\r\n              (cdkDropListDropped)=\"drop($event)\">\r\n\r\n              <div class=\"example-box\" *ngFor=\"let item of setlistEdicao.items; let i = index\" cdkDrag>\r\n                <div class=\"musica-artista\" *ngIf=\"item.nome\">\r\n                  <button class=\"btn-excluir-musica\" *ngIf=\"ehEdicao && item.nome\" (click)=\"excluirMusica(item)\" mat-icon-button color=\"accent\">\r\n                    <mat-icon>delete</mat-icon>\r\n                  </button>\r\n                  &nbsp;{{item.nome || item}} - {{item?.artista}}\r\n                </div>\r\n                <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\r\n                \r\n                <div class=\"drag-handle\" cdkDragHandle>                   \r\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\r\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\r\n                </div>                \r\n              </div>\r\n            </div>\r\n          </div>\r\n        </mat-card-content>\r\n      </mat-card>\r\n    </div>\r\n  </div>\r\n</mat-card>\r\n<div class=\"row\" *ngIf=\"grupoSetLists.length > 0\">\r\n    <div class=\"col-sm-4\" *ngFor=\"let setlist of grupoSetLists\">\r\n      <br>\r\n      <mat-card class=\"card-rep\">\r\n        <mat-card-content>\r\n          <div>\r\n            <strong>Título do evento</strong><br>\r\n            {{setlist.tituloEvento}}\r\n            <br>\r\n            <label>Data</label><br>\r\n            {{setlist.dataEvento | date:'dd/MM/yyyy'}}\r\n          </div>\r\n          <label>Musicas</label>\r\n          <div class=\"example-container\">\r\n            <div class=\"example-list\">\r\n              <mat-accordion [displayMode]=\"flat\">\r\n                  <mat-expansion-panel *ngFor=\"let item of setlist.items; let i = index\" [disabled]=\"!item.nome\">\r\n                      <mat-expansion-panel-header>\r\n                          <div *ngIf=\"item.nome\">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>\r\n                          <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\r\n                      </mat-expansion-panel-header>\r\n                      <div>\r\n                        <button [disabled]=\"!item.linkOuvir\" class=\"mat-raised-button\">Ouvir</button>&nbsp;\r\n                        <button [disabled]=\"!item.linkCifra\" class=\"mat-raised-button\">Cifra</button>\r\n                      </div>\r\n                  </mat-expansion-panel>\r\n              </mat-accordion>             \r\n            </div>\r\n          </div>\r\n          <div class=\"rep-actions\">\r\n              <button mat-icon-button color=\"accent\">\r\n                  <mat-icon>delete</mat-icon>\r\n              </button>\r\n              <button (click)=\"editarSetlist(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\r\n                  <mat-icon>edit</mat-icon>\r\n              </button>\r\n              <button (click)=\"compartilhar(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\r\n                  <mat-icon>share</mat-icon>\r\n              </button>           \r\n          </div> \r\n        </mat-card-content>\r\n      </mat-card>\r\n    </div>\r\n  </div>"
+module.exports = "<mat-card *ngIf=\"setlistEdicao.items.length > 0 || ehEdicao\">\r\n  <br>\r\n  <mat-card-title>\r\n    <h3>{{tituloRepertorio}}</h3>\r\n  </mat-card-title>\r\n  <mat-card-content>\r\n    <div class=\"row\" [formGroup]=\"formNovoRepertorio\">\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <input matInput type=\"text\" placeholder=\"Título do evento\" formControlName=\"titulo\" autocomplete=\"off\">\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <input matInput [matDatepicker]=\"picker\" (click)=\"picker.open()\" placeholder=\"Data do evento\" formControlName=\"dataEvento\"\r\n            autocomplete=\"off\">\r\n          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n          <mat-datepicker touchUi #picker></mat-datepicker>\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3\">\r\n        <mat-form-field class=\"full-width\">\r\n          <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\r\n            <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\r\n              [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\r\n              (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\r\n          </mat-chip-list>\r\n          <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"col-md-3 btn-novo-repertorio\">\r\n        <button class=\"mat-raised-button\" (click)=\"criarRepertorio()\">Salvar</button>\r\n        &nbsp;<button class=\"mat-raised-button\" (click)=\"cancelarCriacaoRepertorio()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </mat-card-content>\r\n  <div class=\"row\">\r\n    <!-- <div class=\"col-md-3\" [formGroup]=\"formNovoRepertorio\">\r\n      <mat-form-field class=\"full-width\">\r\n        <mat-chip-list #chipList aria-label=\"Seleção de momentos\">\r\n          <input placeholder=\"Seções do evento\" [matChipInputFor]=\"chipList\"\r\n            [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\"\r\n            (matChipInputTokenEnd)=\"add($event)\" formControlName=\"momentos\" autocomplete=\"off\">\r\n        </mat-chip-list>\r\n        <mat-hint align=\"start\">Aperte ENTER ou VÍRGULA para adicionar</mat-hint>\r\n      </mat-form-field>\r\n    </div> -->\r\n    <div class=\"col-md-9\">\r\n      <mat-chip *ngFor=\"let momento of momentos\" [selectable]=\"selectable\" [removable]=\"removable\"\r\n        (removed)=\"remove(momento)\">\r\n        {{momento}}\r\n        <mat-icon matChipRemove *ngIf=\"removable\">cancelar</mat-icon>\r\n      </mat-chip>\r\n    </div>\r\n  </div>\r\n  <!-- card criação e edicao -->\r\n  <div class=\"row\" *ngIf=\"setlistEdicao.items.length > 0 || ehEdicao\">\r\n    <div class=\"col-md-4\">\r\n      <br>\r\n      <mat-card class=\"card-rep\">\r\n        <mat-card-content>\r\n          <div>\r\n            <strong>Título do evento</strong><br>\r\n            {{formNovoRepertorio.value.titulo}}\r\n            <br>\r\n            <label>Data</label><br>\r\n            {{formNovoRepertorio.value.dataEvento | date:'dd/MM/yyyy'}}\r\n          </div>\r\n          <label>Musicas</label>\r\n          <div class=\"example-container\">\r\n            <div cdkDropList #todoList=\"cdkDropList\" [cdkDropListData]=\"setlistEdicao.items\" class=\"example-list\"\r\n              (cdkDropListDropped)=\"drop($event)\">\r\n\r\n              <div class=\"example-box\" *ngFor=\"let item of setlistEdicao.items; let i = index\" cdkDrag>\r\n                <div class=\"musica-artista\" *ngIf=\"item.nome\">\r\n                  <button class=\"btn-excluir-musica\" *ngIf=\"ehEdicao && item.nome\" (click)=\"excluirMusica(item)\" mat-icon-button color=\"accent\">\r\n                    <mat-icon>delete</mat-icon>\r\n                  </button>\r\n                  &nbsp;{{item.nome || item}} - {{item?.artista}}\r\n                </div>\r\n                <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\r\n                \r\n                <div class=\"drag-handle\" cdkDragHandle>                   \r\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\r\n                  <i class=\"fa fa-ellipsis-v pull-right drag-icon\"></i>\r\n                </div>                \r\n              </div>\r\n            </div>\r\n          </div>\r\n        </mat-card-content>\r\n      </mat-card>\r\n    </div>\r\n  </div>\r\n</mat-card>\r\n<div class=\"row\" *ngIf=\"grupoSetLists.length > 0\">\r\n    <div class=\"col-sm-4\" *ngFor=\"let setlist of grupoSetLists\">\r\n      <br>\r\n      <mat-card class=\"card-rep\">\r\n        <mat-card-content>\r\n          <div>\r\n            <strong>Título do evento</strong><br>\r\n            {{setlist.tituloEvento}}\r\n            <br>\r\n            <label>Data</label><br>\r\n            {{setlist.dataEvento | date:'dd/MM/yyyy'}}\r\n          </div>\r\n          <label>Musicas</label>\r\n          <div class=\"example-container\">\r\n            <div class=\"example-list\">\r\n              <mat-accordion [displayMode]=\"flat\">\r\n                  <mat-expansion-panel *ngFor=\"let item of setlist.items; let i = index\" [disabled]=\"!item.nome\">\r\n                      <mat-expansion-panel-header>\r\n                          <div *ngIf=\"item.nome\">&nbsp;{{item.nome || item}} - {{item?.artista}}</div>\r\n                          <div *ngIf=\"!item.nome\"><strong>{{item}}</strong></div>\r\n                      </mat-expansion-panel-header>\r\n                      <div>\r\n                        <button [disabled]=\"!item.linkOuvir\" class=\"mat-raised-button\">Ouvir</button>&nbsp;\r\n                        <button [disabled]=\"!item.linkCifra\" class=\"mat-raised-button\">Cifra</button>\r\n                      </div>\r\n                  </mat-expansion-panel>\r\n              </mat-accordion>             \r\n            </div>\r\n          </div>\r\n          <div class=\"rep-actions\">\r\n              <button (click)=\"excluirSetlist(setlist)\" mat-icon-button color=\"accent\">\r\n                  <mat-icon>delete</mat-icon>\r\n              </button>\r\n              <button (click)=\"editarSetlist(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\r\n                  <mat-icon>edit</mat-icon>\r\n              </button>\r\n              <button (click)=\"compartilhar(setlist)\" class=\"pull-right\" mat-icon-button color=\"primary\">\r\n                  <mat-icon>share</mat-icon>\r\n              </button>           \r\n          </div> \r\n        </mat-card-content>\r\n      </mat-card>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -2136,6 +2139,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/GLOBAL_FUNCTIONS */ "./src/app/shared/GLOBAL_FUNCTIONS.ts");
 /* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/esm5/core.es5.js");
 /* harmony import */ var ng_navigator_share__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-navigator-share */ "./node_modules/ng-navigator-share/fesm5/ng-navigator-share.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var src_app_shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/shared/modals/compartilhar-modal/compartilhar-modal.component */ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.ts");
+/* harmony import */ var src_app_shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component */ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.ts");
 
 // tslint:disable:variable-name
 
@@ -2146,13 +2152,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 var RepertoriosComponent = /** @class */ (function () {
     //setList: any[] = this.musicasRepertorio;
-    function RepertoriosComponent(fb, repertorioService, _adapter, shareService) {
+    function RepertoriosComponent(fb, repertorioService, _adapter, shareService, modalDialog) {
         this.fb = fb;
         this.repertorioService = repertorioService;
         this._adapter = _adapter;
         this.shareService = shareService;
+        this.modalDialog = modalDialog;
         //@Input() musicasRepertorio: any[]; 
         this.qtdGroupSetListsEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.needToClearSelection = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
@@ -2235,10 +2245,7 @@ var RepertoriosComponent = /** @class */ (function () {
     };
     RepertoriosComponent.prototype.podeEditarSetlist = function (setlist) {
         var hoje = new Date();
-        console.log("setlist.dataEvento", setlist.dataEvento.toString());
-        console.log("hoje", hoje);
-        console.log(new Date(setlist.dataEvento.toString()) >= hoje);
-        return new Date(setlist.dataEvento.toString()) >= hoje;
+        return new Date(setlist.dataEvento.toString()) < hoje;
     };
     RepertoriosComponent.prototype.editarSetlist = function (setlist) {
         if (this.podeEditarSetlist(setlist) === false) {
@@ -2247,11 +2254,9 @@ var RepertoriosComponent = /** @class */ (function () {
         }
         this.ehEdicao = true;
         this.grupoSetlistsOriginal = JSON.parse(JSON.stringify(this.grupoSetLists));
-        // this.setlistEdicao = JSON.parse(JSON.stringify(setlist));
-        // this.setlistEdicao.items = setlist.items;    
         Object.assign(this.setlistEdicao, setlist);
         this.copiaSetlistEdicao = JSON.parse(JSON.stringify(setlist));
-        console.log("this.copiaSetlistEdicao", this.copiaSetlistEdicao);
+        // console.log("this.copiaSetlistEdicao", this.copiaSetlistEdicao);
         this.tituloRepertorio = "Editar Repertório";
         // console.log("Editar setlist", setlist)
         this.momentos = setlist.items.filter(function (i) { return !i.nome; });
@@ -2294,6 +2299,28 @@ var RepertoriosComponent = /** @class */ (function () {
             items: []
         };
     };
+    RepertoriosComponent.prototype.excluirSetlist = function (setlist) {
+        var _this = this;
+        var dialogRef = this.modalDialog.open(src_app_shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_11__["MensagemExcluirModalComponent"], {
+            width: '450px',
+            data: { obj: setlist, entidade: 'repertório' }
+        });
+        dialogRef.afterClosed().subscribe(function (excluir) {
+            if (excluir) {
+                if (_this.podeEditarSetlist(setlist) === false) {
+                    alert("Não é possível excluir a lista de um evento passado");
+                    return;
+                }
+                _this.repertorioService.removeSetlist(setlist, _this.grupo).then(function (res) {
+                    console.log("Setlist excluida com sucesso");
+                    alert("Setlist excluida com sucesso");
+                }).catch(function (error) {
+                    console.error(error);
+                    alert(error || error.message);
+                });
+            }
+        });
+    };
     RepertoriosComponent.prototype.drop = function (event) {
         if (event.previousContainer === event.container) {
             Object(_angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_3__["moveItemInArray"])(event.container.data, event.previousIndex, event.currentIndex);
@@ -2327,25 +2354,44 @@ var RepertoriosComponent = /** @class */ (function () {
     };
     RepertoriosComponent.prototype.compartilhar = function (setlist) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var sharedResponse, error_1;
+            var listaMusicas, shareText, sharedResponse, error_1, dialogRef;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.shareService.share({
-                                title: '`Web Articles and Tutorials',
-                                text: 'Check out my blog — its worth looking.',
-                                url: 'www.codershood.info'
-                            })];
+                        console.log(setlist);
+                        listaMusicas = setlist.tituloEvento + "\r\n" + new Date(setlist.dataEvento).toLocaleDateString() + "\r\n";
+                        listaMusicas = listaMusicas + "Ordem:\r\n";
+                        setlist.items.forEach(function (item) {
+                            if (item.nome) {
+                                listaMusicas = listaMusicas + "  > " + item.nome + " - " + item.artista + "\r\n";
+                            }
+                            else {
+                                listaMusicas = listaMusicas + item + "\r\n";
+                            }
+                        });
+                        shareText = {
+                            title: setlist.tituloEvento + " - " + setlist.dataEvento.toString(),
+                            text: listaMusicas,
+                            url: ''
+                        };
+                        _a.label = 1;
                     case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, this.shareService.share(shareText)];
+                    case 2:
                         sharedResponse = _a.sent();
                         console.log(sharedResponse);
-                        return [3 /*break*/, 3];
-                    case 2:
+                        return [3 /*break*/, 4];
+                    case 3:
                         error_1 = _a.sent();
                         console.log('You app is not shared, reason: ', error_1);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                        console.log(shareText);
+                        dialogRef = this.modalDialog.open(src_app_shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_10__["CompartilharModalComponent"], {
+                            width: '450px',
+                            data: { share: shareText, repertorio: setlist }
+                        });
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
                 }
             });
         });
@@ -2372,7 +2418,8 @@ var RepertoriosComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
             src_app_componentes_repertorios_services_repertorios_service__WEBPACK_IMPORTED_MODULE_5__["RepertoriosService"],
             _angular_material_core__WEBPACK_IMPORTED_MODULE_7__["DateAdapter"],
-            ng_navigator_share__WEBPACK_IMPORTED_MODULE_8__["NgNavigatorShareService"]])
+            ng_navigator_share__WEBPACK_IMPORTED_MODULE_8__["NgNavigatorShareService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatDialog"]])
     ], RepertoriosComponent);
     return RepertoriosComponent;
 }());
@@ -2501,6 +2548,10 @@ var RepertoriosService = /** @class */ (function () {
     RepertoriosService.prototype.getSetLists = function (grupo) {
         var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
         return this.firestore.collection('setlists/' + anomes + '/sets', function (ref) { return ref.where('idGrupo', '==', grupo.id); }).valueChanges();
+    };
+    RepertoriosService.prototype.removeSetlist = function (setlist, grupo) {
+        var anomes = Object(_shared_GLOBAL_FUNCTIONS__WEBPACK_IMPORTED_MODULE_3__["getAnoMesCriacaoGrupo"])(grupo);
+        return this.firestore.collection('setlists/' + anomes + '/sets').doc(setlist.id).delete();
     };
     RepertoriosService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -2671,67 +2722,139 @@ var generateId = function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.css":
-/*!***************************************************************************************!*\
-  !*** ./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.css ***!
-  \***************************************************************************************/
+/***/ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.css":
+/*!***********************************************************************************!*\
+  !*** ./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.css ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".msg-excluir{    \r\n    padding: 2px;\r\n    margin: 5px;\r\n    background-color: rgb(233, 165, 165);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL21vZGFscy9leGNsdWlyLW11c2ljYS1tb2RhbC9leGNsdWlyLW11c2ljYS1tb2RhbC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLFdBQVc7SUFDWCxvQ0FBb0M7QUFDeEMiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvbW9kYWxzL2V4Y2x1aXItbXVzaWNhLW1vZGFsL2V4Y2x1aXItbXVzaWNhLW1vZGFsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXNnLWV4Y2x1aXJ7ICAgIFxyXG4gICAgcGFkZGluZzogMnB4O1xyXG4gICAgbWFyZ2luOiA1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjMzLCAxNjUsIDE2NSk7XHJcbn0iXX0= */"
+module.exports = "h4{\r\n    margin: 0;\r\n    font-size: 1.15em;\r\n}\r\n\r\nul{\r\n    list-style-type: none;\r\n    padding-left: 0px;\r\n}\r\n\r\nli{\r\n    margin-bottom: -12px;\r\n}\r\n\r\n.whatsapp{\r\n    background-color: #25D366;\r\n    color: white;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL21vZGFscy9jb21wYXJ0aWxoYXItbW9kYWwvY29tcGFydGlsaGFyLW1vZGFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxTQUFTO0lBQ1QsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixZQUFZO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL21vZGFscy9jb21wYXJ0aWxoYXItbW9kYWwvY29tcGFydGlsaGFyLW1vZGFsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoNHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIGZvbnQtc2l6ZTogMS4xNWVtO1xyXG59XHJcblxyXG51bHtcclxuICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcclxuICAgIHBhZGRpbmctbGVmdDogMHB4O1xyXG59XHJcblxyXG5saXtcclxuICAgIG1hcmdpbi1ib3R0b206IC0xMnB4O1xyXG59XHJcblxyXG4ud2hhdHNhcHB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjVEMzY2O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59Il19 */"
 
 /***/ }),
 
-/***/ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.html":
-/*!****************************************************************************************!*\
-  !*** ./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.html ***!
-  \****************************************************************************************/
+/***/ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.html":
+/*!************************************************************************************!*\
+  !*** ./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.html ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div mat-dialog-content>  \r\n  <p class=\"msg-excluir\">\r\n    Tem certeza que deseja excluir a música <strong>{{data.nome}} - {{data.artista}}</strong>?\r\n  </p>  \r\n</div>\r\n<div mat-dialog-actions class=\"pull-right\">\r\n  <button mat-raised-button (click)=\"onNoClick()\" cdkFocusInitial>Cancelar</button>\r\n  <button mat-raised-button (click)=\"excluir()\">Sim</button>\r\n</div>"
+module.exports = "<h3 mat-dialog-title>Compartilhar Repertório</h3>\n\n<div #conteudoCompartilhar>\n  <h4>\n      {{data.repertorio.tituloEvento}}\n  </h4>\n  <p>{{data.repertorio.dataEvento | date: 'dd/MM/yyyy'}}</p>\n  <h4>Ordem:</h4>\n  <ul *ngFor=\"let item of data.repertorio.items\">\n    <li *ngIf=\"item.nome\">\n      &nbsp;&nbsp;{{item.nome}} - {{item.artista}}\n    </li>\n    <li *ngIf=\"!item.nome\">\n      <strong>{{item}}</strong>\n    </li>\n  </ul>\n</div>\n<br>\n<div mat-dialog-actions>\n  <button mat-raised-button (click)=\"copiar()\"><i class=\"fa fa-copy fa-lg\"></i> Copiar para área de transferência</button>\n  <a mat-raised-button target=\"_blank\" class=\"whatsapp\" href=\"https://web.whatsapp.com/send?text={{data.share.text}}\" ><i class=\"fa fa-whatsapp fa-lg\"></i>&nbsp;WhatsApp</a>\n</div>"
 
 /***/ }),
 
-/***/ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.ts":
-/*!**************************************************************************************!*\
-  !*** ./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.ts ***!
-  \**************************************************************************************/
-/*! exports provided: ExcluirMusicaModalComponent */
+/***/ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: CompartilharModalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExcluirMusicaModalComponent", function() { return ExcluirMusicaModalComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompartilharModalComponent", function() { return CompartilharModalComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 
 
 
-var ExcluirMusicaModalComponent = /** @class */ (function () {
-    function ExcluirMusicaModalComponent(dialogRef, data) {
+var CompartilharModalComponent = /** @class */ (function () {
+    function CompartilharModalComponent(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
     }
-    ExcluirMusicaModalComponent.prototype.ngOnInit = function () {
+    CompartilharModalComponent.prototype.ngOnInit = function () {
     };
-    ExcluirMusicaModalComponent.prototype.onNoClick = function () {
-        this.dialogRef.close();
+    CompartilharModalComponent.prototype.copiar = function () {
+        var conteudo = this.data.share;
+        // alert(conteudo.text);
+        var el = document.createElement('textarea');
+        el.value = conteudo.text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alert("conteudo copiado!");
     };
-    ExcluirMusicaModalComponent.prototype.excluir = function () {
-        this.dialogRef.close(true);
-    };
-    ExcluirMusicaModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    CompartilharModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-excluir-musica-modal',
-            template: __webpack_require__(/*! ./excluir-musica-modal.component.html */ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.html"),
-            styles: [__webpack_require__(/*! ./excluir-musica-modal.component.css */ "./src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component.css")]
+            selector: 'app-compartilhar-modal',
+            template: __webpack_require__(/*! ./compartilhar-modal.component.html */ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.html"),
+            styles: [__webpack_require__(/*! ./compartilhar-modal.component.css */ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
-    ], ExcluirMusicaModalComponent);
-    return ExcluirMusicaModalComponent;
+    ], CompartilharModalComponent);
+    return CompartilharModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.css":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.css ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".msg-excluir{    \r\n    padding: 2px;\r\n    margin: 5px;\r\n    background-color: rgb(233, 165, 165);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL21vZGFscy9tZW5zYWdlbS1leGNsdWlyLW1vZGFsL21lbnNhZ2VtLWV4Y2x1aXItbW9kYWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsb0NBQW9DO0FBQ3hDIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL21vZGFscy9tZW5zYWdlbS1leGNsdWlyLW1vZGFsL21lbnNhZ2VtLWV4Y2x1aXItbW9kYWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tc2ctZXhjbHVpcnsgICAgXHJcbiAgICBwYWRkaW5nOiAycHg7XHJcbiAgICBtYXJnaW46IDVweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyMzMsIDE2NSwgMTY1KTtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.html":
+/*!********************************************************************************************!*\
+  !*** ./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.html ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div mat-dialog-content>  \r\n  <p *ngIf=\"data.entidade == 'música'\" class=\"msg-excluir\">\r\n    Tem certeza que deseja excluir a música <strong>{{data.obj.nome}} - {{data.obj.artista}}</strong>?\r\n  </p>  \r\n  <p *ngIf=\"data.entidade == 'repertório'\" class=\"msg-excluir\">\r\n    Tem certeza que deseja excluir a lista do(a) <strong>{{data.obj.tituloEvento}}</strong>?\r\n  </p>  \r\n</div>\r\n<div mat-dialog-actions class=\"pull-right\">\r\n  <button mat-raised-button (click)=\"onNoClick()\" cdkFocusInitial>Cancelar</button>\r\n  <button mat-raised-button (click)=\"excluir()\">Sim</button>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.ts ***!
+  \******************************************************************************************/
+/*! exports provided: MensagemExcluirModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MensagemExcluirModalComponent", function() { return MensagemExcluirModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var MensagemExcluirModalComponent = /** @class */ (function () {
+    function MensagemExcluirModalComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    MensagemExcluirModalComponent.prototype.ngOnInit = function () {
+    };
+    MensagemExcluirModalComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    MensagemExcluirModalComponent.prototype.excluir = function () {
+        this.dialogRef.close(true);
+    };
+    MensagemExcluirModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-mensagem-excluir-modal',
+            template: __webpack_require__(/*! ./mensagem-excluir-modal.component.html */ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.html"),
+            styles: [__webpack_require__(/*! ./mensagem-excluir-modal.component.css */ "./src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
+    ], MensagemExcluirModalComponent);
+    return MensagemExcluirModalComponent;
 }());
 
 

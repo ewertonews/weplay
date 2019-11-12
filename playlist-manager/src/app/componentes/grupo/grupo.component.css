@@ -10,3 +10,17 @@ mat-card{
     margin-top: 3vh;
     margin-bottom: 2vh;
 }
+
+.spinner-musicas{
+    padding: 10px;
+    width: 93px;
+    height: 95px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.add-user{
+    float: right;
+    position: sticky;
+    margin-top: 7px;
+}

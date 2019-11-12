@@ -1,0 +1,43 @@
+  <h2 mat-dialog-title>Nova Integrante</h2> 
+  <mat-dialog-content [formGroup]="formNovoMembro">
+      <div class="col-md-4">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Nome" formControlName="nome" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" formControlName="email_membro" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+          <mat-form-field class="full-width">
+            <mat-label>Principal participação no grupo</mat-label>
+            <mat-select formControlName="participacao" required>
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let part of participacoes" [value]="part">
+                {{part}}
+              </mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="participacao.hasError('required')">Você deve escolher uma opção</mat-error> -->
+          </mat-form-field>            
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+        <div class="col-md-4" *ngIf="formNovoMembro.value.participacao == 'Outro'">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Especifique aqui" formControlName="outro" autocomplete="off">
+          </mat-form-field>
+      </div> 
+      
+  </mat-dialog-content>
+    <mat-dialog-actions class="pull-right botoes">
+        <!-- <mat-dialog-actions> -->
+      <button class="mat-raised-button" (click)="close()">Cancelar</button>
+      <button class="mat-raised-button mat-primary" (click)="cadastrarIntegrante()">Salvar</button>
+      <button class="mat-raised-button mat-primary" (click)="salvarEAdicionarOutro()">Salvar e cadastrar outro integrante</button>
+          <!-- </mat-dialog-actions> -->
+    </mat-dialog-actions>
+
+
+

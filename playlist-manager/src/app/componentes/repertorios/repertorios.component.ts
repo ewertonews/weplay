@@ -15,6 +15,7 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
 import { NgNavigatorShareService } from 'ng-navigator-share';
 import { MatDialog } from '@angular/material';
 import { CompartilharModalComponent } from 'src/app/shared/modals/compartilhar-modal/compartilhar-modal.component';
+import { MensagemExcluirModalComponent } from 'src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component';
 
 
 @Component({
@@ -127,36 +128,29 @@ export class RepertoriosComponent implements OnInit {
     this.clearCommand = false;
   }
 
-  excluirMusica(item){
-    
+  excluirMusica(item){    
     let indexToDelete = this.setlistEdicao.items.indexOf(item);
     this.setlistEdicao.items.splice(indexToDelete, 1);
     this.needToClearSelection.emit(Object.assign({}, this.clearCommand));
-
   }
   
 
   podeEditarSetlist(setlist: Setlist){
     let hoje = new Date();
-    console.log("setlist.dataEvento", setlist.dataEvento.toString());
-    console.log("hoje", hoje);
-    console.log(new Date(setlist.dataEvento.toString()) >= hoje);
-    return new Date(setlist.dataEvento.toString()) >= hoje;
+    return new Date(setlist.dataEvento.toString()) < hoje;
   }
 
   editarSetlist(setlist: Setlist){
-    if(this.podeEditarSetlist(setlist) === false){
+    if (this.podeEditarSetlist(setlist) === false){
       alert("Não é possível editar a lista de um evento passado");
       return;
     }
     this.ehEdicao = true;
     this.grupoSetlistsOriginal = JSON.parse(JSON.stringify(this.grupoSetLists));
-    // this.setlistEdicao = JSON.parse(JSON.stringify(setlist));
-    // this.setlistEdicao.items = setlist.items;    
-    
+      
     Object.assign(this.setlistEdicao, setlist);
     this.copiaSetlistEdicao = JSON.parse(JSON.stringify(setlist));
-    console.log("this.copiaSetlistEdicao", this.copiaSetlistEdicao);
+    // console.log("this.copiaSetlistEdicao", this.copiaSetlistEdicao);
     
     this.tituloRepertorio = "Editar Repertório";
     // console.log("Editar setlist", setlist)
@@ -200,6 +194,29 @@ export class RepertoriosComponent implements OnInit {
       tituloEvento: '',
       items: []
     };
+  }
+
+  excluirSetlist(setlist){
+    const dialogRef = this.modalDialog.open(MensagemExcluirModalComponent, {
+      width: '450px',
+      data: { obj: setlist, entidade: 'repertório'}
+    });
+
+    dialogRef.afterClosed().subscribe(excluir => {
+      if (excluir){
+        if (this.podeEditarSetlist(setlist) === false){
+          alert("Não é possível excluir a lista de um evento passado");
+          return;
+        }
+        this.repertorioService.removeSetlist(setlist, this.grupo).then(res => {
+          console.log("Setlist excluida com sucesso");
+          alert("Setlist excluida com sucesso");
+        }).catch(error => {
+          console.error(error);
+          alert(error || error.message);
+        });
+      }      
+    });    
   }
 
   drop(event: CdkDragDrop<string[]>) {

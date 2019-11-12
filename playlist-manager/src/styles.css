@@ -12,3 +12,7 @@
     background-color: none !important;
     color: rgba(0,0,0,.87);
 }
+
+.full-width{
+    width:100%;
+}

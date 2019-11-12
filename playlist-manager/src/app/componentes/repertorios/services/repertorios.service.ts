@@ -22,4 +22,9 @@ export class RepertoriosService {
     let anomes = getAnoMesCriacaoGrupo(grupo);
     return this.firestore.collection('setlists/' + anomes + '/sets', ref => ref.where('idGrupo', '==', grupo.id)).valueChanges();
   }
+
+  removeSetlist(setlist: Setlist, grupo: Grupo){    
+    let anomes = getAnoMesCriacaoGrupo(grupo);
+    return this.firestore.collection('setlists/' + anomes + '/sets').doc(setlist.id).delete();    
+  }
 }

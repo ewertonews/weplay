@@ -36,16 +36,20 @@ export class HomeComponent implements OnInit {
     if(!this.auth.authenticated) {
       this.router.navigate(['']);
     }
-
-    let usuarioRP = localStorage.getItem("usuarioRP");
-    if (usuarioRP){
-      this.usuario = JSON.parse(usuarioRP);
-      this.obterGruposDoUsuario();
-    }else{
-      this.criarOuAtualizarUsuario();
-    }  
+    this.setUsuario();  
   }
 
+
+  private setUsuario() {
+    let usuarioRP = localStorage.getItem("usuarioRP");
+    if (usuarioRP) {
+      this.usuario = JSON.parse(usuarioRP);
+      this.obterGruposDoUsuario();
+    }
+    else {
+      this.criarOuAtualizarUsuario();
+    }
+  }
 
   openDialog() {
     console.log("Chamou o open dialog")
@@ -71,27 +75,9 @@ export class HomeComponent implements OnInit {
 
 
   criarOuAtualizarUsuario() {
-    const loggedUser = JSON.parse(localStorage.getItem("usuario"));
+    const loggedUser = JSON.parse(localStorage.getItem("usuarioRP"));
     console.log("loggedUser", loggedUser);
-
-    let tipoLogin = localStorage.getItem("tipoLogin");
-    let fotoUrl = loggedUser.user.photoURL;
     
-    if (tipoLogin === "facebook"){
-          fotoUrl = fotoUrl + "?type=large";
-    }
-    
-    this.usuario = {
-          id: loggedUser.user.uid,
-          email: loggedUser.user.email,
-          urlFoto: fotoUrl,
-          nome: loggedUser.user.displayName,
-          idGrupos: [],
-          papel: null,
-          sexo: null,
-          telefone: null
-    };
-
     this.userService.getUserByEmail(loggedUser.user.email).subscribe(respUserQuery => {
       if (respUserQuery.length === 0){
         this.showSpinner = false;
@@ -103,11 +89,9 @@ export class HomeComponent implements OnInit {
         this.usuario.sexo = userFromDB.sexo;
         this.usuario.papel = userFromDB.papel;
       }
-      localStorage.setItem("usuarioRP", JSON.stringify(this.usuario));
 
       this.obterGruposDoUsuario();
     });   
-    
   }
 
   criarGrupo(data){

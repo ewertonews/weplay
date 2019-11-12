@@ -4,7 +4,7 @@ import { CriarMusicaComponent } from 'src/app/componentes/musicas/modals/criar-m
 import { Musica } from 'src/app/componentes/musicas/interfaces/musica.model';
 import {MatTableDataSource} from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { ExcluirMusicaModalComponent } from 'src/app/shared/modals/excluir-musica-modal/excluir-musica-modal.component';
+import { MensagemExcluirModalComponent } from 'src/app/shared/modals/mensagem-excluir-modal/mensagem-excluir-modal.component';
 import { PlaylistService } from 'src/app/componentes/repertorios/services/playlist.service';
 import { Playlist } from 'src/app/componentes/repertorios/interfaces/playlist.model';
 import { EditarMusicaModalComponent } from 'src/app/componentes/musicas/modals/editar-musica-modal/editar-musica-modal.component';
@@ -17,7 +17,9 @@ import { EditarMusicaModalComponent } from 'src/app/componentes/musicas/modals/e
 export class MusicasComponent implements OnInit {
   temMusicas = false;
   textoBotaoLista = "Criar Lista";
+
   @Input() musicas: Musica[];
+  
   // tslint:disable-next-line: variable-name
   _clearSelected: boolean;
   
@@ -35,7 +37,7 @@ export class MusicasComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private modalDialog: MatDialog, private playlistService: PlaylistService) {
-    console.log("=========================== musicas.component =================================");
+    
   }
 
   // tslint:disable-next-line:max-line-length
@@ -170,9 +172,9 @@ export class MusicasComponent implements OnInit {
 
   excluirMusica(musica, indiceMusica){
     console.log("musica para exluir: ", musica);
-    const dialogRef = this.modalDialog.open(ExcluirMusicaModalComponent, {
+    const dialogRef = this.modalDialog.open(MensagemExcluirModalComponent, {
       width: '390px',
-      data: musica
+      data: {obj: musica, entidade: 'música'}
     });
 
     dialogRef.afterClosed().subscribe(excluir =>{
