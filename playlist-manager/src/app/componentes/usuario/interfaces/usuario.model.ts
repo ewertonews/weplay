@@ -7,5 +7,4 @@ export class Usuario {
     urlFoto: string;
     idGrupos: string[] = new Array<string>();
     telefone: string;
-    status: string;
 }

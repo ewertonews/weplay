@@ -59,6 +59,8 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/compartilhar-modal.component';
 import { NovoIntegranteComponent } from './componentes/novo-integrante/novo-integrante.component';
 import { CadastrarIntegranteModalComponent } from './componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
+import { ConfirmacaoModalComponent } from './shared/modals/confirmacao-modal/confirmacao-modal.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ import { CadastrarIntegranteModalComponent } from './componentes/grupo/modals/ca
     UsuarioComponent,
     CompartilharModalComponent,
     NovoIntegranteComponent,
-    CadastrarIntegranteModalComponent
+    CadastrarIntegranteModalComponent,
+    ConfirmacaoModalComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -126,7 +130,8 @@ import { CadastrarIntegranteModalComponent } from './componentes/grupo/modals/ca
     MensagemExcluirModalComponent,
     EditarMusicaModalComponent,
     CompartilharModalComponent,
-    CadastrarIntegranteModalComponent
+    CadastrarIntegranteModalComponent,
+    ConfirmacaoModalComponent
   ]
 })
 export class AppModule { }

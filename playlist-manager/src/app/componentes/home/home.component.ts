@@ -8,6 +8,9 @@ import { Grupo } from 'src/app/componentes/grupo/interfaces/grupo.model';
 import { UsuariosService } from 'src/app/componentes/usuario/services/usuarios.service';
 import { GruposService } from 'src/app/componentes/grupo/services/grupos.service';
 import { PlaylistService } from 'src/app/componentes/repertorios/services/playlist.service';
+import { ConviteService } from '../grupo/services/convite.service';
+import { Convite } from '../grupo/interfaces/convite.model';
+import { ConfirmacaoModalComponent } from 'src/app/shared/modals/confirmacao-modal/confirmacao-modal.component';
 
 
 @Component({
@@ -20,14 +23,16 @@ export class HomeComponent implements OnInit {
   usuario: Usuario;
   gruposDoUsuario: Array<Grupo> = [];
   showSpinner = true;
+  convitesUsuario: Convite[];
 
   constructor(
     private auth: AuthService, 
     private router: Router,
-    private dialogGrupo: MatDialog,
+    private matDialog: MatDialog,
     private userService: UsuariosService,
     private grupoService: GruposService,
-    private playListService: PlaylistService) {
+    private playListService: PlaylistService,
+    private conviteService: ConviteService) {
     
 
    }
@@ -44,7 +49,8 @@ export class HomeComponent implements OnInit {
     let usuarioRP = localStorage.getItem("usuarioRP");
     if (usuarioRP) {
       this.usuario = JSON.parse(usuarioRP);
-      this.obterGruposDoUsuario();
+      this.obterGruposDoUsuario(this.usuario.email);
+      this.obterConvitesUsuario(this.usuario.email);
     }
     else {
       this.criarOuAtualizarUsuario();
@@ -60,7 +66,7 @@ export class HomeComponent implements OnInit {
     dialogConfig.maxWidth = "100%";
     dialogConfig.minWidth = "70%";
 
-    const dialogRef = this.dialogGrupo.open(CriarGrupoModalComponent, dialogConfig);
+    const dialogRef = this.matDialog.open(CriarGrupoModalComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(
       data =>{
@@ -75,9 +81,30 @@ export class HomeComponent implements OnInit {
 
 
   criarOuAtualizarUsuario() {
-    const loggedUser = JSON.parse(localStorage.getItem("usuarioRP"));
+    const loggedUser = JSON.parse(localStorage.getItem("usuario"));
     console.log("loggedUser", loggedUser);
+
+    let tipoLogin = localStorage.getItem("tipoLogin");
+    let fotoUrl = loggedUser.user.photoURL;
     
+    if (tipoLogin === "facebook"){
+          fotoUrl = fotoUrl + "?type=large";
+    }
+    
+    this.usuario = {
+          id: loggedUser.user.uid,
+          email: loggedUser.user.email,
+          urlFoto: fotoUrl,
+          nome: loggedUser.user.displayName,
+          idGrupos: [],
+          papel: null,
+          sexo: null,
+          telefone: null
+    };
+
+    this.obterGruposDoUsuario(this.usuario.email);
+    this.obterConvitesUsuario(this.usuario.email);
+
     this.userService.getUserByEmail(loggedUser.user.email).subscribe(respUserQuery => {
       if (respUserQuery.length === 0){
         this.showSpinner = false;
@@ -89,9 +116,10 @@ export class HomeComponent implements OnInit {
         this.usuario.sexo = userFromDB.sexo;
         this.usuario.papel = userFromDB.papel;
       }
-
-      this.obterGruposDoUsuario();
+      localStorage.setItem("usuarioRP", JSON.stringify(this.usuario));
+      localStorage.removeItem("usuario");
     });   
+    
   }
 
   criarGrupo(data){
@@ -112,30 +140,68 @@ export class HomeComponent implements OnInit {
       this.grupoService.associateUserToGroup(grupo.id, this.usuario);
     });
 
-    // this.playListService.createPlaylist(grupo).then(res => {
-    //   console.log("PLAYLIST CRIADA");
-    // }, error => {
-    //   console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      
-    // });
+    console.log("grupos do usuario: ", this.gruposDoUsuario);    
+  }
 
-    console.log("grupos do usuario: ", this.gruposDoUsuario);
+  pedirConfirmacaoAceitarConvite(convite: Convite){
+  
+    const dialogRef = this.matDialog.open(ConfirmacaoModalComponent, {
+      minWidth: '70%',
+      data: {mensagem: `Confirma tua participação no ${convite.nomeGrupo}?`}
+    });
 
-    
+    dialogRef.afterClosed().subscribe(res => {
+      if (res){
+        //add usuario
+        console.log("convite eceito!");
+        this.showSpinner = true;
+        this.grupoService.associateUserToGroup(convite.idGrupo, this.usuario).then(resp => {
+          this.convitesUsuario.splice(this.convitesUsuario.indexOf(convite), 1);
+          console.log("resp", resp);
+          this.showSpinner = false;
+        });
+        console.log("Convites do caba:", this.convitesUsuario);
+      }
+    });
+  }
+
+  pedirConfirmacaoRecusarConvite(convite: Convite){
+    const dialogRef = this.matDialog.open(ConfirmacaoModalComponent, {
+      minWidth: '70%',
+      data: {mensagem: `Tem certeza que deseja rejeitar o convite para participar do ${convite.nomeGrupo}?`}
+    });
+    dialogRef.afterClosed().subscribe(res => {
+      if (res){
+        //remover convite
+        console.log("convite rejeitado!")
+      }
+    });
   }
 
   generateIdGrupo(){
     let hoje = new Date();
-    //Math.random().toString(36).substring(2) 
     return "G" + hoje.getMilliseconds() + hoje.getSeconds() + hoje.getDate() + hoje.getMonth() + hoje.getFullYear();
   }
   
-  obterGruposDoUsuario(){
-    this.grupoService.getUserGroups(this.usuario.email).subscribe(grupos => {          
+  async obterGruposDoUsuario(email){
+    this.showSpinner = true;
+    this.grupoService.getUserGroups(email).subscribe(grupos => {          
       if(grupos.length > 0){
         this.gruposDoUsuario = grupos as Grupo[];        
       }
       this.showSpinner = false;
       console.log("grupos do caba:", this.gruposDoUsuario);
+    });
+  }
+
+  async obterConvitesUsuario(email){
+    this.showSpinner = true;
+    this.conviteService.getConvitesUsuario(email).subscribe(convites => {
+      if(convites.length > 0){
+        this.convitesUsuario = convites as Convite[];        
+      }      
+      console.log("convites do caba:", this.convitesUsuario);
+      this.showSpinner = false;
     });
   }
 }

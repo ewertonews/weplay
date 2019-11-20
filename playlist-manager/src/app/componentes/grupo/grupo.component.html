@@ -1,4 +1,4 @@
-<!-- <app-header [usuario]="currentUser"></app-header> -->
+<app-header [usuario]="currentUser"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -42,7 +42,8 @@
                       <span *ngIf="!qtdMusicas">Músicas</span>
                     </ng-template>
                     <div class="spinner-musicas" *ngIf="!playlistDoGrupo"> 
-                        <mat-spinner [diameter]="70" [strokeWidth]="7"></mat-spinner>
+                        <!-- <mat-spinner [diameter]="70" [strokeWidth]="7"></mat-spinner> -->
+                        <app-loader></app-loader>
                     </div>                    
                     <app-musicas 
                         *ngIf="playlistDoGrupo" 

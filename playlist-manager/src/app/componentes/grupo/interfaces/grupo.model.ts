@@ -7,4 +7,7 @@ export class Grupo {
     nome: string;
     criadoEm: string;
     foto: string;
+    nomeIgreja: string;
+    localIgreja: string;
+    demoninação: string;
 }

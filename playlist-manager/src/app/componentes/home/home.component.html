@@ -1,19 +1,40 @@
+<app-header [usuario]="usuario"></app-header>
 <div class="container">
         <div class="row">
             <div class="col-md-12" *ngIf="showSpinner">
-                <mat-spinner></mat-spinner>
+                <app-loader></app-loader>
             </div>            
             <div *ngIf="usuario" class="col-md-12">
+                <div *ngIf="!showSpinner && convitesUsuario?.length != 0">
+                    <div class="callout callout-info" *ngFor="let convite of convitesUsuario">                        
+                        <h4><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;Você foi convidado para participar de um grupo! 😄</h4>    
+                        <p>
+                            {{convite.convidadoPor}} te convidou para participar do <strong>{{convite.nomeGrupo}}</strong>.
+                        </p>
+                        <div align="end">
+                            <button mat-raised-button color="primary" (click)="pedirConfirmacaoAceitarConvite(convite)">TÔ DENTRO! ✌</button>&nbsp;    
+                            <button mat-raised-button (click)="pedirConfirmacaoRecusarConvite(convite)"> Agora não 😐 </button>    
+                        </div>
+                    </div>
+                </div>
+                
                 <mat-card *ngIf="!showSpinner && gruposDoUsuario.length == 0">                    
                     <mat-card-content>                        
-                        <div *ngIf="gruposDoUsuario.length == 0">
-                            <h4>Olá, {{usuario.nome}}!</h4>
-                            <p>
+                        <div *ngIf="gruposDoUsuario.length == 0 && convitesUsuario?.length == 0">
+                            <h4>Olá, {{usuario.nome}}!</h4>                            <p>
                                 Você ainda não participa de nenhuma banda ou grupo. Solicite ao administrador do seu grupo para 
                                 lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>) ou clique no botão abaixo para criar um novo grupo.
-                            </p>
-                            <button mat-raised-button color="primary" (click)="openDialog()"> CRIAR GRUPO </button>
-                        </div>                        
+                            </p>                                                      
+                        </div>  
+                        <div *ngIf="gruposDoUsuario.length == 0 && convitesUsuario?.length != 0 && !showSpinner">
+                            <h4>Olá, {{usuario.nome}}!</h4>                            <p>
+                                Você ainda não participa de nenhum grupo, mas você pode aceitar o convite disponível acima ou solicite ao administrador do seu grupo para 
+                                lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>). Se preferir, clique no botão abaixo para criar um novo grupo.
+                            </p>                                                      
+                        </div>
+                        <mat-card-actions style=" padding-right: 37px;" align="end">
+                            <button mat-raised-button color="primary" class="btn-novogrupo" (click)="openDialog()"> CRIAR GRUPO </button>    
+                        </mat-card-actions>                        
                    </mat-card-content>                   
                 </mat-card>
                 <div class="row" *ngIf="!showSpinner && gruposDoUsuario.length > 0">

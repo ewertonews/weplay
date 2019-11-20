@@ -11,6 +11,8 @@ import { GruposService } from 'src/app/componentes/grupo/services/grupos.service
 import { UsuarioGrupo } from 'src/app/componentes/usuario/interfaces/usuarioGrupo.model';
 import { MatDialogConfig, MatDialog } from '@angular/material';
 import { CadastrarIntegranteModalComponent } from './modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
+import { Convite } from './interfaces/convite.model';
+import { ConviteService } from './services/convite.service';
 
 @Component({
   selector: 'app-grupo',
@@ -33,6 +35,7 @@ export class GrupoComponent implements OnInit {
   constructor(
     private playlistService: PlaylistService,
     private gruposService: GruposService,
+    private conviteService: ConviteService,
     private modalDialog: MatDialog) { 
     this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
     console.log("currentUser", this.currentUser);
@@ -105,24 +108,32 @@ export class GrupoComponent implements OnInit {
 
     criarMusicadialogRef.afterClosed().subscribe(data => {
       if (data){
-        console.log(data);
+        this.convidarNovoIntegrante(data);
       }
-    })
+    });
   }
 
-  cadastrarNovoIntegrante(novoIntegrante: any){
+  convidarNovoIntegrante(novoIntegrante: any){
     let papelNoGrupo = novoIntegrante.outro === "" ? novoIntegrante.participacao : novoIntegrante.outro;
-    let novoMembro: Usuario = {
-      id: 
+    let novoMembro: Convite = {
+      id: this.grupo.id + "_" + novoIntegrante.email_membro,
+      convidadoPor: this.currentUser.nome,
       email: novoIntegrante.email_membro,
-      idGrupos: [this.grupo.id],
+      nomeGrupo: this.grupo.nome,
+      idGrupo: this.grupo.id,
       nome: novoIntegrante.nome,
       papel: papelNoGrupo,
       status: "pendente",
-      sexo: '',
-      telefone: '',
-      urlFoto: '',
+      dataConvite: new Date().toLocaleDateString()
     };
+
+    this.conviteService.createConvite(novoMembro).then(res => {
+      console.log(res);
+      alert("Convite criado com sucesso");
+    }).catch(error => {
+      alert(error || error.message);
+      
+    });
   }
 
   qtdGroupSetListsEvent($event){

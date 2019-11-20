@@ -11,7 +11,7 @@ export class UsuariosService {
 
 
   createUser(usuario: Usuario){
-    return this.firestore.collection('usuarios').doc(usuario.id).set(usuario);
+    return this.firestore.collection('usuarios').doc(usuario.email).set(usuario);
   }
 
   getUsers() {
