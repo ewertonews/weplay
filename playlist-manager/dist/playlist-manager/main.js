@@ -346,6 +346,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentes_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./componentes/home/home.component */ "./src/app/componentes/home/home.component.ts");
 /* harmony import */ var _componentes_landing_landing_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./componentes/landing/landing.component */ "./src/app/componentes/landing/landing.component.ts");
 /* harmony import */ var _componentes_grupo_grupo_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./componentes/grupo/grupo.component */ "./src/app/componentes/grupo/grupo.component.ts");
+/* harmony import */ var _componentes_novo_integrante_novo_integrante_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./componentes/novo-integrante/novo-integrante.component */ "./src/app/componentes/novo-integrante/novo-integrante.component.ts");
+
 
 
 
@@ -356,7 +358,8 @@ var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: _componentes_landing_landing_component__WEBPACK_IMPORTED_MODULE_4__["LandingComponent"] },
     { path: 'grupos', component: _componentes_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
-    { path: 'detalhe-grupo', component: _componentes_grupo_grupo_component__WEBPACK_IMPORTED_MODULE_5__["GrupoComponent"] }
+    { path: 'detalhe-grupo', component: _componentes_grupo_grupo_component__WEBPACK_IMPORTED_MODULE_5__["GrupoComponent"] },
+    { path: 'adicionar-integrante', component: _componentes_novo_integrante_novo_integrante_component__WEBPACK_IMPORTED_MODULE_6__["NovoIntegranteComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -490,6 +493,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
 /* harmony import */ var _componentes_usuario_usuario_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./componentes/usuario/usuario.component */ "./src/app/componentes/usuario/usuario.component.ts");
 /* harmony import */ var _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./shared/modals/compartilhar-modal/compartilhar-modal.component */ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.ts");
+/* harmony import */ var _componentes_novo_integrante_novo_integrante_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./componentes/novo-integrante/novo-integrante.component */ "./src/app/componentes/novo-integrante/novo-integrante.component.ts");
+/* harmony import */ var _componentes_grupo_modals_cadastrar_integrante_modal_cadastrar_integrante_modal_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component */ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.ts");
+/* harmony import */ var _shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./shared/modals/confirmacao-modal/confirmacao-modal.component */ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.ts");
+/* harmony import */ var _shared_loader_loader_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./shared/loader/loader.component */ "./src/app/shared/loader/loader.component.ts");
+
+
+
+
 
 
 
@@ -562,7 +573,11 @@ var AppModule = /** @class */ (function () {
                 _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"],
                 _componentes_repertorios_modals_editar_repertorio_modal_editar_repertorio_modal_component__WEBPACK_IMPORTED_MODULE_48__["EditarRepertorioModalComponent"],
                 _componentes_usuario_usuario_component__WEBPACK_IMPORTED_MODULE_50__["UsuarioComponent"],
-                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"]
+                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"],
+                _componentes_novo_integrante_novo_integrante_component__WEBPACK_IMPORTED_MODULE_52__["NovoIntegranteComponent"],
+                _componentes_grupo_modals_cadastrar_integrante_modal_cadastrar_integrante_modal_component__WEBPACK_IMPORTED_MODULE_53__["CadastrarIntegranteModalComponent"],
+                _shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_54__["ConfirmacaoModalComponent"],
+                _shared_loader_loader_component__WEBPACK_IMPORTED_MODULE_55__["LoaderComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -609,7 +624,9 @@ var AppModule = /** @class */ (function () {
                 _componentes_musicas_modals_criar_musica_criar_musica_component__WEBPACK_IMPORTED_MODULE_43__["CriarMusicaComponent"],
                 _shared_modals_mensagem_excluir_modal_mensagem_excluir_modal_component__WEBPACK_IMPORTED_MODULE_46__["MensagemExcluirModalComponent"],
                 _componentes_musicas_modals_editar_musica_modal_editar_musica_modal_component__WEBPACK_IMPORTED_MODULE_47__["EditarMusicaModalComponent"],
-                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"]
+                _shared_modals_compartilhar_modal_compartilhar_modal_component__WEBPACK_IMPORTED_MODULE_51__["CompartilharModalComponent"],
+                _componentes_grupo_modals_cadastrar_integrante_modal_cadastrar_integrante_modal_component__WEBPACK_IMPORTED_MODULE_53__["CadastrarIntegranteModalComponent"],
+                _shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_54__["ConfirmacaoModalComponent"]
             ]
         })
     ], AppModule);
@@ -799,7 +816,7 @@ var CardGrupoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n\r\n.integrantes{\r\n    margin-top: 3vh;\r\n    margin-bottom: 2vh;\r\n}\r\n\r\n.spinner-musicas{\r\n    padding: 10px;\r\n    width: 93px;\r\n    height: 95px;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vZ3J1cG8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLFdBQVc7SUFDWCxZQUFZO0lBQ1osY0FBYztJQUNkLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2dydXBvL2dydXBvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9wby1ncnVwb3tcclxuICAgIGhlaWdodDogMTB2aDtcclxufVxyXG5cclxubWF0LWNhcmR7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxdmg7XHJcbn1cclxuXHJcbi5pbnRlZ3JhbnRlc3tcclxuICAgIG1hcmdpbi10b3A6IDN2aDtcclxuICAgIG1hcmdpbi1ib3R0b206IDJ2aDtcclxufVxyXG5cclxuLnNwaW5uZXItbXVzaWNhc3tcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICB3aWR0aDogOTNweDtcclxuICAgIGhlaWdodDogOTVweDtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufSJdfQ== */"
+module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n    margin-bottom: 1vh;\r\n}\r\n\r\n.integrantes{\r\n    margin-top: 3vh;\r\n    margin-bottom: 2vh;\r\n}\r\n\r\n.spinner-musicas{\r\n    /* padding: 10px; */\r\n    width: 93px;\r\n    height: 115px;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n}\r\n\r\n.add-user{\r\n    float: right;\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    margin-top: 7px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vZ3J1cG8uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxhQUFhO0lBQ2IsY0FBYztJQUNkLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFlBQVk7SUFDWix3QkFBZ0I7SUFBaEIsZ0JBQWdCO0lBQ2hCLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRlcy9ncnVwby9ncnVwby5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRvcG8tZ3J1cG97XHJcbiAgICBoZWlnaHQ6IDEwdmg7XHJcbn1cclxuXHJcbm1hdC1jYXJke1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMXZoO1xyXG59XHJcblxyXG4uaW50ZWdyYW50ZXN7XHJcbiAgICBtYXJnaW4tdG9wOiAzdmg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAydmg7XHJcbn1cclxuXHJcbi5zcGlubmVyLW11c2ljYXN7XHJcbiAgICAvKiBwYWRkaW5nOiAxMHB4OyAqL1xyXG4gICAgd2lkdGg6IDkzcHg7XHJcbiAgICBoZWlnaHQ6IDExNXB4O1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG59XHJcblxyXG4uYWRkLXVzZXJ7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gICAgbWFyZ2luLXRvcDogN3B4O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -810,7 +827,7 @@ module.exports = ".topo-grupo{\r\n    height: 10vh;\r\n}\r\n\r\nmat-card{\r\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h2>{{grupo.nome}}</h2>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <mat-expansion-panel class=\"integrantes\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                <h4>Integrantes</h4>\r\n              </mat-panel-title>               \r\n            </mat-expansion-panel-header>\r\n            <mat-list>\r\n              <div>\r\n                  <mat-list-item *ngFor=\"let usuario of usuariosDoGrupo\">\r\n                      {{usuario.nome}} - {{usuario.email}} - Guitarra \r\n                   </mat-list-item>\r\n                  <mat-divider></mat-divider>\r\n              </div>\r\n              </mat-list> \r\n          </mat-expansion-panel>\r\n    </div>\r\n  </div>\r\n  <!-- <div class=\"row\">\r\n      <div class=\"col-md-6\">        \r\n       \r\n      </div>\r\n   </div> -->\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-12\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs selectedIndex=\"tabSelecionada\">                  \r\n                  <mat-tab> \r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtdMusicas\" matBadge=\"{{qtdMusicas}}\" matBadgeOverlap=\"false\">Músicas</span>\r\n                      <span *ngIf=\"!qtdMusicas\">Músicas</span>\r\n                    </ng-template>\r\n                    <div class=\"spinner-musicas\" *ngIf=\"!playlistDoGrupo\"> \r\n                        <mat-spinner [diameter]=\"70\" [strokeWidth]=\"7\"></mat-spinner>\r\n                    </div>                    \r\n                    <app-musicas \r\n                        *ngIf=\"playlistDoGrupo\" \r\n                        (musicasSelecionadasEvent)=\"receiveMusicasSelecionadas($event)\"                      \r\n                        [musicas]=\"playlistDoGrupo.musicas\"\r\n                        [clearSelected]=\"clearSelection\">\r\n                      </app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\">\r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-list-alt fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtsSetlists\" matBadge=\"{{qtsSetlists}}\" matBadgeOverlap=\"false\">Repertórios</span>\r\n                      <span *ngIf=\"!qtsSetlists\">Repertórios</span>\r\n                    </ng-template>                    \r\n                    <app-repertorios \r\n                      (qtdGroupSetListsEvent)=\"qtdGroupSetListsEvent($event)\"\r\n                      (needToClearSelection)=\"limparSelecao($event)\"\r\n                      [musicasRepertorio]=\"musicasParaRepertorio\">\r\n                    </app-repertorios>                  \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>        \r\n  </div>\r\n</div>\r\n"
+module.exports = "<app-header [usuario]=\"currentUser\"></app-header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h2>{{grupo.nome}}</h2>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n        <mat-expansion-panel class=\"integrantes\">\r\n            <mat-expansion-panel-header>\r\n              <mat-panel-title>\r\n                <h4>Integrantes</h4>\r\n              </mat-panel-title>               \r\n            </mat-expansion-panel-header>\r\n            <mat-list>\r\n              <div>\r\n                  <mat-list-item *ngFor=\"let usuario of usuariosDoGrupo\">\r\n                      {{usuario.nome}} - {{usuario.email}} - Guitarra \r\n                   </mat-list-item>\r\n                  <mat-divider></mat-divider>\r\n              </div>\r\n              </mat-list> \r\n              <button (click)=\"openCadastrarIntegranteModal()\" *ngIf=\"isAdmin\" class=\"add-user\" mat-mini-fab aria-label=\"Example icon-button with a heart icon\" matTooltip=\"Adicionar membro ao grupo\">\r\n                <mat-icon>add</mat-icon>\r\n              </button>\r\n          </mat-expansion-panel>\r\n    </div>\r\n  </div>\r\n  <!-- <div class=\"row\">\r\n      <div class=\"col-md-6\">        \r\n       \r\n      </div>\r\n   </div> -->\r\n  <div class=\"row\">          \r\n      <div class=\"col-lg-12\">\r\n          <mat-card>\r\n            <mat-card-content>\r\n                <mat-tab-group mat-stretch-tabs selectedIndex=\"tabSelecionada\">                  \r\n                  <mat-tab> \r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-music fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtdMusicas\" matBadge=\"{{qtdMusicas}}\" matBadgeOverlap=\"false\">Músicas</span>\r\n                      <span *ngIf=\"!qtdMusicas\">Músicas</span>\r\n                    </ng-template>\r\n                    <div class=\"spinner-musicas\" *ngIf=\"!playlistDoGrupo\"> \r\n                        <!-- <mat-spinner [diameter]=\"70\" [strokeWidth]=\"7\"></mat-spinner> -->\r\n                        <app-loader></app-loader>\r\n                    </div>                    \r\n                    <app-musicas \r\n                        *ngIf=\"playlistDoGrupo\" \r\n                        (musicasSelecionadasEvent)=\"receiveMusicasSelecionadas($event)\"                      \r\n                        [musicas]=\"playlistDoGrupo.musicas\"\r\n                        [clearSelected]=\"clearSelection\">\r\n                      </app-musicas>\r\n                  </mat-tab>\r\n                  <mat-tab label=\"Repertórios\">\r\n                    <ng-template mat-tab-label>\r\n                      <i class=\"fa fa-list-alt fa-lg\" aria-hidden=\"true\"></i>\r\n                      &nbsp;<span *ngIf=\"qtsSetlists\" matBadge=\"{{qtsSetlists}}\" matBadgeOverlap=\"false\">Repertórios</span>\r\n                      <span *ngIf=\"!qtsSetlists\">Repertórios</span>\r\n                    </ng-template>                    \r\n                    <app-repertorios \r\n                      (qtdGroupSetListsEvent)=\"qtdGroupSetListsEvent($event)\"\r\n                      (needToClearSelection)=\"limparSelecao($event)\"\r\n                      [musicasRepertorio]=\"musicasParaRepertorio\">\r\n                    </app-repertorios>                  \r\n                  </mat-tab>               \r\n                </mat-tab-group>\r\n            </mat-card-content>\r\n          </mat-card>\r\n        </div>        \r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -828,30 +845,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/componentes/repertorios/services/playlist.service */ "./src/app/componentes/repertorios/services/playlist.service.ts");
 /* harmony import */ var src_app_componentes_grupo_services_grupos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/componentes/grupo/services/grupos.service */ "./src/app/componentes/grupo/services/grupos.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _modals_cadastrar_integrante_modal_cadastrar_integrante_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component */ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.ts");
+/* harmony import */ var _services_convite_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/convite.service */ "./src/app/componentes/grupo/services/convite.service.ts");
+
+
+
 
 
 
 
 var GrupoComponent = /** @class */ (function () {
-    function GrupoComponent(playlistService, gruposService) {
+    function GrupoComponent(playlistService, gruposService, conviteService, modalDialog) {
         this.playlistService = playlistService;
         this.gruposService = gruposService;
+        this.conviteService = conviteService;
+        this.modalDialog = modalDialog;
         this.tabSelecionada = 0;
         this.musicasParaRepertorio = [];
         this.clearSelection = false;
+        this.isAdmin = false;
         this.currentUser = JSON.parse(localStorage.getItem('usuarioRP'));
         console.log("currentUser", this.currentUser);
     }
     GrupoComponent.prototype.ngOnInit = function () {
         var _this = this;
         var grupoSelecionado = localStorage.getItem("grupo");
-        console.log('grupo selec', grupoSelecionado);
+        // console.log('grupo selec', grupoSelecionado);
         if (grupoSelecionado) {
             this.grupo = JSON.parse(grupoSelecionado);
         }
         this.playlistService.getGroupSongs(this.grupo)
             .subscribe(function (resp) {
-            console.log("getPlaylist 2", resp);
+            // console.log("getPlaylist 2", resp);
             var retornoMusicas = resp.map(function (obj) {
                 var musicaGrupo = obj;
                 return musicaGrupo.musica;
@@ -868,6 +894,7 @@ var GrupoComponent = /** @class */ (function () {
             var grupoUsuario = grupo;
             _this.usuariosDoGrupo = grupoUsuario.usuarios;
         });
+        this.isAdmin = this.verifyIfUserIsAdmin(this.grupo, this.currentUser);
     };
     GrupoComponent.prototype.receiveMusicasSelecionadas = function ($event) {
         console.log("recebeu o evento");
@@ -887,12 +914,50 @@ var GrupoComponent = /** @class */ (function () {
             localStorage.removeItem("tab");
         }
     };
+    GrupoComponent.prototype.openCadastrarIntegranteModal = function () {
+        var _this = this;
+        var dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialogConfig"]();
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+        dialogConfig.hasBackdrop = true;
+        dialogConfig.width = "70%";
+        dialogConfig.height = "45%";
+        var criarMusicadialogRef = this.modalDialog.open(_modals_cadastrar_integrante_modal_cadastrar_integrante_modal_component__WEBPACK_IMPORTED_MODULE_5__["CadastrarIntegranteModalComponent"], dialogConfig);
+        criarMusicadialogRef.afterClosed().subscribe(function (data) {
+            if (data) {
+                _this.convidarNovoIntegrante(data);
+            }
+        });
+    };
+    GrupoComponent.prototype.convidarNovoIntegrante = function (novoIntegrante) {
+        var papelNoGrupo = novoIntegrante.outro === "" ? novoIntegrante.participacao : novoIntegrante.outro;
+        var novoMembro = {
+            id: this.grupo.id + "_" + novoIntegrante.email_membro,
+            convidadoPor: this.currentUser.nome,
+            email: novoIntegrante.email_membro,
+            nomeGrupo: this.grupo.nome,
+            idGrupo: this.grupo.id,
+            nome: novoIntegrante.nome,
+            papel: papelNoGrupo,
+            status: "pendente",
+            dataConvite: new Date().toLocaleDateString()
+        };
+        this.conviteService.createConvite(novoMembro).then(function (res) {
+            console.log(res);
+            alert("Convite criado com sucesso");
+        }).catch(function (error) {
+            alert(error || error.message);
+        });
+    };
     GrupoComponent.prototype.qtdGroupSetListsEvent = function ($event) {
         this.qtsSetlists = $event;
     };
     GrupoComponent.prototype.limparSelecao = function (event) {
         console.log("limpar selecao", event);
         this.clearSelection = event;
+    };
+    GrupoComponent.prototype.verifyIfUserIsAdmin = function (grupo, usuario) {
+        return grupo.emailAdmins.includes(usuario.email);
     };
     GrupoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -901,7 +966,9 @@ var GrupoComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./grupo.component.css */ "./src/app/componentes/grupo/grupo.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_2__["PlaylistService"],
-            src_app_componentes_grupo_services_grupos_service__WEBPACK_IMPORTED_MODULE_3__["GruposService"]])
+            src_app_componentes_grupo_services_grupos_service__WEBPACK_IMPORTED_MODULE_3__["GruposService"],
+            _services_convite_service__WEBPACK_IMPORTED_MODULE_6__["ConviteService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
     ], GrupoComponent);
     return GrupoComponent;
 }());
@@ -944,6 +1011,83 @@ var MembrosPorGrupo = /** @class */ (function () {
     function MembrosPorGrupo() {
     }
     return MembrosPorGrupo;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.css":
+/*!**************************************************************************************************************!*\
+  !*** ./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.css ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n.botoes{\r\n    padding-top:30px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvZ3J1cG8vbW9kYWxzL2NhZGFzdHJhci1pbnRlZ3JhbnRlLW1vZGFsL2NhZGFzdHJhci1pbnRlZ3JhbnRlLW1vZGFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRlcy9ncnVwby9tb2RhbHMvY2FkYXN0cmFyLWludGVncmFudGUtbW9kYWwvY2FkYXN0cmFyLWludGVncmFudGUtbW9kYWwuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mdWxsLXdpZHRoe1xyXG4gICAgd2lkdGg6MTAwJTtcclxufVxyXG5cclxuLmJvdG9lc3tcclxuICAgIHBhZGRpbmctdG9wOjMwcHg7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.html ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "  <h2 mat-dialog-title>Nova Integrante</h2> \n  <mat-dialog-content [formGroup]=\"formNovoMembro\">\n      <div class=\"col-md-4\">\n        <mat-form-field class=\"full-width\">\n          <input matInput placeholder=\"Nome\" formControlName=\"nome\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n      <div class=\"col-md-4\">\n        <mat-form-field class=\"full-width\">\n          <input matInput placeholder=\"Email\" formControlName=\"email_membro\" autocomplete=\"off\">\n        </mat-form-field>\n      </div>\n      <div class=\"col-md-4\">\n          <mat-form-field class=\"full-width\">\n            <mat-label>Principal participação no grupo</mat-label>\n            <mat-select formControlName=\"participacao\" required>\n              <mat-option>--</mat-option>\n              <mat-option *ngFor=\"let part of participacoes\" [value]=\"part\">\n                {{part}}\n              </mat-option>\n            </mat-select>\n            <!-- <mat-error *ngIf=\"participacao.hasError('required')\">Você deve escolher uma opção</mat-error> -->\n          </mat-form-field>            \n      </div>\n      <div class=\"col-md-8\"> Bla bla bla bla bla bla bla bla bla blab lab la</div>\n      \n        <div class=\"col-md-4\" *ngIf=\"formNovoMembro.value.participacao == 'Outro'\">\n          <mat-form-field class=\"full-width\">\n            <input matInput placeholder=\"Especifique aqui\" formControlName=\"outro\" autocomplete=\"off\">\n          </mat-form-field>\n      </div> \n      \n  </mat-dialog-content>\n    <mat-dialog-actions class=\"pull-right botoes\">\n        <!-- <mat-dialog-actions> -->\n      <button class=\"mat-raised-button\" (click)=\"close()\">Cancelar</button>\n      <button class=\"mat-raised-button mat-primary\" (click)=\"cadastrarIntegrante()\">Salvar</button>\n      <button class=\"mat-raised-button mat-primary\" (click)=\"salvarEAdicionarOutro()\">Salvar e cadastrar outro integrante</button>\n          <!-- </mat-dialog-actions> -->\n    </mat-dialog-actions>\n\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.ts":
+/*!*************************************************************************************************************!*\
+  !*** ./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.ts ***!
+  \*************************************************************************************************************/
+/*! exports provided: CadastrarIntegranteModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CadastrarIntegranteModalComponent", function() { return CadastrarIntegranteModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+
+var CadastrarIntegranteModalComponent = /** @class */ (function () {
+    function CadastrarIntegranteModalComponent(fb, dialogRef) {
+        this.fb = fb;
+        this.dialogRef = dialogRef;
+        this.participacoes = ["Violão", "Guitarra", "Baixo", "Bateria", "Teclado", "Vocal", "Percussão", "Piano", "Saxofone",
+            "Tropete", "Trobone", "Violino", "Violoncelo", "Cavaco", "Cajon", "Outro"];
+        this.formNovoMembro = this.fb.group({
+            nome: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            email_membro: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            participacao: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            outro: ''
+        });
+    }
+    CadastrarIntegranteModalComponent.prototype.ngOnInit = function () {
+    };
+    CadastrarIntegranteModalComponent.prototype.close = function () {
+        this.dialogRef.close();
+    };
+    CadastrarIntegranteModalComponent.prototype.cadastrarIntegrante = function () {
+        this.dialogRef.close(this.formNovoMembro.value);
+    };
+    CadastrarIntegranteModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            template: __webpack_require__(/*! ./cadastrar-integrante-modal.component.html */ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.html"),
+            selector: 'app-cadastrar-integrante-modal',
+            styles: [__webpack_require__(/*! ./cadastrar-integrante-modal.component.css */ "./src/app/componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"]])
+    ], CadastrarIntegranteModalComponent);
+    return CadastrarIntegranteModalComponent;
 }());
 
 
@@ -1030,6 +1174,51 @@ var CriarGrupoModalComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/componentes/grupo/services/convite.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/componentes/grupo/services/convite.service.ts ***!
+  \***************************************************************/
+/*! exports provided: ConviteService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConviteService", function() { return ConviteService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
+
+
+var ConviteService = /** @class */ (function () {
+    function ConviteService(firestore) {
+        this.firestore = firestore;
+    }
+    ConviteService.prototype.createConvite = function (convite) {
+        return this.firestore.collection('convites').doc(convite.id).set(JSON.parse(JSON.stringify(convite)));
+    };
+    ConviteService.prototype.getConvitesUsuario = function (email) {
+        return this.firestore.collection('convites', function (ref) { return ref.where('email', '==', email); }).valueChanges();
+    };
+    ConviteService.prototype.removeConvite = function (idConvite) {
+        return this.firestore.collection('convites').doc(idConvite).delete();
+    };
+    ConviteService.prototype.getConvitesGrupo = function (idGrupo) {
+        return this.firestore.collection('convites', function (ref) { return ref.where('email', '==', idGrupo); }).valueChanges();
+    };
+    ConviteService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], ConviteService);
+    return ConviteService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/componentes/grupo/services/grupos.service.ts":
 /*!**************************************************************!*\
   !*** ./src/app/componentes/grupo/services/grupos.service.ts ***!
@@ -1063,35 +1252,46 @@ var GruposService = /** @class */ (function () {
     };
     GruposService.prototype.associateUserToGroup = function (idGrupo, usuario) {
         var _this = this;
-        var jaTemAssoc;
-        var associacao;
-        var sub = this.firestore.collection('usuariosPorGrupo', function (ref) { return ref.where('idGrupo', '==', idGrupo); }).valueChanges().subscribe(function (ass) {
-            if (ass.length == 0) {
-                jaTemAssoc = false;
-                sub.unsubscribe();
-                console.log("jaTemAssoc", jaTemAssoc);
-                console.log("associacao", associacao);
-                associacao = new _interfaces_membrosPorGrupo_model__WEBPACK_IMPORTED_MODULE_3__["MembrosPorGrupo"]();
-                associacao.idGrupo = idGrupo;
-                associacao.usuarios = [usuario];
-                _this.firestore.collection('usuariosPorGrupo').doc(idGrupo).set(JSON.parse(JSON.stringify(associacao))).then(function (res) {
-                    console.log("Usuário associado ao grupo");
-                });
-            }
-            else {
-                jaTemAssoc = true;
-                console.log("jaTemAssoc", jaTemAssoc);
-                console.log("associacao", associacao);
-                sub.unsubscribe();
-                console.log("ASSOC", ass[0]);
-                if (!associacao.usuarios.includes(usuario)) {
+        return new Promise(function (resolve) {
+            var jaTemAssoc;
+            var associacao;
+            var sub = _this.firestore.collection('usuariosPorGrupo', function (ref) { return ref.where('idGrupo', '==', idGrupo); }).valueChanges().subscribe(function (ass) {
+                if (ass.length == 0) {
+                    jaTemAssoc = false;
+                    sub.unsubscribe();
+                    console.log("jaTemAssoc", jaTemAssoc);
+                    console.log("associacao", associacao);
+                    associacao = new _interfaces_membrosPorGrupo_model__WEBPACK_IMPORTED_MODULE_3__["MembrosPorGrupo"]();
                     associacao.idGrupo = idGrupo;
-                    associacao.usuarios.push(usuario);
-                    _this.firestore.doc('usuariosPorGrupo/' + idGrupo).update(associacao).then(function (res) {
-                        console.log("Usuário associado ao grupo");
-                    });
+                    associacao.usuarios = [usuario];
+                    // this.firestore.collection('usuariosPorGrupo').doc(idGrupo).set(JSON.parse(JSON.stringify(associacao))).then(res => {
+                    //   console.log("Usuário associado ao grupo");
+                    // });
+                    resolve(_this.firestore.collection('usuariosPorGrupo').doc(idGrupo).set(JSON.parse(JSON.stringify(associacao))));
                 }
-            }
+                else {
+                    jaTemAssoc = true;
+                    associacao = ass[0];
+                    console.log("jaTemAssoc", jaTemAssoc);
+                    console.log("ass[ociacao]", ass);
+                    sub.unsubscribe();
+                    console.log("ASSOC", ass[0]);
+                    if (!associacao.usuarios.includes(usuario)) {
+                        associacao.idGrupo = idGrupo;
+                        associacao.usuarios.push(usuario);
+                        _this.firestore.doc('usuariosPorGrupo/' + idGrupo).update(associacao).then(function (res) {
+                            console.log("Usuário associado ao grupo");
+                            _this.firestore.doc('grupos/' + idGrupo).get().subscribe(function (grupo) {
+                                var grupoAtual = grupo.data();
+                                console.log("grupoAtual", grupoAtual);
+                                grupoAtual.emailMembros.push(usuario.email);
+                                _this.firestore.doc('convites/' + idGrupo + "_" + usuario.email).delete();
+                                resolve(_this.firestore.doc('grupos/' + idGrupo).set(grupoAtual));
+                            });
+                        });
+                    }
+                }
+            });
         });
     };
     GruposService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1114,7 +1314,7 @@ var GruposService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* .user-image{\r\n    height: 30px !important;\r\n    width: 30px !important;\r\n} */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7R0FHRyIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIC51c2VyLWltYWdle1xyXG4gICAgaGVpZ2h0OiAzMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICB3aWR0aDogMzBweCAhaW1wb3J0YW50O1xyXG59ICovIl19 */"
+module.exports = "/* .user-image{\r\n    height: 30px !important;\r\n    width: 30px !important;\r\n} */\r\n\r\nheader{\r\n    margin-bottom: 15px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7R0FHRzs7QUFFSDtJQUNJLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIC51c2VyLWltYWdle1xyXG4gICAgaGVpZ2h0OiAzMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICB3aWR0aDogMzBweCAhaW1wb3J0YW50O1xyXG59ICovXHJcblxyXG5oZWFkZXJ7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -1125,7 +1325,7 @@ module.exports = "/* .user-image{\r\n    height: 30px !important;\r\n    width: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"main-header\">\r\n    <nav class=\"navbar navbar-static-top\">\r\n      <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n          <a href=\"../../index2.html\" class=\"navbar-brand\"><b>Reper</b>Tore</a>\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n        </div>\r\n\r\n        <!-- Collect the nav links, forms, and other content for toggling -->\r\n        <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">\r\n          <ul class=\"nav navbar-nav\">\r\n            <!-- <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>\r\n            <li><a href=\"#\">Link</a></li> -->\r\n            <!-- <li class=\"dropdown\">\r\n              <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\r\n              <ul class=\"dropdown-menu\" role=\"menu\">\r\n                <li><a href=\"#\">Action</a></li>\r\n                <li><a href=\"#\">Another action</a></li>\r\n                <li><a href=\"#\">Something else here</a></li>\r\n                <li class=\"divider\"></li>\r\n                <li><a href=\"#\">Separated link</a></li>\r\n                <li class=\"divider\"></li>\r\n                <li><a href=\"#\">One more separated link</a></li>\r\n              </ul>\r\n            </li> -->\r\n          </ul>\r\n          <!-- <form class=\"navbar-form navbar-left\" role=\"search\">\r\n            <div class=\"form-group\">\r\n              <input type=\"text\" class=\"form-control\" id=\"navbar-search-input\" placeholder=\"Search\">\r\n            </div>\r\n          </form> -->\r\n        </div>\r\n        <!-- /.navbar-collapse -->\r\n        <!-- Navbar Right Menu -->\r\n        <div class=\"navbar-custom-menu\">\r\n          <ul class=\"nav navbar-nav\">\r\n  \r\n\r\n            <!-- Notifications Menu -->\r\n            <li class=\"dropdown notifications-menu\">\r\n              <!-- Menu toggle button -->\r\n              <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\r\n                <i class=\"fa fa-bell-o\"></i>\r\n                <span class=\"label label-warning\">10</span>\r\n              </a>\r\n              <ul class=\"dropdown-menu\">\r\n                <li class=\"header\">You have 10 notifications</li>\r\n                <li>\r\n                  <!-- Inner Menu: contains the notifications -->\r\n                  <ul class=\"menu\">\r\n                    <li><!-- start notification -->\r\n                      <a href=\"#\">\r\n                        <i class=\"fa fa-users text-aqua\"></i> 5 new members joined today\r\n                      </a>\r\n                    </li>\r\n                    <!-- end notification -->\r\n                  </ul>\r\n                </li>\r\n                <li class=\"footer\"><a href=\"#\">View all</a></li>\r\n              </ul>\r\n            </li>\r\n            \r\n            \r\n            <!-- User Account Menu -->\r\n            <li *ngIf=\"usuario\" class=\"dropdown user user-menu\">\r\n              <!-- Menu Toggle Button -->\r\n              <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\r\n                <!-- The user image in the navbar-->\r\n                <img src=\"{{usuario.urlFoto}}\" class=\"user-image\" alt=\"User Image\">\r\n                <!-- hidden-xs hides the username on small devices so only the image appears. -->\r\n                <span class=\"hidden-xs\">{{usuario.nome}}</span>\r\n              </a>\r\n              <ul class=\"dropdown-menu\">\r\n                <!-- The user image in the menu -->\r\n                <li class=\"user-header\">\r\n                  <img src=\"{{usuario.urlFoto}}\" class=\"img-circle\" alt=\"User Image\">\r\n\r\n                  <p>\r\n                    {{usuario.nome}} - Guitarrista\r\n                    <small>Member since Nov. 2012</small>\r\n                  </p>\r\n                </li>\r\n                <!-- Menu Body -->\r\n                <!-- <li class=\"user-body\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-xs-4 text-center\">\r\n                      <a href=\"#\">Followers</a>\r\n                    </div>\r\n                    <div class=\"col-xs-4 text-center\">\r\n                      <a href=\"#\">Sales</a>\r\n                    </div>\r\n                    <div class=\"col-xs-4 text-center\">\r\n                      <a href=\"#\">Friends</a>\r\n                    </div>\r\n                  </div>\r\n                </li> -->\r\n                <!-- Menu Footer-->\r\n                <li class=\"user-footer\">\r\n                  <div class=\"pull-left\">\r\n                    <a href=\"#\" class=\"btn btn-default btn-flat\">Perfil</a>\r\n                  </div>\r\n                  <div class=\"pull-right\">\r\n                    <button (click)=\"sair()\" class=\"btn btn-default btn-flat\">Sair</button>\r\n                  </div>\r\n                </li>\r\n              </ul>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n        <!-- /.navbar-custom-menu -->\r\n      </div>\r\n      <!-- /.container-fluid -->\r\n    </nav>\r\n  </header>\r\n\r\n"
+module.exports = "<header class=\"main-header\">\r\n  <nav class=\"navbar navbar-static-top\">\r\n    <div class=\"container\">\r\n      <div class=\"navbar-header\">\r\n        <a href=\"../../index2.html\" class=\"navbar-brand\"><b>Reper</b>Tore</a>\r\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n      </div>\r\n\r\n      <!-- Collect the nav links, forms, and other content for toggling -->\r\n      <div class=\"collapse navbar-collapse pull-left\" id=\"navbar-collapse\">\r\n        <ul class=\"nav navbar-nav\">\r\n          <!-- <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>\r\n          <li><a href=\"#\">Link</a></li> -->\r\n          <!-- <li class=\"dropdown\">\r\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\r\n            <ul class=\"dropdown-menu\" role=\"menu\">\r\n              <li><a href=\"#\">Action</a></li>\r\n              <li><a href=\"#\">Another action</a></li>\r\n              <li><a href=\"#\">Something else here</a></li>\r\n              <li class=\"divider\"></li>\r\n              <li><a href=\"#\">Separated link</a></li>\r\n              <li class=\"divider\"></li>\r\n              <li><a href=\"#\">One more separated link</a></li>\r\n            </ul>\r\n          </li> -->\r\n        </ul>\r\n        <!-- <form class=\"navbar-form navbar-left\" role=\"search\">\r\n          <div class=\"form-group\">\r\n            <input type=\"text\" class=\"form-control\" id=\"navbar-search-input\" placeholder=\"Search\">\r\n          </div>\r\n        </form> -->\r\n      </div>\r\n      <!-- /.navbar-collapse -->\r\n      <!-- Navbar Right Menu -->\r\n      <div class=\"navbar-custom-menu\">\r\n        <ul class=\"nav navbar-nav\">\r\n\r\n\r\n          <!-- Notifications Menu -->\r\n          <li class=\"dropdown notifications-menu\">\r\n            <!-- Menu toggle button -->\r\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\r\n              <i class=\"fa fa-bell-o\"></i>\r\n              <span class=\"label label-warning\">10</span>\r\n            </a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"header\">You have 10 notifications</li>\r\n              <li>\r\n                <!-- Inner Menu: contains the notifications -->\r\n                <ul class=\"menu\">\r\n                  <li><!-- start notification -->\r\n                    <a href=\"#\">\r\n                      <i class=\"fa fa-users text-aqua\"></i> 5 new members joined today\r\n                    </a>\r\n                  </li>\r\n                  <!-- end notification -->\r\n                </ul>\r\n              </li>\r\n              <li class=\"footer\"><a href=\"#\">View all</a></li>\r\n            </ul>\r\n          </li>\r\n          \r\n          \r\n          <!-- User Account Menu -->\r\n          <li *ngIf=\"usuario\" class=\"dropdown user user-menu\">\r\n            <!-- Menu Toggle Button -->\r\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\r\n              <!-- The user image in the navbar-->\r\n              <img src=\"{{usuario.urlFoto}}\" class=\"user-image\" alt=\"User Image\">\r\n              <!-- hidden-xs hides the username on small devices so only the image appears. -->\r\n              <span class=\"hidden-xs\">{{usuario.nome}}</span>\r\n            </a>\r\n            <ul class=\"dropdown-menu\">\r\n              <!-- The user image in the menu -->\r\n              <li class=\"user-header\">\r\n                <img src=\"{{usuario.urlFoto}}\" class=\"img-circle\" alt=\"User Image\">\r\n\r\n                <p>\r\n                  {{usuario.nome}} - Guitarrista\r\n                  <small>Member since Nov. 2012</small>\r\n                </p>\r\n              </li>\r\n              <!-- Menu Body -->\r\n              <!-- <li class=\"user-body\">\r\n                <div class=\"row\">\r\n                  <div class=\"col-xs-4 text-center\">\r\n                    <a href=\"#\">Followers</a>\r\n                  </div>\r\n                  <div class=\"col-xs-4 text-center\">\r\n                    <a href=\"#\">Sales</a>\r\n                  </div>\r\n                  <div class=\"col-xs-4 text-center\">\r\n                    <a href=\"#\">Friends</a>\r\n                  </div>\r\n                </div>\r\n              </li> -->\r\n              <!-- Menu Footer-->\r\n              <li class=\"user-footer\">\r\n                <div class=\"pull-left\">\r\n                  <a href=\"#\" class=\"btn btn-default btn-flat\">Perfil</a>\r\n                </div>\r\n                <div class=\"pull-right\">\r\n                  <button (click)=\"sair()\" class=\"btn btn-default btn-flat\">Sair</button>\r\n                </div>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n      <!-- /.navbar-custom-menu -->\r\n    </div>\r\n    <!-- /.container-fluid -->\r\n  </nav>\r\n</header>\r\n\r\n"
 
 /***/ }),
 
@@ -1188,7 +1388,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".btn-novogrupo{\r\n    background-color: darkorange;\r\n    border-radius: 2px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw0QkFBNEI7SUFDNUIsa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnRuLW5vdm9ncnVwb3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGRhcmtvcmFuZ2U7XHJcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -1199,7 +1399,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header [usuario]=\"usuario\"></app-header>\r\n<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\" *ngIf=\"showSpinner\">\r\n                <mat-spinner></mat-spinner>\r\n            </div>            \r\n            <div *ngIf=\"usuario\" class=\"col-md-12\">\r\n                <mat-card *ngIf=\"!showSpinner && gruposDoUsuario.length == 0\">                    \r\n                    <mat-card-content>                        \r\n                        <div *ngIf=\"gruposDoUsuario.length == 0\">\r\n                            <h4>Olá, {{usuario.nome}}!</h4>\r\n                            <p>\r\n                                Você ainda não participa de nenhuma banda ou grupo. Solicite ao administrador do seu grupo para \r\n                                lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>) ou clique no botão abaixo para criar um novo grupo.\r\n                            </p>\r\n                            <button mat-raised-button color=\"primary\" (click)=\"openDialog()\"> CRIAR GRUPO </button>\r\n                        </div>                        \r\n                   </mat-card-content>                   \r\n                </mat-card>\r\n                <div class=\"row\" *ngIf=\"!showSpinner && gruposDoUsuario.length > 0\">\r\n                    <div class=\"col-md-12\">\r\n                        <h3>Meus grupos</h3>    \r\n                    </div>                   \r\n                    <div *ngFor=\"let grupo of gruposDoUsuario\" class=\"col-md-3\">\r\n                        <app-card-grupo [grupo]=\"grupo\"></app-card-grupo>\r\n                    </div>        \r\n                </div>\r\n            </div>            \r\n        </div>\r\n</div>"
+module.exports = "<app-header [usuario]=\"usuario\"></app-header>\r\n<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12\" *ngIf=\"showSpinner\">\r\n                <app-loader></app-loader>\r\n            </div>            \r\n            <div *ngIf=\"usuario\" class=\"col-md-12\">\r\n                <div *ngIf=\"!showSpinner && convitesUsuario?.length != 0\">\r\n                    <div class=\"callout callout-info\" *ngFor=\"let convite of convitesUsuario\">                        \r\n                        <h4><i class=\"fa fa-info-circle fa-lg\" aria-hidden=\"true\"></i>&nbsp;Você foi convidado para participar de um grupo! 😄</h4>    \r\n                        <p>\r\n                            {{convite.convidadoPor}} te convidou para participar do <strong>{{convite.nomeGrupo}}</strong>.\r\n                        </p>\r\n                        <div align=\"end\">\r\n                            <button mat-raised-button color=\"primary\" (click)=\"pedirConfirmacaoAceitarConvite(convite)\">TÔ DENTRO! ✌</button>&nbsp;    \r\n                            <button mat-raised-button (click)=\"pedirConfirmacaoRecusarConvite(convite)\"> Agora não 😐 </button>    \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                \r\n                <mat-card *ngIf=\"!showSpinner && gruposDoUsuario.length == 0\">                    \r\n                    <mat-card-content>                        \r\n                        <div *ngIf=\"gruposDoUsuario.length == 0 && convitesUsuario?.length == 0\">\r\n                            <h4>Olá, {{usuario.nome}}!</h4>                            <p>\r\n                                Você ainda não participa de nenhuma banda ou grupo. Solicite ao administrador do seu grupo para \r\n                                lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>) ou clique no botão abaixo para criar um novo grupo.\r\n                            </p>                                                      \r\n                        </div>  \r\n                        <div *ngIf=\"gruposDoUsuario.length == 0 && convitesUsuario?.length != 0 && !showSpinner\">\r\n                            <h4>Olá, {{usuario.nome}}!</h4>                            <p>\r\n                                Você ainda não participa de nenhum grupo, mas você pode aceitar o convite disponível acima ou solicite ao administrador do seu grupo para \r\n                                lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>). Se preferir, clique no botão abaixo para criar um novo grupo.\r\n                            </p>                                                      \r\n                        </div>\r\n                        <mat-card-actions style=\" padding-right: 37px;\" align=\"end\">\r\n                            <button mat-raised-button color=\"primary\" class=\"btn-novogrupo\" (click)=\"openDialog()\"> CRIAR GRUPO </button>    \r\n                        </mat-card-actions>                        \r\n                   </mat-card-content>                   \r\n                </mat-card>\r\n                <div class=\"row\" *ngIf=\"!showSpinner && gruposDoUsuario.length > 0\">\r\n                    <div class=\"col-md-12\">\r\n                        <h3>Meus grupos</h3>    \r\n                    </div>                   \r\n                    <div *ngFor=\"let grupo of gruposDoUsuario\" class=\"col-md-3\">\r\n                        <app-card-grupo [grupo]=\"grupo\"></app-card-grupo>\r\n                    </div>        \r\n                </div>\r\n            </div>            \r\n        </div>\r\n</div>"
 
 /***/ }),
 
@@ -1223,6 +1423,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_componentes_usuario_services_usuarios_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/componentes/usuario/services/usuarios.service */ "./src/app/componentes/usuario/services/usuarios.service.ts");
 /* harmony import */ var src_app_componentes_grupo_services_grupos_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/componentes/grupo/services/grupos.service */ "./src/app/componentes/grupo/services/grupos.service.ts");
 /* harmony import */ var src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/componentes/repertorios/services/playlist.service */ "./src/app/componentes/repertorios/services/playlist.service.ts");
+/* harmony import */ var _grupo_services_convite_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../grupo/services/convite.service */ "./src/app/componentes/grupo/services/convite.service.ts");
+/* harmony import */ var src_app_shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/shared/modals/confirmacao-modal/confirmacao-modal.component */ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.ts");
+
+
 
 
 
@@ -1234,13 +1438,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(auth, router, dialogGrupo, userService, grupoService, playListService) {
+    function HomeComponent(auth, router, matDialog, userService, grupoService, playListService, conviteService) {
         this.auth = auth;
         this.router = router;
-        this.dialogGrupo = dialogGrupo;
+        this.matDialog = matDialog;
         this.userService = userService;
         this.grupoService = grupoService;
         this.playListService = playListService;
+        this.conviteService = conviteService;
         this.gruposDoUsuario = [];
         this.showSpinner = true;
     }
@@ -1248,10 +1453,14 @@ var HomeComponent = /** @class */ (function () {
         if (!this.auth.authenticated) {
             this.router.navigate(['']);
         }
+        this.setUsuario();
+    };
+    HomeComponent.prototype.setUsuario = function () {
         var usuarioRP = localStorage.getItem("usuarioRP");
         if (usuarioRP) {
             this.usuario = JSON.parse(usuarioRP);
-            this.obterGruposDoUsuario();
+            this.obterGruposDoUsuario(this.usuario.email);
+            this.obterConvitesUsuario(this.usuario.email);
         }
         else {
             this.criarOuAtualizarUsuario();
@@ -1266,7 +1475,7 @@ var HomeComponent = /** @class */ (function () {
         dialogConfig.hasBackdrop = true;
         dialogConfig.maxWidth = "100%";
         dialogConfig.minWidth = "70%";
-        var dialogRef = this.dialogGrupo.open(src_app_componentes_grupo_modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_5__["CriarGrupoModalComponent"], dialogConfig);
+        var dialogRef = this.matDialog.open(src_app_componentes_grupo_modals_criar_grupo_criar_grupo_modal_component__WEBPACK_IMPORTED_MODULE_5__["CriarGrupoModalComponent"], dialogConfig);
         dialogRef.afterClosed().subscribe(function (data) {
             console.log("Dialog output:", data);
             if (data) {
@@ -1293,6 +1502,8 @@ var HomeComponent = /** @class */ (function () {
             sexo: null,
             telefone: null
         };
+        this.obterGruposDoUsuario(this.usuario.email);
+        this.obterConvitesUsuario(this.usuario.email);
         this.userService.getUserByEmail(loggedUser.user.email).subscribe(function (respUserQuery) {
             if (respUserQuery.length === 0) {
                 _this.showSpinner = false;
@@ -1306,7 +1517,7 @@ var HomeComponent = /** @class */ (function () {
                 _this.usuario.papel = userFromDB.papel;
             }
             localStorage.setItem("usuarioRP", JSON.stringify(_this.usuario));
-            _this.obterGruposDoUsuario();
+            localStorage.removeItem("usuario");
         });
     };
     HomeComponent.prototype.criarGrupo = function (data) {
@@ -1325,26 +1536,74 @@ var HomeComponent = /** @class */ (function () {
             console.log('RESPOSTA CRIAÇÃO GRUPO: ', res);
             _this.grupoService.associateUserToGroup(grupo.id, _this.usuario);
         });
-        // this.playListService.createPlaylist(grupo).then(res => {
-        //   console.log("PLAYLIST CRIADA");
-        // }, error => {
-        //   console.error("OCORREU UM ERRO NA CRIAÇÂO DA PLAYLIST");      
-        // });
         console.log("grupos do usuario: ", this.gruposDoUsuario);
+    };
+    HomeComponent.prototype.pedirConfirmacaoAceitarConvite = function (convite) {
+        var _this = this;
+        var dialogRef = this.matDialog.open(src_app_shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_11__["ConfirmacaoModalComponent"], {
+            minWidth: '70%',
+            data: { mensagem: "Confirma tua participa\u00E7\u00E3o no " + convite.nomeGrupo + "?" }
+        });
+        dialogRef.afterClosed().subscribe(function (res) {
+            if (res) {
+                //add usuario
+                console.log("convite eceito!");
+                _this.showSpinner = true;
+                _this.grupoService.associateUserToGroup(convite.idGrupo, _this.usuario).then(function (resp) {
+                    _this.convitesUsuario.splice(_this.convitesUsuario.indexOf(convite), 1);
+                    console.log("resp", resp);
+                    _this.showSpinner = false;
+                });
+                console.log("Convites do caba:", _this.convitesUsuario);
+            }
+        });
+    };
+    HomeComponent.prototype.pedirConfirmacaoRecusarConvite = function (convite) {
+        var dialogRef = this.matDialog.open(src_app_shared_modals_confirmacao_modal_confirmacao_modal_component__WEBPACK_IMPORTED_MODULE_11__["ConfirmacaoModalComponent"], {
+            minWidth: '70%',
+            data: { mensagem: "Tem certeza que deseja rejeitar o convite para participar do " + convite.nomeGrupo + "?" }
+        });
+        dialogRef.afterClosed().subscribe(function (res) {
+            if (res) {
+                //remover convite
+                console.log("convite rejeitado!");
+            }
+        });
     };
     HomeComponent.prototype.generateIdGrupo = function () {
         var hoje = new Date();
-        //Math.random().toString(36).substring(2) 
         return "G" + hoje.getMilliseconds() + hoje.getSeconds() + hoje.getDate() + hoje.getMonth() + hoje.getFullYear();
     };
-    HomeComponent.prototype.obterGruposDoUsuario = function () {
-        var _this = this;
-        this.grupoService.getUserGroups(this.usuario.email).subscribe(function (grupos) {
-            if (grupos.length > 0) {
-                _this.gruposDoUsuario = grupos;
-            }
-            _this.showSpinner = false;
-            console.log("grupos do caba:", _this.gruposDoUsuario);
+    HomeComponent.prototype.obterGruposDoUsuario = function (email) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.showSpinner = true;
+                this.grupoService.getUserGroups(email).subscribe(function (grupos) {
+                    if (grupos.length > 0) {
+                        _this.gruposDoUsuario = grupos;
+                    }
+                    _this.showSpinner = false;
+                    console.log("grupos do caba:", _this.gruposDoUsuario);
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    HomeComponent.prototype.obterConvitesUsuario = function (email) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this.showSpinner = true;
+                this.conviteService.getConvitesUsuario(email).subscribe(function (convites) {
+                    if (convites.length > 0) {
+                        _this.convitesUsuario = convites;
+                    }
+                    console.log("convites do caba:", _this.convitesUsuario);
+                    _this.showSpinner = false;
+                });
+                return [2 /*return*/];
+            });
         });
     };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1358,7 +1617,8 @@ var HomeComponent = /** @class */ (function () {
             _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"],
             src_app_componentes_usuario_services_usuarios_service__WEBPACK_IMPORTED_MODULE_7__["UsuariosService"],
             src_app_componentes_grupo_services_grupos_service__WEBPACK_IMPORTED_MODULE_8__["GruposService"],
-            src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_9__["PlaylistService"]])
+            src_app_componentes_repertorios_services_playlist_service__WEBPACK_IMPORTED_MODULE_9__["PlaylistService"],
+            _grupo_services_convite_service__WEBPACK_IMPORTED_MODULE_10__["ConviteService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -1374,7 +1634,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\r\n    font-family:hind;\r\n}\r\n\r\nh1,h2,h3,h4,h5,h6{\r\n    font-family:montserrat;\r\n}\r\n\r\np{\r\n    font-size:17px;\r\n}\r\n\r\na{\r\n    border-bottom:2px solid;\r\n    padding: 3px;\r\n    text-decoration:none;\r\n}\r\n\r\na:hover{\r\n    text-decoration:none;\r\n}\r\n\r\na:active{\r\n    padding-top: 2px;\r\n}\r\n\r\na:visited {\r\n    border-bottom:2px solid;\r\n    padding: 3px;\r\n    text-decoration:none;\r\n}\r\n\r\na:focus {\r\n    border-bottom:2px solid;\r\n    text-decoration:none;\r\n}\r\n\r\n.link-white{\r\n    border-bottom:2px solid;\r\n    color:#ffffff;\r\n    text-decoration:none;\r\n}\r\n\r\n.link-white:hover{\r\n    color:#bdc3c7;\r\n    text-decoration:none;\r\n}\r\n\r\n.jumbotron-dark{\r\n    background-color:#333;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(250, 250, 250, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#fff;\r\n}\r\n\r\n.jumbotron-dark-alt{\r\n    background-color:#333;\r\n    color:#fff;\r\n}\r\n\r\n.jumbotron-muted{\r\n    background-color:#ecf0f1;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(250, 250, 250, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n}\r\n\r\n.jumbotron-primary{\r\n    /* background-color:#3498db; */\r\n    background-color:#007065;\r\n    /* background-image:\r\n        url(\"../../../assets/img/music-159865_960_720.png\"),    \r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1)); */\r\n        /*background-position: center; /* Center the image */\r\n        background-repeat: no-repeat; /* \r\n        background-size: cover; /* Resize the background image to cover the entire container */\r\n    color:#ffffff;\r\n}\r\n\r\n.jumbotron-success{\r\n    background-color:#2ecc71;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n        color:#ffffff;\r\n}\r\n\r\n.jumbotron-info{\r\n    background-color:#9b59b6;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n}\r\n\r\n.jumbotron-warning{\r\n    background-color:#f39c12;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n}\r\n\r\n.jumbotron-danger{\r\n    background-color:#e74c3c;\r\n    background-image:\r\n        url('music-159865_960_720.png'),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsWUFBWTtJQUNaLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsYUFBYTtJQUNiLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxxQkFBcUI7SUFDckI7Ozs7OEJBSTBCO0lBQzFCLFVBQVU7QUFDZDs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSx3QkFBd0I7SUFDeEI7Ozs7OEJBSTBCO0FBQzlCOztBQUVBO0lBQ0ksOEJBQThCO0lBQzlCLHdCQUF3QjtJQUN4Qjs7Ozs7aUNBSzZCO1FBQ3pCLG9EQUFvRDtRQUNwRCw0QkFBNEIsRUFBRTs4RkFDd0Q7SUFDMUYsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHdCQUF3QjtJQUN4Qjs7Ozs7OzhCQU0wQjtRQUN0QixhQUFhO0FBQ3JCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCOzs7OzhCQUkwQjtJQUMxQixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCOzs7Ozs7OEJBTTBCO0lBQzFCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSx3QkFBd0I7SUFDeEI7Ozs7Ozs4QkFNMEI7SUFDMUIsYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgICBmb250LWZhbWlseTpoaW5kO1xyXG59XHJcblxyXG5oMSxoMixoMyxoNCxoNSxoNntcclxuICAgIGZvbnQtZmFtaWx5Om1vbnRzZXJyYXQ7XHJcbn1cclxuXHJcbnB7XHJcbiAgICBmb250LXNpemU6MTdweDtcclxufVxyXG5cclxuYXtcclxuICAgIGJvcmRlci1ib3R0b206MnB4IHNvbGlkO1xyXG4gICAgcGFkZGluZzogM3B4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOm5vbmU7XHJcbn1cclxuXHJcbmE6aG92ZXJ7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuYTphY3RpdmV7XHJcbiAgICBwYWRkaW5nLXRvcDogMnB4O1xyXG59XHJcblxyXG5hOnZpc2l0ZWQge1xyXG4gICAgYm9yZGVyLWJvdHRvbToycHggc29saWQ7XHJcbiAgICBwYWRkaW5nOiAzcHg7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuYTpmb2N1cyB7XHJcbiAgICBib3JkZXItYm90dG9tOjJweCBzb2xpZDtcclxuICAgIHRleHQtZGVjb3JhdGlvbjpub25lO1xyXG59XHJcblxyXG4ubGluay13aGl0ZXtcclxuICAgIGJvcmRlci1ib3R0b206MnB4IHNvbGlkO1xyXG4gICAgY29sb3I6I2ZmZmZmZjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjpub25lO1xyXG59XHJcblxyXG4ubGluay13aGl0ZTpob3ZlcntcclxuICAgIGNvbG9yOiNiZGMzYzc7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1kYXJre1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojMzMzO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsIHJnYmEoMjUwLCAyNTAsIDI1MCwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSA2NS4xJSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkpO1xyXG4gICAgY29sb3I6I2ZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1kYXJrLWFsdHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzMzMztcclxuICAgIGNvbG9yOiNmZmY7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tbXV0ZWR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNlY2YwZjE7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOlxyXG4gICAgICAgIHVybChcImh0dHBzOi8vaS5pbWd1ci5jb20vMm82Y3VrRC5wbmdcIiksXHJcbiAgICAgICAgbGluZWFyLWdyYWRpZW50KDE2NWRlZywgcmdiYSgyNTAsIDI1MCwgMjUwLCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSwgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tcHJpbWFyeXtcclxuICAgIC8qIGJhY2tncm91bmQtY29sb3I6IzM0OThkYjsgKi9cclxuICAgIGJhY2tncm91bmQtY29sb3I6IzAwNzA2NTtcclxuICAgIC8qIGJhY2tncm91bmQtaW1hZ2U6XHJcbiAgICAgICAgdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2ltZy9tdXNpYy0xNTk4NjVfOTYwXzcyMC5wbmdcIiksICAgIFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSwgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7ICovXHJcbiAgICAgICAgLypiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7IC8qIENlbnRlciB0aGUgaW1hZ2UgKi9cclxuICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyAvKiBcclxuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyAvKiBSZXNpemUgdGhlIGJhY2tncm91bmQgaW1hZ2UgdG8gY292ZXIgdGhlIGVudGlyZSBjb250YWluZXIgKi9cclxuICAgIGNvbG9yOiNmZmZmZmY7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tc3VjY2Vzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzJlY2M3MTtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6XHJcbiAgICAgICAgdXJsKFwiaHR0cHM6Ly9pLmltZ3VyLmNvbS8ybzZjdWtELnBuZ1wiKSxcclxuICAgICAgICBsaW5lYXItZ3JhZGllbnQoMTY1ZGVnLFxyXG4gICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbiAgICAgICAgY29sb3I6I2ZmZmZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1pbmZve1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojOWI1OWI2O1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSA2NS4xJSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkpO1xyXG4gICAgY29sb3I6I2ZmZmZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi13YXJuaW5ne1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjM5YzEyO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkgNjUuMSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpKTtcclxuICAgIGNvbG9yOiNmZmZmZmY7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tZGFuZ2Vye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojZTc0YzNjO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCIuLi8uLi8uLi9hc3NldHMvaW1nL211c2ljLTE1OTg2NV85NjBfNzIwLnBuZ1wiKSxcclxuICAgICAgICBsaW5lYXItZ3JhZGllbnQoMTY1ZGVnLFxyXG4gICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbiAgICBjb2xvcjojZmZmZmZmO1xyXG59Il19 */"
+module.exports = "body {\r\n    font-family:hind;\r\n}\r\n\r\nh1,h2,h3,h4,h5,h6{\r\n    font-family:montserrat;\r\n}\r\n\r\np{\r\n    font-size:17px;\r\n}\r\n\r\na{\r\n    border-bottom:2px solid;\r\n    padding: 3px;\r\n    text-decoration:none;\r\n}\r\n\r\na:hover{\r\n    text-decoration:none;\r\n}\r\n\r\na:active{\r\n    padding-top: 2px;\r\n}\r\n\r\na:visited {\r\n    border-bottom:2px solid;\r\n    padding: 3px;\r\n    text-decoration:none;\r\n}\r\n\r\na:focus {\r\n    border-bottom:2px solid;\r\n    text-decoration:none;\r\n}\r\n\r\n.link-white{\r\n    border-bottom:2px solid;\r\n    color:#ffffff;\r\n    text-decoration:none;\r\n}\r\n\r\n.link-white:hover{\r\n    color:#bdc3c7;\r\n    text-decoration:none;\r\n}\r\n\r\n.jumbotron-dark{\r\n    background-color:#333;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(250, 250, 250, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#fff;\r\n}\r\n\r\n.jumbotron-dark-alt{\r\n    background-color:#333;\r\n    color:#fff;\r\n}\r\n\r\n.jumbotron-muted{\r\n    background-color:#ecf0f1;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(250, 250, 250, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n}\r\n\r\n.jumbotron-primary{\r\n    /* background-color:#3498db; */\r\n    background-color:#007065;\r\n    /* background-image:\r\n        url(\"../../../assets/img/music-159865_960_720.png\"),    \r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1)); */\r\n        /*background-position: center; /* Center the image */\r\n        background-repeat: no-repeat; /* \r\n        background-size: cover; /* Resize the background image to cover the entire container */\r\n    color:#ffffff;\r\n}\r\n\r\n.jumbotron-success{\r\n    background-color:#2ecc71;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n        color:#ffffff;\r\n}\r\n\r\n.jumbotron-info{\r\n    background-color:#9b59b6;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg, rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%, rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n}\r\n\r\n.jumbotron-warning{\r\n    background-color:#f39c12;\r\n    background-image:\r\n        url(\"https://i.imgur.com/2o6cukD.png\"),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n}\r\n\r\n/* .jumbotron-danger{\r\n    background-color:#e74c3c;\r\n    background-image:\r\n        url(\"../../../assets/img/music-159865_960_720.png\"),\r\n        linear-gradient(165deg,\r\n        rgba(255, 255, 255, 0),\r\n        rgba(255, 255, 255, 0) 65%,\r\n        rgba(38, 38, 38, 0.1) 65.1%,\r\n        rgba(38, 38, 38, 0.1));\r\n    color:#ffffff;\r\n} */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsWUFBWTtJQUNaLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsYUFBYTtJQUNiLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxxQkFBcUI7SUFDckI7Ozs7OEJBSTBCO0lBQzFCLFVBQVU7QUFDZDs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSx3QkFBd0I7SUFDeEI7Ozs7OEJBSTBCO0FBQzlCOztBQUVBO0lBQ0ksOEJBQThCO0lBQzlCLHdCQUF3QjtJQUN4Qjs7Ozs7aUNBSzZCO1FBQ3pCLG9EQUFvRDtRQUNwRCw0QkFBNEIsRUFBRTs4RkFDd0Q7SUFDMUYsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHdCQUF3QjtJQUN4Qjs7Ozs7OzhCQU0wQjtRQUN0QixhQUFhO0FBQ3JCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCOzs7OzhCQUkwQjtJQUMxQixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCOzs7Ozs7OEJBTTBCO0lBQzFCLGFBQWE7QUFDakI7O0FBRUE7Ozs7Ozs7Ozs7R0FVRyIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgICBmb250LWZhbWlseTpoaW5kO1xyXG59XHJcblxyXG5oMSxoMixoMyxoNCxoNSxoNntcclxuICAgIGZvbnQtZmFtaWx5Om1vbnRzZXJyYXQ7XHJcbn1cclxuXHJcbnB7XHJcbiAgICBmb250LXNpemU6MTdweDtcclxufVxyXG5cclxuYXtcclxuICAgIGJvcmRlci1ib3R0b206MnB4IHNvbGlkO1xyXG4gICAgcGFkZGluZzogM3B4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOm5vbmU7XHJcbn1cclxuXHJcbmE6aG92ZXJ7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuYTphY3RpdmV7XHJcbiAgICBwYWRkaW5nLXRvcDogMnB4O1xyXG59XHJcblxyXG5hOnZpc2l0ZWQge1xyXG4gICAgYm9yZGVyLWJvdHRvbToycHggc29saWQ7XHJcbiAgICBwYWRkaW5nOiAzcHg7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuYTpmb2N1cyB7XHJcbiAgICBib3JkZXItYm90dG9tOjJweCBzb2xpZDtcclxuICAgIHRleHQtZGVjb3JhdGlvbjpub25lO1xyXG59XHJcblxyXG4ubGluay13aGl0ZXtcclxuICAgIGJvcmRlci1ib3R0b206MnB4IHNvbGlkO1xyXG4gICAgY29sb3I6I2ZmZmZmZjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjpub25lO1xyXG59XHJcblxyXG4ubGluay13aGl0ZTpob3ZlcntcclxuICAgIGNvbG9yOiNiZGMzYzc7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246bm9uZTtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1kYXJre1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojMzMzO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsIHJnYmEoMjUwLCAyNTAsIDI1MCwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSA2NS4xJSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkpO1xyXG4gICAgY29sb3I6I2ZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1kYXJrLWFsdHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzMzMztcclxuICAgIGNvbG9yOiNmZmY7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tbXV0ZWR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNlY2YwZjE7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOlxyXG4gICAgICAgIHVybChcImh0dHBzOi8vaS5pbWd1ci5jb20vMm82Y3VrRC5wbmdcIiksXHJcbiAgICAgICAgbGluZWFyLWdyYWRpZW50KDE2NWRlZywgcmdiYSgyNTAsIDI1MCwgMjUwLCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSwgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tcHJpbWFyeXtcclxuICAgIC8qIGJhY2tncm91bmQtY29sb3I6IzM0OThkYjsgKi9cclxuICAgIGJhY2tncm91bmQtY29sb3I6IzAwNzA2NTtcclxuICAgIC8qIGJhY2tncm91bmQtaW1hZ2U6XHJcbiAgICAgICAgdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2ltZy9tdXNpYy0xNTk4NjVfOTYwXzcyMC5wbmdcIiksICAgIFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSwgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7ICovXHJcbiAgICAgICAgLypiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7IC8qIENlbnRlciB0aGUgaW1hZ2UgKi9cclxuICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyAvKiBcclxuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyAvKiBSZXNpemUgdGhlIGJhY2tncm91bmQgaW1hZ2UgdG8gY292ZXIgdGhlIGVudGlyZSBjb250YWluZXIgKi9cclxuICAgIGNvbG9yOiNmZmZmZmY7XHJcbn1cclxuXHJcbi5qdW1ib3Ryb24tc3VjY2Vzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzJlY2M3MTtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6XHJcbiAgICAgICAgdXJsKFwiaHR0cHM6Ly9pLmltZ3VyLmNvbS8ybzZjdWtELnBuZ1wiKSxcclxuICAgICAgICBsaW5lYXItZ3JhZGllbnQoMTY1ZGVnLFxyXG4gICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbiAgICAgICAgY29sb3I6I2ZmZmZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi1pbmZve1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojOWI1OWI2O1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSA2NS4xJSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkpO1xyXG4gICAgY29sb3I6I2ZmZmZmZjtcclxufVxyXG5cclxuLmp1bWJvdHJvbi13YXJuaW5ne1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjM5YzEyO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCJodHRwczovL2kuaW1ndXIuY29tLzJvNmN1a0QucG5nXCIpLFxyXG4gICAgICAgIGxpbmVhci1ncmFkaWVudCgxNjVkZWcsXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSxcclxuICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIDY1JSxcclxuICAgICAgICByZ2JhKDM4LCAzOCwgMzgsIDAuMSkgNjUuMSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpKTtcclxuICAgIGNvbG9yOiNmZmZmZmY7XHJcbn1cclxuXHJcbi8qIC5qdW1ib3Ryb24tZGFuZ2Vye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojZTc0YzNjO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTpcclxuICAgICAgICB1cmwoXCIuLi8uLi8uLi9hc3NldHMvaW1nL211c2ljLTE1OTg2NV85NjBfNzIwLnBuZ1wiKSxcclxuICAgICAgICBsaW5lYXItZ3JhZGllbnQoMTY1ZGVnLFxyXG4gICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMCksXHJcbiAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSA2NSUsXHJcbiAgICAgICAgcmdiYSgzOCwgMzgsIDM4LCAwLjEpIDY1LjElLFxyXG4gICAgICAgIHJnYmEoMzgsIDM4LCAzOCwgMC4xKSk7XHJcbiAgICBjb2xvcjojZmZmZmZmO1xyXG59ICovIl19 */"
 
 /***/ }),
 
@@ -2042,6 +2302,73 @@ var MusicasService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/componentes/novo-integrante/novo-integrante.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/componentes/novo-integrante/novo-integrante.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".full-width{\r\n    width:100%;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvbm92by1pbnRlZ3JhbnRlL25vdm8taW50ZWdyYW50ZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvbm92by1pbnRlZ3JhbnRlL25vdm8taW50ZWdyYW50ZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZ1bGwtd2lkdGh7XHJcbiAgICB3aWR0aDoxMDAlO1xyXG59XHJcblxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/componentes/novo-integrante/novo-integrante.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/componentes/novo-integrante/novo-integrante.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-4\">\n        <h2 mat-dialog-title>Nova Integrante</h2>\n    </div>      \n  </div>  \n  <div class=\"row\" [formGroup]=\"formNovoMembro\">\n          <div class=\"col-md-3\">\n            <mat-form-field class=\"full-width\">\n              <input matInput placeholder=\"Nome\" formControlName=\"nome\" autocomplete=\"off\">\n            </mat-form-field>\n          </div>\n          <div class=\"col-md-3\">\n            <mat-form-field class=\"full-width\">\n              <input matInput placeholder=\"Email\" formControlName=\"email_membro\" autocomplete=\"off\">\n            </mat-form-field>\n          </div>\n          <div class=\"col-md-3\">\n              <mat-form-field class=\"full-width\">\n                <mat-label>Principal participação no grupo</mat-label>\n                <mat-select formControlName=\"participacao\" required>\n                  <mat-option>--</mat-option>\n                  <mat-option *ngFor=\"let part of participacoes\" [value]=\"part\">\n                    {{part}}\n                  </mat-option>\n                </mat-select>\n                <!-- <mat-error *ngIf=\"participacao.hasError('required')\">Você deve escolher uma opção</mat-error> -->\n              </mat-form-field>            \n          </div>\n          <div class=\"col-md-3\" *ngIf=\"formNovoMembro.value.participacao == 'Outro'\">\n              <mat-form-field class=\"full-width\">\n                <input matInput placeholder=\"Especifique aqui\" formControlName=\"outro\" autocomplete=\"off\">\n              </mat-form-field>\n        </div>        \n    </div>\n    <div class=\"pull-right\">\n        <!-- <mat-dialog-actions> -->\n      <button class=\"mat-raised-button\" (click)=\"close()\">Cancelar</button>\n      <button class=\"mat-raised-button mat-primary\" (click)=\"cadastrarIntegrante()\">Salvar</button>\n      <button class=\"mat-raised-button mat-primary\" (click)=\"salvarEAdicionarOutro()\">Salvar e cadastrar outra</button>\n          <!-- </mat-dialog-actions> -->\n    </div>\n  <!-- <input type=\"text\" [formControl]=\"someflag\" />\n  <p [ngClass]=\"(someflag.value == 1)?'green-back':'red-back'\" >can proceed</p> -->\n</div>\n<!-- {{someflag.value}} -->\n\n"
+
+/***/ }),
+
+/***/ "./src/app/componentes/novo-integrante/novo-integrante.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/componentes/novo-integrante/novo-integrante.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: NovoIntegranteComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NovoIntegranteComponent", function() { return NovoIntegranteComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
+
+
+var NovoIntegranteComponent = /** @class */ (function () {
+    function NovoIntegranteComponent(fb) {
+        this.fb = fb;
+        this.participacoes = ["Violão", "Guitarra", "Baixo", "Bateria", "Teclado", "Vocal", "Percussão", "Piano", "Saxofone",
+            "Tropete", "Trobone", "Violino", "Violoncelo", "Cavaco", "Cajon", "Outro"];
+        this.formNovoMembro = this.fb.group({
+            nome: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            email_membro: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            participacao: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            outro: ''
+        });
+    }
+    NovoIntegranteComponent.prototype.ngOnInit = function () {
+    };
+    NovoIntegranteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-novo-integrante',
+            template: __webpack_require__(/*! ./novo-integrante.component.html */ "./src/app/componentes/novo-integrante/novo-integrante.component.html"),
+            styles: [__webpack_require__(/*! ./novo-integrante.component.css */ "./src/app/componentes/novo-integrante/novo-integrante.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
+    ], NovoIntegranteComponent);
+    return NovoIntegranteComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component.css":
 /*!**************************************************************************************************************!*\
   !*** ./src/app/componentes/repertorios/modals/editar-repertorio-modal/editar-repertorio-modal.component.css ***!
@@ -2608,7 +2935,7 @@ var UsuariosService = /** @class */ (function () {
         this.firestore = firestore;
     }
     UsuariosService.prototype.createUser = function (usuario) {
-        return this.firestore.collection('usuarios').doc(usuario.id).set(usuario);
+        return this.firestore.collection('usuarios').doc(usuario.email).set(usuario);
     };
     UsuariosService.prototype.getUsers = function () {
         return this.firestore.collection('usuarios').snapshotChanges();
@@ -2722,6 +3049,62 @@ var generateId = function () {
 
 /***/ }),
 
+/***/ "./src/app/shared/loader/loader.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/loader/loader.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"meio\">\n    <svg xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.0\" width=\"80px\" height=\"80px\" viewBox=\"0 0 135 135\" xml:space=\"preserve\">\n      <path fill=\"#242b96\" fill-opacity=\"1\" d=\"M111.708,49A50.116,50.116,0,0,0,79,16.292V1.785A64.076,64.076,0,0,1,126.215,49H111.708ZM49,16.292A50.114,50.114,0,0,0,16.292,49H1.785A64.075,64.075,0,0,1,49,1.785V16.292ZM16.292,79A50.116,50.116,0,0,0,49,111.708v14.507A64.076,64.076,0,0,1,1.785,79H16.292ZM79,111.708A50.118,50.118,0,0,0,111.708,79h14.507A64.078,64.078,0,0,1,79,126.215V111.708Z\" transform=\"rotate(-6.20855 64 64)\">\n        <animateTransform attributeName=\"transform\" type=\"rotate\" from=\"0 64 64\" to=\"-90 64 64\" dur=\"1000ms\" repeatCount=\"indefinite\"/>\n      </path>\n      <path fill=\"#242b96\" fill-opacity=\"1\" d=\"M96.971,53.633a34.634,34.634,0,0,0-22.6-22.6V21A44.283,44.283,0,0,1,107,53.633H96.971Zm-43.338-22.6a34.634,34.634,0,0,0-22.6,22.6H21A44.283,44.283,0,0,1,53.633,21V31.029Zm-22.6,43.338a34.634,34.634,0,0,0,22.6,22.6V107A44.283,44.283,0,0,1,21,74.367H31.029Zm43.338,22.6a34.634,34.634,0,0,0,22.6-22.6H107A44.283,44.283,0,0,1,74.367,107V96.971Z\" transform=\"rotate(6.20855 64 64)\">\n        <animateTransform attributeName=\"transform\" type=\"rotate\" from=\"0 64 64\" to=\"90 64 64\" dur=\"1800ms\" repeatCount=\"indefinite\"/></path>\n      <path fill=\"#242b96\" fill-opacity=\"1\" d=\"M85.47,57.25A22.552,22.552,0,0,0,70.75,42.53V36A28.836,28.836,0,0,1,92,57.25H85.47ZM57.25,42.53A22.552,22.552,0,0,0,42.53,57.25H36A28.836,28.836,0,0,1,57.25,36V42.53ZM42.53,70.75A22.552,22.552,0,0,0,57.25,85.47V92A28.836,28.836,0,0,1,36,70.75H42.53ZM70.75,85.47A22.552,22.552,0,0,0,85.47,70.75H92A28.836,28.836,0,0,1,70.75,92V85.47Z\" transform=\"rotate(-6.20855 64 64)\"><animateTransform attributeName=\"transform\" type=\"rotate\" from=\"0 64 64\" to=\"-90 64 64\" dur=\"1800ms\" repeatCount=\"indefinite\"/></path>\n    </svg>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/loader/loader.component.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/loader/loader.component.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".meio {\n  text-align: center;\n  padding-top: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2xvYWRlci9DOlxcVXNlcnNcXGV3ZXJ0b24udy5kYS5zaWx2YVxcRG9jdW1lbnRzXFxSZXBlcnRvcmlvc1xccGxheWxpc3QtbWFuYWdlci9zcmNcXGFwcFxcc2hhcmVkXFxsb2FkZXJcXGxvYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFrQjtFQUNsQixpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9sb2FkZXIvbG9hZGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1laW97XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXRvcDogMjBweDtcclxufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/shared/loader/loader.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/loader/loader.component.ts ***!
+  \***************************************************/
+/*! exports provided: LoaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoaderComponent", function() { return LoaderComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LoaderComponent = /** @class */ (function () {
+    function LoaderComponent() {
+    }
+    LoaderComponent.prototype.ngOnInit = function () {
+    };
+    LoaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-loader',
+            template: __webpack_require__(/*! ./loader.component.html */ "./src/app/shared/loader/loader.component.html"),
+            styles: [__webpack_require__(/*! ./loader.component.scss */ "./src/app/shared/loader/loader.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LoaderComponent);
+    return LoaderComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.css":
 /*!***********************************************************************************!*\
   !*** ./src/app/shared/modals/compartilhar-modal/compartilhar-modal.component.css ***!
@@ -2788,6 +3171,73 @@ var CompartilharModalComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object])
     ], CompartilharModalComponent);
     return CompartilharModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9tb2RhbHMvY29uZmlybWFjYW8tbW9kYWwvY29uZmlybWFjYW8tbW9kYWwuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.html":
+/*!**********************************************************************************!*\
+  !*** ./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div mat-dialog-content>  \n    <p>\n      {{data.mensagem}}\n    </p>  \n  </div>\n  <div mat-dialog-actions class=\"pull-right\">\n    <button mat-raised-button (click)=\"onNoClick()\">Não</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onYesClick()\">Sim</button>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: ConfirmacaoModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmacaoModalComponent", function() { return ConfirmacaoModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+
+
+
+var ConfirmacaoModalComponent = /** @class */ (function () {
+    function ConfirmacaoModalComponent(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ConfirmacaoModalComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ConfirmacaoModalComponent.prototype.onYesClick = function () {
+        this.dialogRef.close(true);
+    };
+    ConfirmacaoModalComponent.prototype.ngOnInit = function () {
+    };
+    ConfirmacaoModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-confirmacao-modal',
+            template: __webpack_require__(/*! ./confirmacao-modal.component.html */ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.html"),
+            styles: [__webpack_require__(/*! ./confirmacao-modal.component.css */ "./src/app/shared/modals/confirmacao-modal/confirmacao-modal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], String])
+    ], ConfirmacaoModalComponent);
+    return ConfirmacaoModalComponent;
 }());
 
 
