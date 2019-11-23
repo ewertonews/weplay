@@ -3,14 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component';
 import { LandingComponent } from './componentes/landing/landing.component';
 import { GrupoComponent } from './componentes/grupo/grupo.component';
-import { NovoIntegranteComponent } from './componentes/novo-integrante/novo-integrante.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LandingComponent},
   {path: 'grupos', component: HomeComponent},
-  {path: 'detalhe-grupo', component: GrupoComponent},
-  {path: 'adicionar-integrante', component: NovoIntegranteComponent}
+  {path: 'detalhe-grupo', component: GrupoComponent}
 ];
 
 @NgModule({

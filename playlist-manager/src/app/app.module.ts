@@ -57,7 +57,6 @@ import { EditarRepertorioModalComponent } from './componentes/repertorios/modals
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { CompartilharModalComponent } from './shared/modals/compartilhar-modal/compartilhar-modal.component';
-import { NovoIntegranteComponent } from './componentes/novo-integrante/novo-integrante.component';
 import { CadastrarIntegranteModalComponent } from './componentes/grupo/modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
 import { ConfirmacaoModalComponent } from './shared/modals/confirmacao-modal/confirmacao-modal.component';
 import { LoaderComponent } from './shared/loader/loader.component';
@@ -79,7 +78,6 @@ import { LoaderComponent } from './shared/loader/loader.component';
     EditarRepertorioModalComponent,
     UsuarioComponent,
     CompartilharModalComponent,
-    NovoIntegranteComponent,
     CadastrarIntegranteModalComponent,
     ConfirmacaoModalComponent,
     LoaderComponent
