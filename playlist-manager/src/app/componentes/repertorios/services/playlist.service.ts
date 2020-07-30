@@ -11,7 +11,6 @@ import { reject } from 'q';
 import { getAnoMesCriacaoGrupo } from '../../../shared/GLOBAL_FUNCTIONS';
 //import * as firebase from 'firebase';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +18,6 @@ export class PlaylistService {
 
   constructor(private firestore: AngularFirestore) { }
   collectionExists: boolean;
-
  
   createPlaylist(grupo: Grupo){
     
@@ -42,16 +40,19 @@ export class PlaylistService {
   getGroupSongs(grupo: Grupo){
     let anomes = getAnoMesCriacaoGrupo(grupo);
     return this.firestore.collection('musicasGrupos/' + anomes + '/musicas', ref => ref.where('idGrupo', '==', grupo.id)).valueChanges();
+  }  
+  
+  async getGroupSongsCount(grupo: Grupo){
+    let anomes = getAnoMesCriacaoGrupo(grupo);
+    const snap = await this.firestore.collection('musicasGrupos/' + anomes + '/musicas', ref => ref.where('idGrupo', '==', grupo.id))
+      .get().toPromise();
+    return snap.size;
   }
 
-  
-  
   removeSongFromPlaylist(musica, grupo){    
     let anomes = getAnoMesCriacaoGrupo(grupo);
     return this.firestore.collection('musicasGrupos/' + anomes + '/musicas').doc(musica.id).delete();    
   }
-
-
 
   editSongFromPlaylist(novaMusica, grupo){
     let anomes = getAnoMesCriacaoGrupo(grupo);
@@ -62,7 +63,6 @@ export class PlaylistService {
     return this.firestore.doc('musicasGrupos/' + anomes + '/musicas/' + novaMusica.id).update(novoRegistro);
   }
 
-  
 
   addSongToPlaylist(musicaNova, grupo: Grupo){
     let anomes = getAnoMesCriacaoGrupo(grupo);
