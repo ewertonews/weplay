@@ -1,4 +1,4 @@
-export interface AdminModel{
+export interface Admin{
     nome: string;
     email: string;
 }

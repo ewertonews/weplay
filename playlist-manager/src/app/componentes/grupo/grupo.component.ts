@@ -1,18 +1,18 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { Grupo } from 'src/app/componentes/grupo/interfaces/grupo.model';
-import { Usuario } from 'src/app/componentes/usuario/interfaces/usuario.model';
-import { PlaylistService } from 'src/app/componentes/repertorios/services/playlist.service';
-import { Playlist } from 'src/app/componentes/repertorios/interfaces/playlist.model';
+import { PlaylistService } from '../repertorios/services/playlist.service';
+import { Playlist } from '../repertorios/interfaces/playlist.model';
 import { MusicasComponent } from '../musicas/musicas.component';
-import { Musica } from 'src/app/componentes/musicas/interfaces/musica.model';
-import { MusicasGrupo } from 'src/app/componentes/musicas/interfaces/musicasGrupos';
-import { MusicasService } from 'src/app/componentes/musicas/services/musicas.service';
-import { GruposService } from 'src/app/componentes/grupo/services/grupos.service';
-import { UsuarioGrupo } from 'src/app/componentes/usuario/interfaces/usuarioGrupo.model';
+import { Musica } from '../musicas/interfaces/musica.model';
+import { MusicasGrupo } from '../musicas/interfaces/musicasGrupos';
+import { MusicasService } from '../musicas/services/musicas.service';
+import { GruposService } from '../grupo/services/grupos.service';
+import { UsuarioGrupo } from '../usuario/interfaces/usuarioGrupo.model';
 import { MatDialogConfig, MatDialog } from '@angular/material';
 import { CadastrarIntegranteModalComponent } from './modals/cadastrar-integrante-modal/cadastrar-integrante-modal.component';
 import { Convite } from './interfaces/convite.model';
 import { ConviteService } from './services/convite.service';
+import { Grupo } from './interfaces/grupo.model';
+import { Usuario } from '../usuario/interfaces/usuario.model';
 
 @Component({
   selector: 'app-grupo',
@@ -114,7 +114,7 @@ export class GrupoComponent implements OnInit {
   }
 
   convidarNovoIntegrante(novoIntegrante: any){
-    let papelNoGrupo = novoIntegrante.outro === "" ? novoIntegrante.participacao : novoIntegrante.outro;
+    let atuacaoNoGrupo = novoIntegrante.outro === "" ? novoIntegrante.participacao : novoIntegrante.outro;
     let novoMembro: Convite = {
       id: this.grupo.id + "_" + novoIntegrante.email_membro,
       convidadoPor: this.currentUser.nome,
@@ -122,7 +122,7 @@ export class GrupoComponent implements OnInit {
       nomeGrupo: this.grupo.nome,
       idGrupo: this.grupo.id,
       nome: novoIntegrante.nome,
-      papel: papelNoGrupo,
+      atuacao: atuacaoNoGrupo,
       status: "pendente",
       dataConvite: new Date().toLocaleDateString()
     };
@@ -131,8 +131,7 @@ export class GrupoComponent implements OnInit {
       console.log(res);
       alert("Convite criado com sucesso");
     }).catch(error => {
-      alert(error || error.message);
-      
+      alert(error || error.message);      
     });
   }
 
@@ -145,8 +144,19 @@ export class GrupoComponent implements OnInit {
     this.clearSelection = event;
   }
 
-  verifyIfUserIsAdmin(grupo: Grupo, usuario: Usuario){
-    return grupo.emailAdmins.includes(usuario.email);
+  verifyIfUserIsAdmin(grupo: Grupo, usuario: Usuario){  
+    var oldAdminCheck = false;  
+    if (grupo.emailAdmins != undefined){
+      oldAdminCheck = grupo.emailAdmins.includes(usuario.email);
+    }    
+    var newAdminCheck = false;
+    if (grupo.admins !== undefined){
+      newAdminCheck = grupo.admins.some(adm => adm.email == usuario.email);
+    }    
+    console.log("OldAdminCheck: ", oldAdminCheck);
+    console.log("NewAdminCheck: ", newAdminCheck);
+    
+    return oldAdminCheck || newAdminCheck;
   }
 
 }

@@ -2,7 +2,7 @@ export class Usuario {
     id: string;
     nome: string;
     email: string;
-    papel: string;
+    atuacao: string;
     sexo: string;
     urlFoto: string;
     idGrupos: string[] = new Array<string>();

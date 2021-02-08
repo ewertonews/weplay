@@ -30,7 +30,7 @@ export const sendInviteEmail = functions.firestore
                 service: 'gmail',
                 auth: {
                     user: 'ewertonws@gmail.com',
-                    pass: 'ews231299578234'
+                    pass: ''
                 }
             });
 
@@ -52,6 +52,5 @@ export const sendInviteEmail = functions.firestore
             return transporter.sendMail(mailOptions);
         })
         .then(() => console.log("Email enviado!"))
-        .catch(err => console.log(err)); 
-        
+        .catch(err => console.log(err));        
     });

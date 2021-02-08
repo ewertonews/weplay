@@ -1,11 +1,13 @@
 import { Usuario } from '../../usuario/interfaces/usuario.model';
-import { AdminModel } from './admin.model';
+import { Admin } from './admin.model';
+import { Membro } from './membro.model';
 
 export class Grupo {
     id: string;
     emailMembros: string[];
     emailAdmins: string[];
-    admins: AdminModel[];
+    admins: Admin[];
+    membros: Membro[];
     nome: string;
     criadoEm: string;
     foto: string;

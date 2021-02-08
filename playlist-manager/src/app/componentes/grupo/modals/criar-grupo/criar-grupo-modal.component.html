@@ -1,11 +1,32 @@
 <h2 mat-dialog-title>Novo grupo</h2>
 <mat-dialog-content [formGroup]="formNovoGrupo">
-  
-    <mat-form-field style="width: 100%">
-        <input matInput
-              placeholder="Nome do grupo/banda"
-              formControlName="nome" autocomplete="off">
-    </mat-form-field>
+    <div class="row">
+        <div class="col-md-6">
+            <mat-form-field style="width: 100%">
+                <input matInput
+                    placeholder="Nome do grupo/banda"
+                    formControlName="nome" autocomplete="off">
+            </mat-form-field>
+            <p>* Você será o administrador deste grupo</p>
+        </div>   
+        <div class="col-md-6">
+            <mat-form-field style="width: 100%">
+            <mat-label>Qual sua participação no grupo?</mat-label>
+            <mat-select formControlName="participacao" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let part of participacoes" [value]="part">
+                {{part}}
+                </mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="participacao.hasError('required')">Você deve escolher uma opção</mat-error> -->
+            </mat-form-field>
+            <div *ngIf="formNovoGrupo.value.participacao == 'Outro'">
+                <mat-form-field style="width: 100%">
+                  <input matInput placeholder="Especifique aqui" formControlName="outro" autocomplete="off">
+                </mat-form-field>
+            </div>             
+        </div>
+    </div>
     <!-- <label for="file">Foto do grupo:</label>
     <input type="file" formControlName="foto" (change)="getFotoRef($event)" accept=".png,.jpg" /> -->
 </mat-dialog-content>

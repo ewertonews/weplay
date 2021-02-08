@@ -4,7 +4,7 @@ export interface Convite {
     dataConvite: string;
     nome: string;
     email: string;
-    papel: string;
+    atuacao: string;
     idGrupo: string;
     nomeGrupo: string;
     status: string;

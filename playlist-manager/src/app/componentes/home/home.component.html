@@ -28,15 +28,12 @@
                         </div>  
                         <div *ngIf="gruposDoUsuario.length == 0 && convitesUsuario?.length != 0 && !showSpinner">
                             <h4>Olá, {{usuario.nome}}!</h4>                            <p>
-                                Você ainda não participa de nenhum grupo, mas você pode aceitar o convite disponível acima ou solicite ao administrador do seu grupo para 
+                                Você ainda não participa de nenhum grupo, mas você pode aceitar o convite disponível acima ou solicitar ao administrador do seu grupo para 
                                 lhe adicionar usando seu email (<strong>{{usuario.email}}</strong>). Se preferir, clique no botão abaixo para criar um novo grupo.
                             </p>                                                      
-                        </div>
-                        <mat-card-actions style=" padding-right: 37px;" align="end">
-                            <button mat-raised-button color="primary" class="btn-novogrupo" (click)="openDialog()"> CRIAR GRUPO </button>    
-                        </mat-card-actions>                        
+                        </div>                                               
                    </mat-card-content>                   
-                </mat-card>
+                </mat-card>               
                 <div class="row" *ngIf="!showSpinner && gruposDoUsuario.length > 0">
                     <div class="col-md-12">
                         <h3>Meus grupos</h3>    
@@ -44,6 +41,9 @@
                     <div *ngFor="let grupo of gruposDoUsuario" class="col-md-3">
                         <app-card-grupo [grupo]="grupo"></app-card-grupo>
                     </div>        
+                </div>
+                <div class="row pull-right" *ngIf="!showSpinner">
+                    <button mat-raised-button color="primary" class="btn-novogrupo" (click)="openDialog()"> CRIAR GRUPO </button>    
                 </div>
             </div>            
         </div>

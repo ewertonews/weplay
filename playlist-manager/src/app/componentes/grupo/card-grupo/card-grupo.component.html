@@ -7,7 +7,7 @@
     <img mat-card-image src="{{grupo.foto}}" alt="foto de {{grupo.nome}}">
     <mat-card-content>
       <p>
-        <strong>Administrador(es):</strong>
+        <strong>Administrador(es):</strong> {{nomesAdmins}}
       </p>
       <ul>
         <li *ngFor="let admin of admins">

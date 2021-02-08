@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Grupo } from 'src/app/componentes/grupo/interfaces/grupo.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Grupo } from '../../interfaces/grupo.model';
 
 @Component({
   selector: 'app-criar-grupo',
@@ -10,13 +10,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class CriarGrupoModalComponent implements OnInit {
 
+  participacoes = ["Violão", "Guitarra", "Baixo", "Bateria", "Teclado", "Vocal", "Percussão", "Piano", "Saxofone", 
+  "Tropete", "Trobone", "Violino", "Violoncelo", "Cavaco", "Cajon", "Outro"];
+
   constructor(
     public dialogRef: MatDialogRef<CriarGrupoModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Grupo,
     private fb: FormBuilder) {}
 
   formNovoGrupo = this.fb.group({
-    nome: '',
+    nome: ['', Validators.required],
+    participacao: ['', Validators.required],
+    outro:''
   });
     
   ngOnInit() {

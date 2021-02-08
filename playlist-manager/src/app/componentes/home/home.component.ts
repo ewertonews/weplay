@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/autenticacao/auth.service';
+import { AuthService } from '../../autenticacao/auth.service';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/componentes/usuario/interfaces/usuario.model';
+import { Usuario } from '../usuario/interfaces/usuario.model';
 import {MatDialog, MatDialogConfig} from "@angular/material";
-import { CriarGrupoModalComponent } from 'src/app/componentes/grupo/modals/criar-grupo/criar-grupo-modal.component';
-import { Grupo } from 'src/app/componentes/grupo/interfaces/grupo.model';
-import { UsuariosService } from 'src/app/componentes/usuario/services/usuarios.service';
-import { GruposService } from 'src/app/componentes/grupo/services/grupos.service';
-import { PlaylistService } from 'src/app/componentes/repertorios/services/playlist.service';
+import { CriarGrupoModalComponent } from '../grupo/modals/criar-grupo/criar-grupo-modal.component';
+import { Grupo } from '../grupo/interfaces/grupo.model';
+import { UsuariosService } from '../usuario/services/usuarios.service';
+import { GruposService } from '../grupo/services/grupos.service';
+import { PlaylistService } from '../repertorios/services/playlist.service';
 import { ConviteService } from '../grupo/services/convite.service';
 import { Convite } from '../grupo/interfaces/convite.model';
-import { ConfirmacaoModalComponent } from 'src/app/shared/modals/confirmacao-modal/confirmacao-modal.component';
+import { ConfirmacaoModalComponent } from '../../shared/modals/confirmacao-modal/confirmacao-modal.component';
+import { Admin } from '../grupo/interfaces/admin.model';
+import { Membro } from '../grupo/interfaces/membro.model';
 
 
 @Component({
@@ -33,8 +35,6 @@ export class HomeComponent implements OnInit {
     private grupoService: GruposService,
     private playListService: PlaylistService,
     private conviteService: ConviteService) {
-    
-
    }
 
   ngOnInit() {
@@ -78,8 +78,6 @@ export class HomeComponent implements OnInit {
     );
   }
 
-
-
   criarOuAtualizarUsuario() {
     const loggedUser = JSON.parse(localStorage.getItem("usuario"));
     console.log("loggedUser", loggedUser);
@@ -97,7 +95,7 @@ export class HomeComponent implements OnInit {
           urlFoto: fotoUrl,
           nome: loggedUser.user.displayName,
           idGrupos: [],
-          papel: null,
+          atuacao: null,
           sexo: null,
           telefone: null
     };
@@ -114,7 +112,7 @@ export class HomeComponent implements OnInit {
         let userFromDB = respUserQuery[0] as Usuario;
         this.usuario.idGrupos = userFromDB.idGrupos;
         this.usuario.sexo = userFromDB.sexo;
-        this.usuario.papel = userFromDB.papel;
+        this.usuario.atuacao = userFromDB.atuacao;
       }
       localStorage.setItem("usuarioRP", JSON.stringify(this.usuario));
       localStorage.removeItem("usuario");
@@ -129,7 +127,13 @@ export class HomeComponent implements OnInit {
     grupo.criadoEm = new Date().toLocaleDateString();
     this.usuario.idGrupos.push(grupo.id);
     grupo.emailMembros = [this.usuario.email];
-    grupo.emailAdmins = [this.usuario.email];
+    grupo.membros = [
+      { 
+        nome: this.usuario.nome, 
+        email: this.usuario.email, 
+        atuacao: data.participacao
+      }];
+    grupo.admins = [{ nome: this.usuario.nome, email: this.usuario.email}];
     grupo.foto = "https://via.placeholder.com/300x200?text=Foto+do+grupo+aqui"
     console.log("grupo criado: ",grupo);
 

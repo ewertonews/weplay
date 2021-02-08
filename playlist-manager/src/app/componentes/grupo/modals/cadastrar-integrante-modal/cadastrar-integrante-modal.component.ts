@@ -15,7 +15,6 @@ export class CadastrarIntegranteModalComponent implements OnInit {
   participacoes = ["Violão", "Guitarra", "Baixo", "Bateria", "Teclado", "Vocal", "Percussão", "Piano", "Saxofone", 
   "Tropete", "Trobone", "Violino", "Violoncelo", "Cavaco", "Cajon", "Outro"];
 
-  
   formNovoMembro = this.fb.group({
     nome: ['', Validators.required],
     email_membro: ['', [Validators.email, Validators.required]],
